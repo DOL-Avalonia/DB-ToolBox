@@ -1,0 +1,3555 @@
+<?xml version="1.0" standalone="yes"?>
+<BaseXMLData xmlns="file://base.xsd">
+	<version>
+		<version>1.0.0.4</version>
+		<doUpdate>true</doUpdate>
+	</version>
+	<!-- Section Realms -->
+	<realm id="0">
+		<name>all realms</name>
+	</realm>
+	<realm id="1">
+		<name>Albion</name>
+	</realm>
+	<realm id="3">
+		<name>Hibernia</name>
+	</realm>
+	<realm id="2">
+		<name>Midgard</name>
+	</realm>
+	<realm id="4">
+		<name>Realm 4</name>
+	</realm>
+	<realm id="5">
+		<name>Realm 5</name>
+	</realm>
+	<realm id="6">
+		<name>Realm 6</name>
+	</realm>
+	<realm id="7">
+		<name>Realm 7</name>
+	</realm>
+	<!-- Section ItemTypes (Slots) -->
+	<itemType id="0">
+		<name>Generic Item</name>
+	</itemType>
+	<itemType id="10">
+		<name>Standard Weapon</name>
+	</itemType>
+	<itemType id="11">
+		<name>Left Hand Weapon</name>
+	</itemType>
+	<itemType id="12">
+		<name>Two Hand Weapon</name>
+	</itemType>
+	<itemType id="13">
+		<name>Distance Weapon</name>
+	</itemType>
+	<itemType id="21">
+		<name>Head Armor</name>
+	</itemType>
+	<itemType id="22">
+		<name>Hands Armor</name>
+	</itemType>
+	<itemType id="23">
+		<name>Feet Armor</name>
+	</itemType>
+	<itemType id="27">
+		<name>Legs Armor</name>
+	</itemType>
+	<itemType id="28">
+		<name>Arms Armor</name>
+	</itemType>
+	<itemType id="25">
+		<name>Torso Armor</name>
+	</itemType>
+	<itemType id="24">
+		<name>Jewellery</name>
+	</itemType>
+	<itemType id="26">
+		<name>Cloak</name>
+	</itemType>
+	<itemType id="29">
+		<name>Neck</name>
+	</itemType>
+	<itemType id="32">
+		<name>Waist</name>
+	</itemType>
+	<itemType id="33">
+		<name>Bracer</name>
+	</itemType>
+	<itemType id="35">
+		<name>Ring</name>
+	</itemType>
+	<itemType id="37">
+		<name>Mythical</name>
+	</itemType>
+	<itemType id="40">
+		<name>First backpack</name>
+	</itemType>
+	<!-- Section objectTypes -->
+	<objectType id="0">
+		<name>Generic Item</name>
+	</objectType>
+	<objectType id="1">
+		<name>Generic Weapon</name>
+	</objectType>
+	<objectType id="2">
+		<name>Albion Crushing Weapon</name>
+	</objectType>
+	<objectType id="3">
+		<name>Albion Slashing Weapon</name>
+	</objectType>
+	<objectType id="4">
+		<name>Albion Thrusting Weapon</name>
+	</objectType>
+	<objectType id="6">
+		<name>Albion Two Handed Weapon</name>
+	</objectType>
+	<objectType id="7">
+		<name>Albion Polearm Weapon</name>
+	</objectType>
+	<objectType id="9">
+		<name>Albion Longbow Weapon</name>
+	</objectType>
+	<objectType id="10">
+		<name>Albion Crossbow Weapon</name>
+	</objectType>
+	<objectType id="24">
+		<name>Albion Flexible Weapon</name>
+	</objectType>
+	<objectType id="11">
+		<name>Midgard Sword Weapon</name>
+	</objectType>
+	<objectType id="12">
+		<name>Midgard Hammer Weapon</name>
+	</objectType>
+	<objectType id="13">
+		<name>Midgard Axe Weapon</name>
+	</objectType>
+	<objectType id="14">
+		<name>Midgard Spear Weapon</name>
+	</objectType>
+	<objectType id="15">
+		<name>Midgard Composite Bow Weapon</name>
+	</objectType>
+	<objectType id="16">
+		<name>Midgard Thrown Weapon</name>
+	</objectType>
+	<objectType id="17">
+		<name>Midgard Left Axe Weapon</name>
+	</objectType>
+	<objectType id="25">
+		<name>Midgard Hand to Hand Weapon</name>
+	</objectType>
+	<objectType id="18">
+		<name>Hibernia Recurved Bow Weapon</name>
+	</objectType>
+	<objectType id="19">
+		<name>Hibernia Blades Weapon</name>
+	</objectType>
+	<objectType id="20">
+		<name>Hibernia Blunt Weapon</name>
+	</objectType>
+	<objectType id="21">
+		<name>Hibernia Piercing Weapon</name>
+	</objectType>
+	<objectType id="22">
+		<name>Hibernia Large Weapon</name>
+	</objectType>
+	<objectType id="23">
+		<name>Hibernia Celtic Spear</name>
+	</objectType>
+	<objectType id="26">
+		<name>Hibernia Scythe</name>
+	</objectType>
+	<objectType id="8">
+		<name>Staff Weapon</name>
+	</objectType>
+	<objectType id="5">
+		<name>Fired Weapon</name>
+	</objectType>
+	<objectType id="27">
+		<name>Mauler Fist Wraps</name>
+	</objectType>
+	<objectType id="28">
+		<name>Mauler Staff</name>
+	</objectType>
+	<objectType id="32">
+		<name>Cloth Armor</name>
+	</objectType>
+	<objectType id="33">
+		<name>Leather Armor</name>
+	</objectType>
+	<objectType id="34">
+		<name>Studded Armor</name>
+	</objectType>
+	<objectType id="35">
+		<name>Chain Armor</name>
+	</objectType>
+	<objectType id="36">
+		<name>Plate Armor</name>
+	</objectType>
+	<objectType id="37">
+		<name>Reinforced Armor</name>
+	</objectType>
+	<objectType id="38">
+		<name>Scale Armor</name>
+	</objectType>
+	<objectType id="41">
+		<name>Magical Item</name>
+	</objectType>
+	<objectType id="42">
+		<name>Shield Weapon</name>
+	</objectType>
+	<objectType id="43">
+		<name>Arrow</name>
+	</objectType>
+	<objectType id="44">
+		<name>Bolt</name>
+	</objectType>
+	<objectType id="45">
+		<name>Instrument</name>
+	</objectType>
+	<objectType id="46">
+		<name>Poison</name>
+	</objectType>
+	<objectType id="47">
+		<name>Alchemy Tincture</name>
+	</objectType>
+	<objectType id="48">
+		<name>Spellcraft Gem</name>
+	</objectType>
+	<!-- Section Classes -->
+	<class id="">
+		<name>All</name>
+	</class>
+	<class id="2">
+		<name>Armsman</name>
+	</class>
+	<class id="13">
+		<name>Cabalist</name>
+	</class>
+	<class id="6">
+		<name>Cleric</name>
+	</class>
+	<class id="10">
+		<name>Friar</name>
+	</class>
+	<class id="33">
+		<name>Heretic</name>
+	</class>
+	<class id="9">
+		<name>Infiltrator</name>
+	</class>
+	<class id="11">
+		<name>Mercenary</name>
+	</class>
+	<class id="4">
+		<name>Minstrel</name>
+	</class>
+	<class id="12">
+		<name>Necromancer</name>
+	</class>
+	<class id="1">
+		<name>Paladin</name>
+	</class>
+	<class id="19">
+		<name>Reaver</name>
+	</class>
+	<class id="3">
+		<name>Scout</name>
+	</class>
+	<class id="8">
+		<name>Sorcerer</name>
+	</class>
+	<class id="5">
+		<name>Theurgist</name>
+	</class>
+	<class id="7">
+		<name>Wizard</name>
+	</class>
+	<class id="55">
+		<name>Animist</name>
+	</class>
+	<class id="39">
+		<name>Bainshee</name>
+	</class>
+	<class id="48">
+		<name>Bard</name>
+	</class>
+	<class id="43">
+		<name>Blademaster</name>
+	</class>
+	<class id="45">
+		<name>Champion</name>
+	</class>
+	<class id="47">
+		<name>Druid</name>
+	</class>
+	<class id="40">
+		<name>Eldritch</name>
+	</class>
+	<class id="41">
+		<name>Enchanter</name>
+	</class>
+	<class id="44">
+		<name>Hero</name>
+	</class>
+	<class id="42">
+		<name>Mentalist</name>
+	</class>
+	<class id="49">
+		<name>Nightshade</name>
+	</class>
+	<class id="50">
+		<name>Ranger</name>
+	</class>
+	<class id="56">
+		<name>Valewalker</name>
+	</class>
+	<class id="58">
+		<name>Vampiir</name>
+	</class>
+	<class id="46">
+		<name>Warden</name>
+	</class>
+	<class id="31">
+		<name>Berserker</name>
+	</class>
+	<class id="30">
+		<name>Bonedancer</name>
+	</class>
+	<class id="26">
+		<name>Healer</name>
+	</class>
+	<class id="25">
+		<name>Hunter</name>
+	</class>
+	<class id="29">
+		<name>Runemaster</name>
+	</class>
+	<class id="32">
+		<name>Savage</name>
+	</class>
+	<class id="23">
+		<name>Shadowblade</name>
+	</class>
+	<class id="28">
+		<name>Shaman</name>
+	</class>
+	<class id="24">
+		<name>Skald</name>
+	</class>
+	<class id="27">
+		<name>Spiritmaster</name>
+	</class>
+	<class id="21">
+		<name>Thane</name>
+	</class>
+	<class id="34">
+		<name>Valkyrie</name>
+	</class>
+	<class id="59">
+		<name>Warlock</name>
+	</class>
+	<class id="22">
+		<name>Warrior</name>
+	</class>
+	<class id="60">
+		<name>Mauler (Alb)</name>
+	</class>
+	<class id="62">
+		<name>Mauler (Hib)</name>
+	</class>
+	<class id="61">
+		<name>Mauler (Mid)</name>
+	</class>
+	<!-- Section hands -->
+  <hand id="-1">
+    <name>None</name>
+  </hand>
+	<hand id="0">
+		<name>Right</name>
+	</hand>
+  <hand id="2">
+    <name>Left</name>
+  </hand>
+	<hand id="1">
+		<name>Two Handed</name>
+	</hand>
+  <hand id="3">
+    <name>Distance</name>
+  </hand>
+	<!-- Section damageTypes -->
+	<damageType id="0">
+		<name>Natural</name>
+	</damageType>
+	<damageType id="1">
+		<name>Crush</name>
+	</damageType>
+	<damageType id="2">
+		<name>Slash</name>
+	</damageType>
+	<damageType id="3">
+		<name>Thrust</name>
+	</damageType>
+	<damageType id="10">
+		<name>Body</name>
+	</damageType>
+	<damageType id="11">
+		<name>Cold</name>
+	</damageType>
+	<damageType id="12">
+		<name>Energy</name>
+	</damageType>
+	<damageType id="13">
+		<name>Heat</name>
+	</damageType>
+	<damageType id="14">
+		<name>Matter</name>
+	</damageType>
+	<damageType id="15">
+		<name>Spirit</name>
+	</damageType>
+	<!-- section bonus categories -->
+	<bonus_category>
+		<name>unused</name>
+	</bonus_category>
+	<bonus_category>
+		<name>stats</name>
+	</bonus_category> 
+	<bonus_category>
+		<name>caps</name>
+	</bonus_category>
+	<bonus_category>
+		<name>resists</name>
+	</bonus_category>
+	<bonus_category>
+		<name>resists caps</name>
+	</bonus_category>
+	<bonus_category>
+		<name>skills</name>
+	</bonus_category>
+	<bonus_category>
+		<name>focus</name>
+	</bonus_category>
+	<bonus_category>
+		<name>other</name>
+	</bonus_category>
+  <bonus_category>
+    <name>mythical</name>
+  </bonus_category>
+	<!-- section boni -->
+	<bonus category="unused" id="0">
+		<name></name>
+	</bonus>
+	<bonus category="stats" id="1">
+		<name>Strength</name>
+	</bonus>
+	<bonus category="stats" id="2">
+		<name>Dexterity</name>
+	</bonus>
+	<bonus category="stats" id="3">
+		<name>Constitution</name>
+	</bonus>
+	<bonus category="stats" id="4">
+		<name>Quickness</name>
+	</bonus>
+	<bonus category="stats" id="5">
+		<name>Intelligence</name>
+	</bonus>
+	<bonus category="stats" id="6">
+		<name>Piety</name>
+	</bonus>
+	<bonus category="stats" id="7">
+		<name>Empathy</name>
+	</bonus>
+	<bonus category="stats" id="8">
+		<name>Charisma</name>
+	</bonus>
+	<bonus category="stats" id="9">
+		<name>Power</name>
+	</bonus>
+	<bonus category="stats" id="10">
+		<name>Hits</name>
+	</bonus>
+	<bonus category="resists" id="11">
+		<name>Body</name>
+	</bonus>
+	<bonus category="resists" id="12">
+		<name>Cold</name>
+	</bonus>
+	<bonus category="resists" id="13">
+		<name>Crush</name>
+	</bonus>
+	<bonus category="resists" id="14">
+		<name>Energy</name>
+	</bonus>
+	<bonus category="resists" id="15">
+		<name>Heat</name>
+	</bonus>
+	<bonus category="resists" id="16">
+		<name>Matter</name>
+	</bonus>
+	<bonus category="resists" id="17">
+		<name>Slash</name>
+	</bonus>
+	<bonus category="resists" id="18">
+		<name>Spirit</name>
+	</bonus>
+	<bonus category="resists" id="19">
+		<name>Thrust</name>
+	</bonus>
+	<bonus category="skills" id="20">
+		<name>Two Handed</name>
+	</bonus>
+	<bonus category="skills" id="21">
+		<name>Body Magic</name>
+	</bonus>
+	<bonus category="skills" id="22">
+		<name>Chants</name>
+	</bonus>
+	<bonus category="skills" id="23">
+		<name>Critical Strike</name>
+	</bonus>
+	<bonus category="skills" id="24">
+		<name>Crossbows</name>
+	</bonus>
+	<bonus category="skills" id="25">
+		<name>Crushing</name>
+	</bonus>
+	<bonus category="skills" id="26">
+		<name>Death Servant</name>
+	</bonus>
+	<bonus category="skills" id="27">
+		<name>Deathsight</name>
+	</bonus>
+	<bonus category="skills" id="28">
+		<name>Dual Wield</name>
+	</bonus>
+	<bonus category="skills" id="29">
+		<name>Earth Magic</name>
+	</bonus>
+	<bonus category="skills" id="30">
+		<name>Enhancement</name>
+	</bonus>
+	<bonus category="skills" id="31">
+		<name>Envenom</name>
+	</bonus>
+	<bonus category="skills" id="32">
+		<name>Fire Magic</name>
+	</bonus>
+	<bonus category="skills" id="33">
+		<name>Flexible Weapon</name>
+	</bonus>
+	<bonus category="skills" id="34">
+		<name>Cold Magic</name>
+	</bonus>
+	<bonus category="skills" id="35">
+		<name>Instruments</name>
+	</bonus>
+	<bonus category="skills" id="36">
+		<name>Longbows</name>
+	</bonus>
+	<bonus category="skills" id="37">
+		<name>Matter Magic</name>
+	</bonus>
+	<bonus category="skills" id="38">
+		<name>Mind Magic</name>
+	</bonus>
+	<bonus category="skills" id="39">
+		<name>Painworking</name>
+	</bonus>
+	<bonus category="skills" id="40">
+		<name>Parry</name>
+	</bonus>
+	<bonus category="skills" id="41">
+		<name>Polearms</name>
+	</bonus>
+	<bonus category="skills" id="42">
+		<name>Rejuvenation</name>
+	</bonus>
+	<bonus category="skills" id="43">
+		<name>Shields</name>
+	</bonus>
+	<bonus category="skills" id="44">
+		<name>Slashing</name>
+	</bonus>
+	<bonus category="skills" id="45">
+		<name>Smiting</name>
+	</bonus>
+	<bonus category="skills" id="46">
+		<name>Soulrending</name>
+	</bonus>
+	<bonus category="skills" id="47">
+		<name>Spirit Magic</name>
+	</bonus>
+	<bonus category="skills" id="48">
+		<name>Staff</name>
+	</bonus>
+	<bonus category="skills" id="49">
+		<name>Stealth</name>
+	</bonus>
+	<bonus category="skills" id="50">
+		<name>Thrusting</name>
+	</bonus>
+	<bonus category="skills" id="51">
+		<name>Wind Magic</name>
+	</bonus>
+	<bonus category="skills" id="52">
+		<name>Sword</name>
+	</bonus>
+	<bonus category="skills" id="53">
+		<name>Hammer</name>
+	</bonus>
+	<bonus category="skills" id="54">
+		<name>Axe</name>
+	</bonus>
+	<bonus category="skills" id="55">
+		<name>Left Axe</name>
+	</bonus>
+	<bonus category="skills" id="56">
+		<name>Spear</name>
+	</bonus>
+	<bonus category="skills" id="57">
+		<name>Mending</name>
+	</bonus>
+	<bonus category="skills" id="58">
+		<name>Augmentation</name>
+	</bonus>
+	<bonus category="skills" id="60">
+		<name>Darkness</name>
+	</bonus>
+	<bonus category="skills" id="61">
+		<name>Suppression</name>
+	</bonus>
+	<bonus category="skills" id="62">
+		<name>Runecarving</name>
+	</bonus>
+	<bonus category="skills" id="63">
+		<name>Stormcalling</name>
+	</bonus>
+	<bonus category="skills" id="64">
+		<name>Beastcraft</name>
+	</bonus>
+	<bonus category="skills" id="65">
+		<name>Light Magic</name>
+	</bonus>
+	<bonus category="skills" id="66">
+		<name>Void Magic</name>
+	</bonus>
+	<bonus category="skills" id="67">
+		<name>Mana Magic</name>
+	</bonus>
+	<bonus category="skills" id="68">
+		<name>Composite</name>
+	</bonus>
+	<bonus category="skills" id="69">
+		<name>Battlesongs</name>
+	</bonus>
+	<bonus category="skills" id="70">
+		<name>Enchantment</name>
+	</bonus>
+	<bonus category="skills" id="72">
+		<name>Blades</name>
+	</bonus>
+	<bonus category="skills" id="73">
+		<name>Blunt</name>
+	</bonus>
+	<bonus category="skills" id="74">
+		<name>Piercing</name>
+	</bonus>
+	<bonus category="skills" id="75">
+		<name>Large Weapon</name>
+	</bonus>
+	<bonus category="skills" id="76">
+		<name>Mentalism</name>
+	</bonus>
+	<bonus category="skills" id="77">
+		<name>Regrowth</name>
+	</bonus>
+	<bonus category="skills" id="78">
+		<name>Nurture</name>
+	</bonus>
+	<bonus category="skills" id="79">
+		<name>Nature</name>
+	</bonus>
+	<bonus category="skills" id="80">
+		<name>Music</name>
+	</bonus>
+	<bonus category="skills" id="81">
+		<name>Celtic Dual</name>
+	</bonus>
+	<bonus category="skills" id="82">
+		<name>Celtic Spear</name>
+	</bonus>
+	<bonus category="skills" id="83">
+		<name>Recurved Bow</name>
+	</bonus>
+	<bonus category="skills" id="84">
+		<name>Valor</name>
+	</bonus>
+	<bonus category="skills" id="85">
+		<name>Cave Magic</name>
+	</bonus>
+	<bonus category="skills" id="86">
+		<name>Bone Army</name>
+	</bonus>
+	<bonus category="skills" id="87">
+		<name>Verdant</name>
+	</bonus>
+	<bonus category="skills" id="88">
+		<name>Creeping</name>
+	</bonus>
+	<bonus category="skills" id="89">
+		<name>Arboreal</name>
+	</bonus>
+	<bonus category="skills" id="90">
+		<name>Scythe</name>
+	</bonus>
+	<bonus category="skills" id="91">
+		<name>Thrown Weapons</name>
+	</bonus>
+	<bonus category="skills" id="92">
+		<name>Hand To Hand</name>
+	</bonus>
+	<bonus category="skills" id="93">
+		<name>Short Bow</name>
+	</bonus>
+	<bonus category="skills" id="94">
+		<name>Pacification</name>
+	</bonus>
+	<bonus category="skills" id="95">
+		<name>Savagery</name>
+	</bonus>
+	<bonus category="skills" id="96">
+		<name>Nightshade Magic</name>
+	</bonus>
+	<bonus category="skills" id="97">
+		<name>Pathfinding</name>
+	</bonus>
+	<bonus category="skills" id="98">
+		<name>Summoning</name>
+	</bonus>
+	<bonus category="skills" id="99">
+		<name>Dementia</name>
+	</bonus>
+	<bonus category="skills" id="100">
+		<name>Shadow Mastery</name>
+	</bonus>
+	<bonus category="skills" id="101">
+		<name>Vampiiric Embrace</name>
+	</bonus>
+	<bonus category="skills" id="102">
+		<name>Ethereal Shriek</name>
+	</bonus>
+	<bonus category="skills" id="103">
+		<name>Phantasmal Wail</name>
+	</bonus>
+	<bonus category="skills" id="104">
+		<name>Spectral Force</name>
+	</bonus>
+	<bonus category="skills" id="105">
+		<name>Odin's Will</name>
+	</bonus>
+	<bonus category="skills" id="106">
+		<name>Cursing</name>
+	</bonus>
+	<bonus category="skills" id="107">
+		<name>Hexing</name>
+	</bonus>
+	<bonus category="skills" id="108">
+		<name>Witchcraft</name>
+	</bonus>
+	<bonus category="skills" id="109">
+		<name>Mauler Staff</name>
+	</bonus>
+	<bonus category="skills" id="110">
+		<name>Fist Wraps</name>
+	</bonus>
+	<bonus category="skills" id="111">
+		<name>Power Strikes</name>
+	</bonus>
+	<bonus category="skills" id="112">
+		<name>Magnetism</name>
+	</bonus>
+	<bonus category="skills" id="113">
+		<name>Aura Manipulation</name>
+	</bonus>
+	<bonus category="skills" id="115"><name>Archery</name></bonus>
+	<bonus category="focus" id="120">
+		<name>Darkness Focus</name>
+	</bonus>
+	<bonus category="focus" id="121">
+		<name>Suppression Focus</name>
+	</bonus>
+	<bonus category="focus" id="122">
+		<name>Runecarving Focus</name>
+	</bonus>
+	<bonus category="focus" id="123">
+		<name>Spirit Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="124">
+		<name>Fire Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="125">
+		<name>Wind Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="126">
+		<name>Cold Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="127">
+		<name>Earth Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="128">
+		<name>Light Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="129">
+		<name>Body Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="130">
+		<name>Matter Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="132">
+		<name>Mind Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="133">
+		<name>Void Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="134">
+		<name>Mana Magic Focus</name>
+	</bonus>
+	<bonus category="focus" id="135">
+		<name>Enchantment Focus</name>
+	</bonus>
+	<bonus category="focus" id="136">
+		<name>Mentalism Focus</name>
+	</bonus>
+	<bonus category="focus" id="137">
+		<name>Summoning Focus</name>
+	</bonus>
+	<bonus category="focus" id="138">
+		<name>Bone Army Focus</name>
+	</bonus>
+	<bonus category="focus" id="139">
+		<name>Painworking Focus</name>
+	</bonus>
+	<bonus category="focus" id="140">
+		<name>Deathsight Focus</name>
+	</bonus>
+	<bonus category="focus" id="141">
+		<name>Deathservant Focus</name>
+	</bonus>
+	<bonus category="focus" id="142">
+		<name>Verdant Focus</name>
+	</bonus>
+	<bonus category="focus" id="143">
+		<name>Creeping Path Focus</name>
+	</bonus>
+	<bonus category="focus" id="144">
+		<name>Arboreal Focus</name>
+	</bonus>
+	<bonus category="focus" id="145">
+		<name>Maximum Speed</name>
+	</bonus>
+	<bonus category="focus" id="147">
+		<name>Concentration</name>
+	</bonus>
+	<bonus category="focus" id="148">
+		<name>Armorfactor</name>
+	</bonus>
+	<bonus category="focus" id="149">
+		<name>Armor Absorbsion</name>
+	</bonus>
+	<bonus category="focus" id="150">
+		<name>Health Regeneration</name>
+	</bonus>
+	<bonus category="focus" id="151">
+		<name>Power Regeneration</name>
+	</bonus>
+	<bonus category="focus" id="152">
+		<name>Endurance Regeneration</name>
+	</bonus>
+	<bonus category="focus" id="153">
+		<name>Spell Range</name>
+	</bonus>
+	<bonus category="focus" id="154">
+		<name>Archery Range</name>
+	</bonus>
+	<bonus category="other" id="155">
+		<name>Melee Combat Speed</name>
+	</bonus>
+	<bonus category="stats" id="156">
+		<name>Acuity</name>
+	</bonus>
+	<bonus category="focus" id="157">
+		<name>Ethereal Shriek Focus</name>
+	</bonus>
+	<bonus category="focus" id="158">
+		<name>Phantasmal Wail Focus</name>
+	</bonus>
+	<bonus category="focus" id="159">
+		<name>Spectral Force Focus</name>
+	</bonus>
+	<bonus category="focus" id="160">
+		<name>Cursing Focus</name>
+	</bonus>
+	<bonus category="focus" id="161">
+		<name>Hexing Focus</name>
+	</bonus>
+	<bonus category="focus" id="162">
+		<name>Witchcraft Focus</name>
+	</bonus>
+	<bonus category="skills" id="163">
+		<name>ALL magic skills</name>
+	</bonus>
+	<bonus category="skills" id="164">
+		<name>ALL melee weapon skills</name>
+	</bonus>
+	<bonus category="focus" id="165">
+		<name>ALL spell lines</name>
+	</bonus>
+	<bonus category="other" id="166">
+		<name>Effective level</name>
+	</bonus>
+	<bonus category="skills" id="167">
+		<name>ALL Dual Wielding Skills</name>
+	</bonus>
+	<bonus category="skills" id="168">
+		<name>ALL Archery Skills</name>
+	</bonus>
+	<bonus category="other" id="169">
+		<name>Evade Chance</name>
+	</bonus>
+	<bonus category="other" id="170">
+		<name>Block Chance</name>
+	</bonus>
+	<bonus category="other" id="171">
+		<name>Parry Chance</name>
+	</bonus>
+	<bonus category="other" id="173">
+		<name>all Melee Damage</name>
+	</bonus>
+	<bonus category="other" id="174">
+		<name>all Ranged Damage</name>
+	</bonus>
+	<bonus category="other" id="175">
+		<name>Fumble Chance</name>
+	</bonus>
+	<bonus category="other" id="176">
+		<name>Mesmerize Duration</name>
+	</bonus>
+	<bonus category="other" id="177">
+		<name>Stun Duration</name>
+	</bonus>
+	<bonus category="other" id="178">
+		<name>Speed Decrease Duration</name>
+	</bonus>
+	<bonus category="other" id="179">
+		<name>Bladeturn Reinforcement</name>
+	</bonus>
+	<bonus category="other" id="180">
+		<name>Defensive Bonus</name>
+	</bonus>
+	<bonus category="other" id="182">
+		<name>Negative Reduction</name>
+	</bonus>
+	<bonus category="other" id="183">
+		<name>Piece Ablative</name>
+	</bonus>
+	<bonus category="other" id="184">
+		<name>Reactionary Style Damage</name>
+	</bonus>
+	<bonus category="other" id="185">
+		<name>Spell Power Cost Reduction</name>
+	</bonus>
+	<bonus category="other" id="186">
+		<name>Style Cost Reduction</name>
+	</bonus>
+	<bonus category="other" id="187">
+		<name>To Hit Bonus</name>
+	</bonus>
+	<bonus category="other" id="188">
+		<name>Archery Speed</name>
+	</bonus>
+	<bonus category="other" id="189">
+		<name>Arrow Recovery</name>
+	</bonus>
+	<bonus category="other" id="190">
+		<name>all Stat Buff Spells</name>
+	</bonus>
+	<bonus category="other" id="191">
+		<name>Casting Speed</name>
+	</bonus>
+	<bonus category="other" id="192">
+		<name>Death Experience Loss Reduction</name>
+	</bonus>
+	<bonus category="other" id="193">
+		<name>Debuff Effectivness</name>
+	</bonus>
+	<bonus category="other" id="194">
+		<name>Fatigue</name>
+	</bonus>
+	<bonus category="other" id="195">
+		<name>all Heal Spells</name>
+	</bonus>
+	<bonus category="other" id="196">
+		<name>Power Pool</name>
+	</bonus>
+	<bonus category="other" id="197">
+		<name>Resist Pierce</name>
+	</bonus>
+	<bonus category="other" id="198">
+		<name>all Magic Damage</name>
+	</bonus>
+	<bonus category="other" id="199">
+		<name>Spell Duration</name>
+	</bonus>
+	<bonus category="other" id="200">
+		<name>Style Damage</name>
+	</bonus>
+
+	<bonus category="caps" id="201">
+		<name>Bonus to Strength attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="202">
+		<name>Bonus to Dexterity attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="203">
+		<name>Bonus to Constitution attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="204">
+		<name>Bonus to Quickness attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="205">
+		<name>Bonus to Intelligence attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="206">
+		<name>Bonus to Piety attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="207">
+		<name>Bonus to Charisma attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="208">
+		<name>Bonus to Empathy attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="209">
+		<name>Bonus to Acuity attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="210">
+		<name>Bonus to hit points bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="211">
+		<name>Bonus to power bonus cap</name>
+	</bonus>
+
+	<bonus category="other" id="212">
+		<name>Bonus to Weaponskill</name>
+	</bonus>
+	<bonus category="skills" id="213">
+		<name>All Skills</name>
+	</bonus>
+	<bonus category="other" id="214">
+		<name>Bonus to critical archery hit chance</name>
+	</bonus>
+	<bonus category="other" id="215">
+		<name>Bonus to critical melee hit chance</name>
+	</bonus>
+
+	<bonus category="other" id="230">
+		<name>DPS increase</name>
+	</bonus>
+	<bonus category="other" id="231">
+		<name>Magic Absorbtion</name>
+	</bonus>
+	<bonus category="other" id="172">
+		<name>Fatigue Consumption</name>
+	</bonus>
+	<bonus category="other" id="223">
+		<name>Spell Fumble Chance</name>
+	</bonus>
+	<bonus category="other" id="216">
+		<name>Bonus to critical spell hit chance</name>
+	</bonus>
+	<bonus category="other" id="222">
+		<name>Bonus to critical heal chance</name>
+	</bonus>
+	<bonus category="other" id="217">
+		<name>Swim speed</name>
+	</bonus>
+	<bonus category="other" id="218">
+		<name>Spell level</name>
+	</bonus>
+	<bonus category="other" id="219">
+		<name>Miss Hit</name>
+	</bonus>
+	<bonus category="other" id="220">
+		<name>Keep Damage</name>
+	</bonus>
+
+	<bonus category="resists caps" id="221">
+		<name>Bonus to Body resists cap</name>
+	</bonus>
+	<!--
+	<bonus category="resists caps" id="900">
+		<name>Bonus to Cold resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="901">
+		<name>Bonus to Crush resists cap</name>
+	</bonus>
+	-->
+	<bonus category="resists caps" id="224">
+		<name>Bonus to Energy resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="225">
+		<name>Bonus to Heat resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="226">
+		<name>Bonus to Matter resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="227">
+		<name>Bonus to Slash resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="228">
+		<name>Bonus to Spirit resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="229">
+		<name>Bonus to Thrust resists cap</name>
+	</bonus>
+			<bonus category="other" id="247">
+		<name>Bounty Points</name>
+	</bonus>
+			<bonus category="other" id="248">
+		<name>Xp Points</name>
+	</bonus>
+  <bonus category="other" id="249">
+    <name>Resist_Natural</name>
+  </bonus>
+  <bonus category="other" id="250">
+    <name>ExtraHP</name>
+  </bonus>
+  <bonus category="other" id="251">
+		<name>Conversion</name>
+	</bonus>
+	 <bonus category="other" id="252">
+		<name>Style Absorb</name>
+	</bonus>
+	<bonus category="other" id="253">
+		<name>Realm Points</name>
+	</bonus>
+		<bonus category="other" id="254">
+		<name>Arcane Syphon</name>
+	</bonus>
+
+  <bonus category="mythical" id="233">
+    <name>MythicalSafeFall</name>
+  </bonus>
+  <bonus category="mythical" id="234">
+    <name>MythicalDiscumbering</name>
+  </bonus>
+  <bonus category="mythical" id="235">
+    <name>MythicalCoin</name>
+  </bonus>
+  <bonus category="mythical" id="236">
+    <name>MythicalStrCapBonus</name>
+  </bonus>
+  <bonus category="mythical" id="237">
+    <name>MythicalDexCapBonus</name>
+  </bonus>
+  <bonus category="mythical" id="238">
+    <name>MythicalConCapBonus</name>
+  </bonus>
+  <bonus category="mythical" id="239">
+    <name>MythicalQuiCapBonus</name>
+  </bonus>
+  <bonus category="mythical" id="240">
+    <name>MythicalIntCapBonus</name>
+  </bonus>
+  <bonus category="mythical" id="241">
+    <name>MythicalPieCapBonus</name>
+  </bonus>
+  <bonus category="mythical" id="242">
+    <name>MythicalEmpCapBonus</name>
+  </bonus>  
+  <bonus category="mythical" id="243">
+    <name>MythicalChaCapBonus</name>
+  </bonus>
+  <bonus category="mythical" id="244">
+    <name>MythicalAcuCapBonus</name>
+  </bonus>
+
+  <!-- Section Visible Effects -->
+	<effect id="0">
+		<name>none</name>
+	</effect>
+	<effect id="1">
+		<name>univ longsword propane-style flame</name>
+	</effect>
+	<effect id="2">
+		<name>univ longsword regular flame</name>
+	</effect>
+	<effect id="3">
+		<name>univ longsword orange flame</name>
+	</effect>
+	<effect id="4">
+		<name>univ longsword rising flame</name>
+	</effect>
+	<effect id="5">
+		<name>univ longsword flame w/smoke</name>
+	</effect>
+	<effect id="6">
+		<name>univ longsword flame w/sparks</name>
+	</effect>
+	<effect id="7">
+		<name>univ longsword hot glow</name>
+	</effect>
+	<effect id="8">
+		<name>univ longsword hot aura</name>
+	</effect>
+	<effect id="9">
+		<name>univ longsword blue aura</name>
+	</effect>
+	<effect id="10">
+		<name>univ longsword hot blue glow</name>
+	</effect>
+	<effect id="11">
+		<name>univ longsword hot gold glow</name>
+	</effect>
+	<effect id="12">
+		<name>univ longsword hot red glow</name>
+	</effect>
+	<effect id="13">
+		<name>univ longsword red aura</name>
+	</effect>
+	<effect id="14">
+		<name>univ longsword cold aura w/sparkles</name>
+	</effect>
+	<effect id="15">
+		<name>univ longsword cold aura w/vapor</name>
+	</effect>
+	<effect id="16">
+		<name>longsword hilt wavering blue beam</name>
+	</effect>
+	<effect id="17">
+		<name>longsword hilt wavering green beam</name>
+	</effect>
+	<effect id="18">
+		<name>longsword hilt wavering red beam</name>
+	</effect>
+	<effect id="19">
+		<name>longsword hilt red/blue beam</name>
+	</effect>
+	<effect id="20">
+		<name>longsword hilt purple beam</name>
+	</effect>
+	<effect id="21">
+		<name>univ 2h/gr sword yellow flames</name>
+	</effect>
+	<effect id="22">
+		<name>univ 2h/gr sword orange flames</name>
+	</effect>
+	<effect id="23">
+		<name>univ 2h/gr sword fire w/smoke</name>
+	</effect>
+	<effect id="24">
+		<name>univ 2h/gr sword fire w/sparks</name>
+	</effect>
+	<effect id="25">
+		<name>univ 2h/gr blue glow w/sparkles</name>
+	</effect>
+	<effect id="26">
+		<name>univ 2h/gr blue aura w/cold vapor</name>
+	</effect>
+	<effect id="27">
+		<name>univ 2h/gr icy blue glow</name>
+	</effect>
+	<effect id="28">
+		<name>univ 2h/gr red aura</name>
+	</effect>
+	<effect id="29">
+		<name>univ 2h/gr strong crimson glow</name>
+	</effect>
+	<effect id="30">
+		<name>univ 2h/gr white core red glow</name>
+	</effect>
+	<effect id="31">
+		<name>univ 2h/gr silvery/white glow</name>
+	</effect>
+	<effect id="32">
+		<name>univ 2h/gr gold/yellow glow</name>
+	</effect>
+	<effect id="33">
+		<name>univ 2h/gr hot green glow</name>
+	</effect>
+	<effect id="34">
+		<name>univ 1h hammer red aura</name>
+	</effect>
+	<effect id="35">
+		<name>univ 1h hammer fiery glow</name>
+	</effect>
+	<effect id="36">
+		<name>univ 1h hammer more intense fiery glow</name>
+	</effect>
+	<effect id="37">
+		<name>univ 1h hammer flaming</name>
+	</effect>
+	<effect id="38">
+		<name>univ 1h hammer torchlike flaming</name>
+	</effect>
+	<effect id="39">
+		<name>univ 1h hammer silvery glow</name>
+	</effect>
+	<effect id="40">
+		<name>univ 1h hammer purple glow</name>
+	</effect>
+	<effect id="41">
+		<name>univ 1h hammer blue aura</name>
+	</effect>
+	<effect id="42">
+		<name>univ 1h hammer blue glow</name>
+	</effect>
+	<effect id="43">
+		<name>univ 1h hammer arcs from head to handle</name>
+	</effect>
+	<effect id="44">
+		<name>univ 1h crush arcing halo</name>
+	</effect>
+	<effect id="45">
+		<name>univ 1h crush center arcing</name>
+	</effect>
+	<effect id="46">
+		<name>univ 1h crush smaller arcing halo</name>
+	</effect>
+	<effect id="47">
+		<name>univ 1h crush hot orange core glow</name>
+	</effect>
+	<effect id="48">
+		<name>univ 1h crush orange aura</name>
+	</effect>
+	<effect id="49">
+		<name>univ 1h crush subtle aura with sparks</name>
+	</effect>
+	<effect id="50">
+		<name>univ 1h crush yellow flame</name>
+	</effect>
+	<effect id="51">
+		<name>univ 1h crush mana flame</name>
+	</effect>
+	<effect id="52">
+		<name>univ 1h crush hot green glow</name>
+	</effect>
+	<effect id="53">
+		<name>univ 1h crush hot red glow</name>
+	</effect>
+	<effect id="54">
+		<name>univ 1h crush hot purple glow</name>
+	</effect>
+	<effect id="55">
+		<name>univ 1h crush cold vapor</name>
+	</effect>
+	<effect id="56">
+		<name>univ 1h axe basic flame</name>
+	</effect>
+	<effect id="57">
+		<name>univ 1h axe orange flame</name>
+	</effect>
+	<effect id="58">
+		<name>univ 1h axe slow orange flame w/sparks</name>
+	</effect>
+	<effect id="59">
+		<name>univ 1h axe fiery/trailing flame</name>
+	</effect>
+	<effect id="60">
+		<name>univ 1h axe cold vapor</name>
+	</effect>
+	<effect id="61">
+		<name>univ 1h axe blue aura with twinkles</name>
+	</effect>
+	<effect id="62">
+		<name>univ 1h axe hot green glow</name>
+	</effect>
+	<effect id="63">
+		<name>univ 1h axe hot blue glow</name>
+	</effect>
+	<effect id="64">
+		<name>univ 1h axe hot cyan glow</name>
+	</effect>
+	<effect id="65">
+		<name>univ 1h axe hot purple glow</name>
+	</effect>
+	<effect id="66">
+		<name>univ 1h axe blue->purple->orange glow</name>
+	</effect>
+	<effect id="67">
+		<name>univ shortsword propane flame</name>
+	</effect>
+	<effect id="68">
+		<name>univ shortsword orange flame with sparks</name>
+	</effect>
+	<effect id="69">
+		<name>univ shortsword blue aura with twinkles</name>
+	</effect>
+	<effect id="70">
+		<name>univ shortsword green cloud with bubbles</name>
+	</effect>
+	<effect id="71">
+		<name>univ shortsword red aura with blood bubbles</name>
+	</effect>
+	<effect id="72">
+		<name>univ shortsword evil green glow</name>
+	</effect>
+	<effect id="73">
+		<name>univ shortsword black glow</name>
+	</effect>
+	<effect id="74">
+		<name>Midgard battlespear cold with twinkles</name>
+	</effect>
+	<effect id="75">
+		<name>Midgard battlespear evil green aura</name>
+	</effect>
+	<effect id="76">
+		<name>Midgard battlespear evil red aura</name>
+	</effect>
+	<effect id="77">
+		<name>Midgard battlespear flaming</name>
+	</effect>
+	<effect id="78">
+		<name>Midgard battlespear hot gold glow</name>
+	</effect>
+	<effect id="79">
+		<name>Midgard battlespear hot fire glow</name>
+	</effect>
+	<effect id="80">
+		<name>Midgard battlespear red aura</name>
+	</effect>
+	<effect id="81">
+		<name>Midgard lugged spear blue glow</name>
+	</effect>
+	<effect id="82">
+		<name>Midgard lugged spear hot blue glow</name>
+	</effect>
+	<effect id="83">
+		<name>Midgard lugged spear cold with twinkles</name>
+	</effect>
+	<effect id="84">
+		<name>Midgard lugged spear electric arcing</name>
+	</effect>
+	<effect id="85">
+		<name>Midgard lugged spear hot yellow flame</name>
+	</effect>
+	<effect id="86">
+		<name>Midgard lugged spear orange flame w/ sparks</name>
+	</effect>
+	<effect id="87">
+		<name>Midgard lugged spear orange to purple flame</name>
+	</effect>
+	<effect id="88">
+		<name>Midgard lugged spear hot purple flame</name>
+	</effect>
+	<effect id="89">
+		<name>Midgard lugged spear silvery glow</name>
+	</effect>
+	<effect id="90">
+		<name>Briton quarterstaff blue glow</name>
+	</effect>
+	<effect id="91">
+		<name>Briton quarterstaff blue glow w/ twinkles</name>
+	</effect>
+	<effect id="92">
+		<name>Briton quarterstaff gold glow</name>
+	</effect>
+	<effect id="93">
+		<name>Briton quarterstaff gold glow w/ twinkles</name>
+	</effect>
+	<effect id="94">
+		<name>Briton quarterstaff faint red glow</name>
+	</effect>
+	<effect id="95">
+		<name>Relic pad effect</name>
+	</effect>
+	<effect id="96">
+		<name>Admorenths Staff Effect (Admorenth ONLY)</name>
+	</effect>
+	<effect id="256">
+		<name>Paladin Epic Two Handed Slash</name>
+	</effect>
+	<effect id="257">
+		<name>Hero Epic Blunt</name>
+	</effect>
+	<effect id="258">
+		<name>Warrior Epic One Handed Axe</name>
+	</effect>
+	<effect id="259">
+		<name>Hero_Piercing_2H</name>
+	</effect>
+	<effect id="260">
+		<name>Hero_Spear_2H</name>
+	</effect>
+	<effect id="261">
+		<name>Hero_Spear_1H</name>
+	</effect>
+	<effect id="262">
+		<name>Hero_Piercing_1H</name>
+	</effect>
+	<effect id="263">
+		<name>Hero_Blunt_2H</name>
+	</effect>
+	<effect id="264">
+		<name>Hero_Blade_2H</name>
+	</effect>
+	<effect id="265">
+		<name>Hero_Blade_1H</name>
+	</effect>
+	<effect id="266">
+		<name>Reaver_Sword_1H</name>
+	</effect>
+	<effect id="267">
+		<name>palladin_Slash_1h</name>
+	</effect>
+	<effect id="268">
+		<name>palladin_Thrust_2H</name>
+	</effect>
+	<effect id="269">
+		<name>palladin_Thrust_1H</name>
+	</effect>
+	<effect id="270">
+		<name>Reaver_Thrust_1H</name>
+	</effect>
+	<effect id="271">
+		<name>Reaver_Crush_1H</name>
+	</effect>
+	<effect id="272">
+		<name>Warrior_Sword_1H</name>
+	</effect>
+	<effect id="273">
+		<name>Warrior_Hammer_2H</name>
+	</effect>
+	<effect id="274">
+		<name>Warrior_Hammer_1H</name>
+	</effect>
+	<effect id="275">
+		<name>Warrior_Axe_2H</name>
+	</effect>
+	<effect id="276">
+		<name>Warrior_Sword_2H</name>
+	</effect>
+	<effect id="277">
+		<name>Reaver_Flex_1H</name>
+	</effect>
+	<effect id="278">
+		<name>palladin_Crush_2H</name>
+	</effect>
+	<effect id="279">
+		<name>palladin_Crush_1H</name>
+	</effect>
+	<effect id="280">
+		<name>Armsman_Thrust_2H</name>
+	</effect>
+	<effect id="281">
+		<name>Armsman_Crush_1H</name>
+	</effect>
+	<effect id="282">
+		<name>Armsman_Crush_2H</name>
+	</effect>
+	<effect id="283">
+		<name>Armsman_Pole_S</name>
+	</effect>
+	<effect id="284">
+		<name>Armsman_Sword_1H</name>
+	</effect>
+	<effect id="285">
+		<name>Armsman_Sword_2H</name>
+	</effect>
+	<effect id="286">
+		<name>Armsman_Thrust_1H</name>
+	</effect>
+	<effect id="287">
+		<name>Mercenary_T</name>
+	</effect>
+	<effect id="288">
+		<name>Mercenary_C</name>
+	</effect>
+	<effect id="289">
+		<name>Mercenary_S</name>
+	</effect>
+	<effect id="290">
+		<name>minstrel_T</name>
+	</effect>
+	<effect id="291">
+		<name>minstrel_S</name>
+	</effect>
+	<effect id="292">
+		<name>minstrel_H</name>
+	</effect>
+	<effect id="293">
+		<name>infiltrator_T</name>
+	</effect>
+	<effect id="294">
+		<name>Infiltrator_S</name>
+	</effect>
+	<effect id="295">
+		<name>sfx_epic_wpn_Armsman_Pole_C</name>
+	</effect>
+	<effect id="296">
+		<name>Heretic_flexS_1H</name>
+	</effect>
+	<effect id="297">
+		<name>Heretic_crush_1H</name>
+	</effect>
+	<effect id="298">
+		<name>Heretic_flexC_1H</name>
+	</effect>
+	<effect id="299">
+		<name>sfx_epic_wpn_cleric_C</name>
+	</effect>
+	<effect id="300">
+		<name>Scout_Bow</name>
+	</effect>
+	<effect id="301">
+		<name>Scout_T</name>
+	</effect>
+	<effect id="302">
+		<name>Scout_S</name>
+	</effect>
+	<effect id="303">
+		<name>sfx_epic_wpn_skald_axe_1h</name>
+	</effect>
+	<effect id="304">
+		<name>sfx_epic_wpn_skald_hammer_1h</name>
+	</effect>
+	<effect id="305">
+		<name>sfx_epic_wpn_skald_sword_1h</name>
+	</effect>
+	<effect id="306">
+		<name>sfx_epic_wpn_skald_hammer_2h</name>
+	</effect>
+	<effect id="307">
+		<name>sfx_epic_wpn_skald_axe_2h</name>
+	</effect>
+	<effect id="308">
+		<name>sfx_epic_wpn_skald_sword_2h</name>
+	</effect>
+	<effect id="309">
+		<name>sfx_epic_Druid_Crush_1H</name>
+	</effect>
+	<effect id="310">
+		<name>sfx_epic_Druid_Blade_1H</name>
+	</effect>
+	<effect id="311">
+		<name>sfx_epic_wpn_savage_sword_1h</name>
+	</effect>
+	<effect id="312">
+		<name>sfx_epic_wpn_savage_sword_2h</name>
+	</effect>
+	<effect id="313">
+		<name>sfx_epic_wpn_savage_axe_1h</name>
+	</effect>
+	<effect id="314">
+		<name>sfx_epic_Warden_Blade_1H</name>
+	</effect>
+	<effect id="315">
+		<name>sfx_epic_Warden_Crush_1H</name>
+	</effect>
+	<effect id="316">
+		<name>sfx_epic_Friar_Staff&amp;Crush</name>
+	</effect>
+	<effect id="317">
+		<name>sfx_epic_Necromancer_Staff</name>
+	</effect>
+	<effect id="318">
+		<name>sfx_epic_wpn_savage_axe_2h</name>
+	</effect>
+	<effect id="319">
+		<name>sfx_epic_wpn_savage_hth</name>
+	</effect>
+	<effect id="320">
+		<name>sfx_epic_wpn_savage_hammer_1h</name>
+	</effect>
+	<effect id="321">
+		<name>sfx_epic_wpn_savage_hammer_2h</name>
+	</effect>
+	<effect id="322">
+		<name>sfx_epic_wpn_valkyrie_sword_1h</name>
+	</effect>
+	<effect id="323">
+		<name>sfx_epic_wpn_valkyrie_sword_2h</name>
+	</effect>
+	<effect id="324">
+		<name>sfx_epic_Ranger_Bow</name>
+	</effect>
+	<effect id="325">
+		<name>sfx_epic_Ranger_Pierce_1H</name>
+	</effect>
+	<effect id="326">
+		<name>sfx_epic_Ranger_Slash_1H</name>
+	</effect>
+	<effect id="327">
+		<name>sfx_epic_wpn_valkyrie_spear</name>
+	</effect>
+	<effect id="328">
+		<name>sfx_epic_wpn_Sorcerer_St</name>
+	</effect>
+	<effect id="329">
+		<name>sfx_epic_wpn_hunter_sword_2h</name>
+	</effect>
+	<effect id="330">
+		<name>sfx_epic_wpn_hunter_sword_1H</name>
+	</effect>
+	<effect id="331">
+		<name>sfx_epic_wpn_hunter_spear</name>
+	</effect>
+	<effect id="332">
+		<name>sfx_epic_wpn_hunter_bow</name>
+	</effect>
+	<effect id="333">
+		<name>sfx_epic_Blademaster_Pierce_1H</name>
+	</effect>
+	<effect id="334">
+		<name>sfx_epic_Blademaster_Slash_1H</name>
+	</effect>
+	<effect id="335">
+		<name>sfx_epic_Blademaster_Crush_1H</name>
+	</effect>
+	<effect id="336">
+		<name>sfx_epic_wpn_thane_sword_2h</name>
+	</effect>
+	<effect id="337">
+		<name>sfx_epic_wpn_thane_sword_1h</name>
+	</effect>
+	<effect id="338">
+		<name>sfx_epic_wpn_thane_axe_2h</name>
+	</effect>
+	<effect id="339">
+		<name>sfx_epic_wpn_thane_axe_1h</name>
+	</effect>
+	<effect id="340">
+		<name>sfx_epic_Bainshee_Staff</name>
+	</effect>
+	<effect id="341">
+		<name>sfx_epic_Animist_Staff</name>
+	</effect>
+	<effect id="342">
+		<name>sfx_epic_Eldritch_Staff</name>
+	</effect>
+	<effect id="343">
+		<name>sfx_epic_Enchanter_Staff</name>
+	</effect>
+	<effect id="344">
+		<name>sfx_epic_wpn_thane_hammer_2h</name>
+	</effect>
+	<effect id="345">
+		<name>sfx_epic_wpn_thane_hammer_1h</name>
+	</effect>
+	<effect id="346">
+		<name>sfx_epic_wpn_shadowblade_sword_2h</name>
+	</effect>
+	<effect id="347">
+		<name>sfx_epic_wpn_shadowblade_sword_1h</name>
+	</effect>
+	<effect id="348">
+		<name>sfx_epic_Mentalist_Staff</name>
+	</effect>
+	<effect id="349">
+		<name>sfx_epic_Valewalker_Sy</name>
+	</effect>
+	<effect id="350">
+		<name>sfx_epic_wpn_shadowblade_axe_1h</name>
+	</effect>
+	<effect id="351">
+		<name>sfx_epic_wpn_shadowblade_axe_2h</name>
+	</effect>
+	<effect id="352">
+		<name>sfx_epic_Healer_Crush_2H</name>
+	</effect>
+	<effect id="353">
+		<name>sfx_epic_Healer_Crush_1H</name>
+	</effect>
+	<effect id="354">
+		<name>sfx_epic_Spiritmaster_Staff</name>
+	</effect>
+	<effect id="355">
+		<name>sfx_epic_wpn_Cabalist_st</name>
+	</effect>
+	<effect id="356">
+		<name>sfx_epic_wpn_Theurgist_St</name>
+	</effect>
+	<effect id="357">
+		<name>sfx_epic_wpn_Vampiir_T</name>
+	</effect>
+	<effect id="358">
+		<name>sfx_epic_wpn_Wizard_St</name>
+	</effect>
+	<effect id="359">
+		<name>sfx_epic_wpn_Runemaster_St</name>
+	</effect>
+	<effect id="360">
+		<name>sfx_epic_Shaman_Crush_1H</name>
+	</effect>
+	<effect id="361">
+		<name>sfx_epic_Bonedancer_Staff</name>
+	</effect>
+	<effect id="362">
+		<name>sfx_epic_Warlock_Staff</name>
+	</effect>
+	<effect id="363">
+		<name>sfx_epic_Shaman_Crush_2H</name>
+	</effect>
+	<effect id="364">
+		<name>sfx_epic_wpn_Champion_Slash_2h</name>
+	</effect>
+	<effect id="365">
+		<name>sfx_epic_wpn_Champion_Slash_1h</name>
+	</effect>
+	<effect id="366">
+		<name>sfx_epic_wpn_Champion_Pierce_1h</name>
+	</effect>
+	<effect id="367">
+		<name>sfx_epic_wpn_Champion_Crush_2h</name>
+	</effect>
+	<effect id="368">
+		<name>sfx_epic_wpn_Champion_Crush_1h</name>
+	</effect>
+	<effect id="369">
+		<name>sfx_epic_wpn_nightshade_T</name>
+	</effect>
+	<effect id="370">
+		<name>sfx_epic_wpn_nightshade_S</name>
+	</effect>
+	<effect id="371">
+		<name>sfx_epic_wpn_berserker_axe_2h</name>
+	</effect>
+	<effect id="372">
+		<name>sfx_epic_wpn_berserker_axe_1h</name>
+	</effect>
+	<effect id="373">
+		<name>sfx_epic_wpn_berserker_sword_2h</name>
+	</effect>
+	<effect id="374">
+		<name>sfx_epic_wpn_berserker_sword_1h</name>
+	</effect>
+	<effect id="375">
+		<name>sfx_epic_wpn_berserker_hammer_2h</name>
+	</effect>
+	<effect id="376">
+		<name>sfx_epic_wpn_berserker_hammer_1h</name>
+	</effect>
+	<effect id="377">
+		<name>sfx_epic_wpn_Bard_Blade_1H</name>
+	</effect>
+	<effect id="378">
+		<name>sfx_epic_wpn_Bard_Crush_1H</name>
+	</effect>
+	<effect id="379">
+		<name>sfx_epic_wpn_Bard_Harp</name>
+	</effect>
+  <effect id="380">
+    <name>sfx_AlbMauler_Staff01</name>
+  </effect>
+  <effect id="381">
+    <name>sfx_HibMauler_Staff01</name>
+  </effect>
+  <effect id="382">
+    <name>sfx_MidMauler_Staff01</name>
+  </effect>
+  <effect id="383">
+    <name>sfx_MidMauler_Punch01</name>
+  </effect>
+  <effect id="384">
+    <name>sfx_HibMauler_Punch01</name>
+  </effect>
+  <effect id="385">
+    <name>sfx_AlbMauler_Punch01</name>
+  </effect>
+  <effect id="386">
+    <name>VFX_epic_DF_wpn_Armsman_thrust_2H01</name>
+  </effect>
+  <effect id="387">
+    <name>VFX_epic_DF_wpn_Armsman_Crush_1H01</name>
+  </effect>
+  <effect id="388">
+    <name>VFX_epic_DF_wpn_Armsman_Crush_2H01</name>
+  </effect>
+  <effect id="389">
+    <name>VFX_epic_DF_wpn_Armsman_pole_C01</name>
+  </effect>
+  <effect id="390">
+    <name>VFX_epic_DF_wpn_Armsman_pole_S01</name>
+  </effect>
+  <effect id="391">
+    <name>VFX_epic_DF_wpn_Armsman_sword_1H01</name>
+  </effect>
+  <effect id="392">
+    <name>VFX_epic_DF_wpn_Armsman_sword_2H01</name>
+  </effect>
+  <effect id="393">
+    <name>VFX_epic_DF_wpn_Armsman_thrust_1H01</name>
+  </effect>
+  <effect id="394">
+    <name>VFX_Epic_wpn_DF_Paladin_thrust_2H</name>
+  </effect>
+  <effect id="395">
+    <name>VFX_Epic_wpn_DF_Paladin_thrust_1H</name>
+  </effect>
+  <effect id="396">
+    <name>VFX_Epic_wpn_DF_Paladin_slash_2H</name>
+  </effect>
+  <effect id="397">
+    <name>VFX_Epic_wpn_DF_Paladin_slash_1H</name>
+  </effect>
+  <effect id="398">
+    <name>VFX_Epic_wpn_DF_Paladin_crush_2H</name>
+  </effect>
+  <effect id="399">
+    <name>VFX_Epic_wpn_DF_Paladin_crush_1H</name>
+  </effect>
+  <effect id="400">
+    <name>VFX_Epic_wpn_DF_Eldritch_Epic_Staff</name>
+  </effect>
+  <effect id="401">
+    <name>VFX_Epic_wpn_DF_Enchanter_Epic_Staff</name>
+  </effect>
+  <effect id="402">
+    <name>VFX_Epic_wpn_DF_Mentalist_Epic_Staff</name>
+  </effect>
+  <effect id="403">
+    <name>VFX_Epic_wpn_DF_Animist_Epic_Staff</name>
+  </effect>
+  <effect id="404">
+    <name>VFX_Epic_wpn_DF_Bainshee_Epic_Staff</name>
+  </effect>
+  <effect id="405">
+    <name>VFX_Epic_wpn_DF_Valewalker_Epic_Scythe</name>
+  </effect>
+  <effect id="406">
+    <name>VFX_Epic_wpn_DF_Vampiir_Epic_Pierce</name>
+  </effect>
+  <effect id="407">
+    <name>VFX_Epic_wpn_DF_Nightshade_Epic_Blade</name>
+  </effect>
+  <effect id="408">
+    <name>VFX_Epic_wpn_DF_Nightshade_Epic_Pierce</name>
+  </effect>
+  <effect id="409">
+    <name>VFX_Epic_wpn_DF_Bard_Epic_Blade</name>
+  </effect>
+  <effect id="410">
+    <name>VFX_Epic_wpn_DF_Bard_Epic_Blunt</name>
+  </effect>
+  <effect id="411">
+    <name>VFX_Epic_wpn_DF_Bard_Epic_Drum</name>
+  </effect>
+  <effect id="412">
+    <name>VFX_Epic_wpn_DF_Bard_Epic_Flute</name>
+  </effect>
+  <effect id="413">
+    <name>VFX_Epic_wpn_DF_Bard_Epic_Harp</name>
+  </effect>
+  <effect id="414">
+    <name>VFX_Epic_wpn_DF_Bard_Epic_Lute</name>
+  </effect>
+  <effect id="415">
+    <name>VFX_Epic_wpn_DF_Ranger_Epic_Pierce</name>
+  </effect>
+  <effect id="416">
+    <name>VFX_Epic_wpn_DF_Ranger_Epic_Blade</name>
+  </effect>
+  <effect id="417">
+    <name>VFX_Epic_wpn_DF_Hib_Recurve_Bow</name>
+  </effect>
+  <effect id="418">
+    <name>VFX_Epic_wpn_DF_Blademaster_Epic_Blade</name>
+  </effect>
+  <effect id="419">
+    <name>VFX_Epic_wpn_DF_Blademaster_Epic_Pierce</name>
+  </effect>
+  <effect id="420">
+    <name>VFX_Epic_wpn_DF_Blademaster_Epic_Blunt</name>
+  </effect>
+  <effect id="421">
+    <name>VFX_Epic_wpn_DF_Druid_Epic_Blade</name>
+  </effect>
+  <effect id="422">
+    <name>VFX_Epic_wpn_DF_Druid_Epic_Blunt</name>
+  </effect>
+  <effect id="423">
+    <name>VFX_Epic_wpn_DF_Warden_Epic_Blade</name>
+  </effect>
+  <effect id="424">
+    <name>VFX_Epic_wpn_DF_Warden_Epic_Blunt</name>
+  </effect>
+  <effect id="425">
+    <name>VFX_Epic_wpn_DF_Champion_Epic_Blade</name>
+  </effect>
+  <effect id="426">
+    <name>VFX_Epic_wpn_DF_Champion_Epic_Pierce</name>
+  </effect>
+  <effect id="427">
+    <name>VFX_Epic_wpn_DF_Champion_Epic_Blunt</name>
+  </effect>
+  <effect id="428">
+    <name>VFX_Epic_wpn_DF_Champion_Epic_Large_Blade</name>
+  </effect>
+  <effect id="429">
+    <name>VFX_Epic_wpn_DF_Champion_Epic_Large_Blunt</name>
+  </effect>
+  <effect id="430">
+    <name>VFX_Epic_wpn_DF_Hero_Epic_Blade</name>
+  </effect>
+  <effect id="431">
+    <name>VFX_Epic_wpn_DF_Hero_Epic_Pierce</name>
+  </effect>
+  <effect id="432">
+    <name>VFX_Epic_wpn_DF_Hero_Epic_Blunt</name>
+  </effect>
+  <effect id="433">
+    <name>VFX_Epic_wpn_DF_Hero_Epic_Large_Blade</name>
+  </effect>
+  <effect id="434">
+    <name>VFX_Epic_wpn_DF_Hero_Epic_Large_Blunt</name>
+  </effect>
+  <effect id="435">
+    <name>VFX_Epic_wpn_DF_Hero_Epic_Large_Pierce</name>
+  </effect>
+  <effect id="436">
+    <name>VFX_Epic_wpn_DF_Hero_Epic_Celtic_Spear</name>
+  </effect>
+  <effect id="437">
+    <name>VFX_Epic_wpn_DF_Hero_Epic_Celtic_2H_Spear</name>
+  </effect>
+  <effect id="438">
+    <name>VFX_Epic_wpn_DF_Cabalist_Epic_Staff</name>
+  </effect>
+  <effect id="439">
+    <name>VFX_Epic_wpn_DF_Sorcerer_Epic_Staff</name>
+  </effect>
+  <effect id="440">
+    <name>VFX_Epic_wpn_DF_Theurgist_Epic_Staff</name>
+  </effect>
+  <effect id="441">
+    <name>VFX_Epic_wpn_DF_Wizard_Epic_Staff</name>
+  </effect>
+  <effect id="442">
+    <name>VFX_Epic_wpn_DF_Necromancer_Epic_Staff</name>
+  </effect>
+  <effect id="443">
+    <name>VFX_Epic_wpn_DF_Infiltrator_Epic_Slash</name>
+  </effect>
+  <effect id="444">
+    <name>VFX_Epic_wpn_DF_Infiltrator_Epic_Thrust</name>
+  </effect>
+  <effect id="445">
+    <name>VFX_Epic_wpn_DF_Friar_Epic_Staff</name>
+  </effect>
+  <effect id="446">
+    <name>VFX_Epic_wpn_DF_Friar_Epic_Crush</name>
+  </effect>
+  <effect id="447">
+    <name>VFX_Epic_wpn_DF_Scout_Epic_Slash</name>
+  </effect>
+  <effect id="448">
+    <name>VFX_Epic_wpn_DF_Scout_Epic_Thrust</name>
+  </effect>
+  <effect id="449">
+    <name>VFX_Epic_wpn_DF_Scout_Epic_Longbow</name>
+  </effect>
+  <effect id="450">
+    <name>VFX_Epic_wpn_DF_Minstrel_Epic_Slash</name>
+  </effect>
+  <effect id="451">
+    <name>VFX_Epic_wpn_DF_Minstrel_Epic_Thrust</name>
+  </effect>
+  <effect id="452">
+    <name>VFX_Epic_wpn_DF_Minstrel_Epic_Drum</name>
+  </effect>
+  <effect id="453">
+    <name>VFX_Epic_wpn_DF_Minstrel_Epic_Flute</name>
+  </effect>
+  <effect id="454">
+    <name>VFX_Epic_wpn_DF_Minstrel_Epic_Harp</name>
+  </effect>
+  <effect id="455">
+    <name>VFX_Epic_wpn_DF_Minstrel_Epic_Lute</name>
+  </effect>
+  <effect id="456">
+    <name>VFX_Epic_wpn_DF_Cleric_Epic_Crush</name>
+  </effect>
+  <effect id="457">
+    <name>VFX_Epic_wpn_DF_Mercenary_Epic_Crush</name>
+  </effect>
+  <effect id="458">
+    <name>VFX_Epic_wpn_DF_Mercenary_Epic_Slash</name>
+  </effect>
+  <effect id="459">
+    <name>VFX_Epic_wpn_DF_Mercenary_Epic_Thrust</name>
+  </effect>
+  <effect id="460">
+    <name>VFX_Epic_wpn_DF_Heretic_Epic_Crush</name>
+  </effect>
+  <effect id="461">
+    <name>VFX_Epic_wpn_DF_Heretic_Epic_Flex_Crush</name>
+  </effect>
+  <effect id="462">
+    <name>VFX_Epic_wpn_DF_Heretic_Epic_Flex_Slash</name>
+  </effect>
+  <effect id="463">
+    <name>VFX_Epic_wpn_DF_Reaver_Epic_Crush</name>
+  </effect>
+  <effect id="464">
+    <name>VFX_Epic_wpn_DF_Reaver_Epic_Slash</name>
+  </effect>
+  <effect id="465">
+    <name>VFX_Epic_wpn_DF_Reaver_Epic_Thrust</name>
+  </effect>
+  <effect id="466">
+    <name>VFX_Epic_wpn_DF_Reaver_Epic_Flex_Crush</name>
+  </effect>
+  <effect id="467">
+    <name>VFX_Epic_wpn_DF_Reaver_Epic_Flex_Crush</name>
+  </effect>
+  <effect id="468">
+    <name>VFX_Epic_wpn_DF_Runemaster_Epic_Staff</name>
+  </effect>
+  <effect id="469">
+    <name>VFX_Epic_wpn_DF_Spirit_Master_Epic_Staff</name>
+  </effect>
+  <effect id="470">
+    <name>VFX_Epic_wpn_DF_Bonedancer_Epic_Staff</name>
+  </effect>
+  <effect id="471">
+    <name>VFX_Epic_wpn_DF_Warlock_Epic_Staff</name>
+  </effect>
+  <effect id="472">
+    <name>VFX_Epic_wpn_DF_Shadowblade_Epic_Sword</name>
+  </effect>
+  <effect id="473">
+    <name>VFX_Epic_wpn_DF_Shadowblade_Epic_Two_Handed_Sword</name>
+  </effect>
+  <effect id="474">
+    <name>VFX_Epic_wpn_DF_Shadowblade_Epic_Axe</name>
+  </effect>
+  <effect id="475">
+    <name>VFX_Epic_wpn_DF_Shadowblade_Epic_Two_Handed_Axe</name>
+  </effect>
+  <effect id="476">
+    <name>VFX_Epic_wpn_DF_Hunter_Epic_Sword</name>
+  </effect>
+  <effect id="477">
+    <name>VFX_Epic_wpn_DF_Hunter_Epic_Two_Handed_Sword</name>
+  </effect>
+  <effect id="478">
+    <name>VFX_Epic_wpn_DF_Hunter_Epic_Spear_Thrust</name>
+  </effect>
+  <effect id="479">
+    <name>VFX_Epic_wpn_DF_Hunter_Epic_Bow</name>
+  </effect>
+  <effect id="480">
+    <name>VFX_Epic_wpn_DF_Berzerker_Epic_Axe</name>
+  </effect>
+  <effect id="481">
+    <name>VFX_Epic_wpn_DF_Berzerker_Epic_Two_Handed_Axe</name>
+  </effect>
+  <effect id="482">
+    <name>VFX_Epic_wpn_DF_Berzerker_Epic_Hammer</name>
+  </effect>
+  <effect id="483">
+    <name>VFX_Epic_wpn_DF_Berzerker_Epic_Two_Handed_Hammer</name>
+  </effect>
+  <effect id="484">
+    <name>VFX_Epic_wpn_DF_Berzerker_Epic_Sword</name>
+  </effect>
+  <effect id="485">
+    <name>VFX_Epic_wpn_DF_Berzerker_Epic_Two_Handed_Sword</name>
+  </effect>
+  <effect id="486">
+    <name>VFX_Epic_wpn_DF_Savage_Epic_Axe</name>
+  </effect>
+  <effect id="487">
+    <name>VFX_Epic_wpn_DF_Savage_Epic_Two_Handed_Axe</name>
+  </effect>
+  <effect id="488">
+    <name>VFX_Epic_wpn_DF_Savage_Epic_Hammer</name>
+  </effect>
+  <effect id="489">
+    <name>VFX_Epic_wpn_DF_Savage_Epic_Two_Handed_Hammer</name>
+  </effect>
+  <effect id="490">
+    <name>VFX_Epic_wpn_DF_Savage_Epic_Sword</name>
+  </effect>
+  <effect id="491">
+    <name>VFX_Epic_wpn_DF_Savage_Epic_Two_Handed_Sword</name>
+  </effect>
+  <effect id="492">
+    <name>VFX_Epic_wpn_DF_Savage_Epic_Hand_to_Hand_Slash</name>
+  </effect>
+  <effect id="493">
+    <name>VFX_Epic_wpn_DF_Savage_Epic_Hand_to_Hand_Crush</name>
+  </effect>
+  <effect id="494">
+    <name>VFX_Epic_wpn_DF_Healer_Epic_Hammer</name>
+  </effect>
+  <effect id="495">
+    <name>VFX_Epic_wpn_DF_Healer_Epic_Two_Handed_Hammer</name>
+  </effect>
+  <effect id="496">
+    <name>VFX_Epic_wpn_DF_Shaman_Epic_Hammer</name>
+  </effect>
+  <effect id="497">
+    <name>VFX_Epic_wpn_DF_Shaman_Epic_Two_Handed_Hammer</name>
+  </effect>
+  <effect id="498">
+    <name>VFX_Epic_wpn_DF_Skald_Epic_Axe</name>
+  </effect>
+  <effect id="499">
+    <name>VFX_Epic_wpn_DF_Skald_Epic_Two_Handed_Axe</name>
+  </effect>
+  <effect id="500">
+    <name>VFX_Epic_wpn_DF_Skald_Epic_Hammer</name>
+  </effect>
+  <effect id="501">
+    <name>VFX_Epic_wpn_DF_Skald_Epic_Two_Handed_Hammer</name>
+  </effect>
+  <effect id="502">
+    <name>VFX_Epic_wpn_DF_Skald_Epic_Sword</name>
+  </effect>
+  <effect id="503">
+    <name>VFX_Epic_wpn_DF_Skald_Epic_Two_Handed_Sword</name>
+  </effect>
+  <effect id="504">
+    <name>VFX_Epic_wpn_DF_Thane_Epic_Axe</name>
+  </effect>
+  <effect id="505">
+    <name>VFX_Epic_wpn_DF_Thane_Epic_Two_Handed_Axe</name>
+  </effect>
+  <effect id="506">
+    <name>VFX_Epic_wpn_DF_Thane_Epic_Hammer</name>
+  </effect>
+  <effect id="507">
+    <name>VFX_Epic_wpn_DF_Thane_Epic_Two_Handed_Hammer</name>
+  </effect>
+  <effect id="508">
+    <name>VFX_Epic_wpn_DF_Thane_Epic_Sword</name>
+  </effect>
+  <effect id="509">
+    <name>VFX_Epic_wpn_DF_Thane_Epic_Two_Handed_Sword</name>
+  </effect>
+  <effect id="510">
+    <name>VFX_Epic_wpn_DF_Warrior_Epic_Axe</name>
+  </effect>
+  <effect id="511">
+    <name>VFX_Epic_wpn_DF_Warrior_Epic_Two_Handed_Axe</name>
+  </effect>
+  <effect id="512">
+    <name>VFX_Epic_wpn_DF_Warrior_Epic_Hammer</name>
+  </effect>
+  <effect id="513">
+    <name>VFX_Epic_wpn_DF_Warrior_Epic_Two_Handed_Hammer</name>
+  </effect>
+  <effect id="514">
+    <name>VFX_Epic_wpn_DF_Warrior_Epic_Sword</name>
+  </effect>
+  <effect id="515">
+    <name>VFX_Epic_wpn_DF_Warrior_Epic_Two_Handed_Sword</name>
+  </effect>
+  <effect id="516">
+    <name>VFX_Epic_wpn_DF_Valkyrie_Epic_Sword</name>
+  </effect>
+  <effect id="517">
+    <name>VFX_Epic_wpn_DF_Valkyrie_Epic_Two_Handed_Sword</name>
+  </effect>
+  <effect id="518">
+    <name>VFX_Epic_wpn_DF_Valkyrie_Epic_Spear_Thrust</name>
+  </effect>
+  <effect id="519">
+    <name>VFX_Epic_wpn_DF_Valkyrie_Epic_Spear_Slash</name>
+  </effect>
+  <effect id="520">
+    <name>VFX_Championweapon_DF_MidMauler_Staff01</name>
+  </effect>
+  <effect id="521">
+    <name>VFX_Championweapon_DF_AlbMauler_Punch01</name>
+  </effect>
+  <effect id="522">
+    <name>VFX_Championweapon_DF_AlbMauler_Staff01</name>
+  </effect>
+  <effect id="523">
+    <name>VFX_Championweapon_DF_HibMauler_Punch01</name>
+  </effect>
+  <effect id="524">
+    <name>VFX_Championweapon_DF_HibMauler_Staff01</name>
+  </effect>
+  <effect id="525">
+    <name>VFX_Championweapon_DF_MidMauler_Punch01</name>
+  </effect>
+  <effect id="526">
+    <name>B_2h_Coffinhammer01_VFX_Energy</name>
+  </effect>
+  <effect id="527">
+    <name>B_2h_InquisitorsPick01_VFX_Energy</name>
+  </effect>
+  <effect id="528">
+    <name>B_2h_RoyalScimitar01_VFX_Energy</name>
+  </effect>
+  <effect id="529">
+    <name>B_bo_SaracenShortbow01_VFX_Energy</name>
+  </effect>
+  <effect id="530">
+    <name>B_bo_ThornBow01_VFX_Energy</name>
+  </effect>
+  <effect id="531">
+    <name>B_Cr_BishopsMace01_VFX_Energy</name>
+  </effect>
+  <effect id="532">
+    <name>B_Cr_CoffinMace01_VFX_Energy</name>
+  </effect>
+  <effect id="533">
+    <name>B_flx_PickFlail01_VFX_Energy</name>
+  </effect>
+  <effect id="534">
+    <name>B_flx_SpikedFlail01_VFX_Energy</name>
+  </effect>
+  <effect id="535">
+    <name>B_Po_MilitaryFork01_VFX_Energy</name>
+  </effect>
+  <effect id="536">
+    <name>B_Po_SaracenGlaive01_VFX_Energy</name>
+  </effect>
+  <effect id="537">
+    <name>B_Po_TallHammer01_VFX_Energy</name>
+  </effect>
+  <effect id="538">
+    <name>B_sl_Cinquedea01_VFX_Energy</name>
+  </effect>
+  <effect id="539">
+    <name>B_sl_Falchion01_VFX_Energy</name>
+  </effect>
+  <effect id="540">
+    <name>b_st_magestaff01_VFX_Energy</name>
+  </effect>
+  <effect id="541">
+    <name>B_st_SpikedStaffMace01_VFX_Energy</name>
+  </effect>
+  <effect id="542">
+    <name>B_th_DuelistsDagger01_VFX_Energy</name>
+  </effect>
+  <effect id="543">
+    <name>B_th_DuelistsRapier01_VFX_Energy</name>
+  </effect>
+  <effect id="544">
+    <name>B_xbo_SkinnersCrossbow01_VFX_Energy</name>
+  </effect>
+  <effect id="545">
+    <name>H_1h_FirbolgLongSword01_VFX_Energy</name>
+  </effect>
+  <effect id="546">
+    <name>H_1h_FirbolgShortSword01_VFX_Energy</name>
+  </effect>
+  <effect id="547">
+    <name>H_2h_FirbolgHammer01_VFX_Energy</name>
+  </effect>
+  <effect id="548">
+    <name>H_2h_FirbolgTrollSplitter01_VFX_Energy</name>
+  </effect>
+  <effect id="549">
+    <name>H_bl_CelticHammer01_VFX_Energy</name>
+  </effect>
+  <effect id="550">
+    <name>H_bl_FirbolgHammer01_VFX_Energy</name>
+  </effect>
+  <effect id="551">
+    <name>H_bo_ElvenLongbow01_VFX_Energy</name>
+  </effect>
+  <effect id="552">
+    <name>H_bo_ElvenShortBow01_VFX_Energy</name>
+  </effect>
+  <effect id="553">
+    <name>H_sc_FirbolgScythe01_VFX_Energy</name>
+  </effect>
+  <effect id="554">
+    <name>H_Sp_FirbolgSpear01_VFX_Energy</name>
+  </effect>
+  <effect id="555">
+    <name>h_st_staff07_VFX_Energy</name>
+  </effect>
+  <effect id="556">
+    <name>h_st_staff09_VFX_Energy</name>
+  </effect>
+  <effect id="557">
+    <name>H_th_FirbolgAdze01_VFX_Energy</name>
+  </effect>
+  <effect id="558">
+    <name>H_th_WarAdze01_VFX_Energy</name>
+  </effect>
+  <effect id="559">
+    <name>N_1h_DwarvenWarAxe01_VFX_Energy</name>
+  </effect>
+  <effect id="560">
+    <name>N_1h_TrollBroadSword01_VFX_Energy</name>
+  </effect>
+  <effect id="561">
+    <name>N_1h_TrollWarAxe01_VFX_Energy</name>
+  </effect>
+  <effect id="562">
+    <name>N_1h_TrollWarHammer01_VFX_Energy</name>
+  </effect>
+  <effect id="563">
+    <name>N_2h_DwarvenSpear01_VFX_Energy</name>
+  </effect>
+  <effect id="564">
+    <name>N_2h_KoboldGreatAxe01_VFX_Energy</name>
+  </effect>
+  <effect id="565">
+    <name>N_2h_KoboldGreatClub01_VFX_Energy</name>
+  </effect>
+  <effect id="566">
+    <name>N_2h_KoboldGreatSword01_VFX_Energy</name>
+  </effect>
+  <effect id="567">
+    <name>N_bo_VikingBeardedBow01_VFX_Energy</name>
+  </effect>
+  <effect id="568">
+    <name>N_hth_GreatBladedClawGreave01_VFX_Energy</name>
+  </effect>
+  <effect id="569">
+    <name>N_hth_GreatBladedFangGreave01_VFX_Energy</name>
+  </effect>
+  <effect id="570">
+    <name>B_2h_Coffinhammer01_VFX_Body</name>
+  </effect>
+  <effect id="571">
+    <name>B_2h_InquisitorsPick01_VFX_Body</name>
+  </effect>
+  <effect id="572">
+    <name>B_2h_RoyalScimitar01_VFX_Body</name>
+  </effect>
+  <effect id="573">
+    <name>B_bo_SaracenShortbow01_VFX_Body</name>
+  </effect>
+  <effect id="574">
+    <name>B_bo_ThornBow01_VFX_Body</name>
+  </effect>
+  <effect id="575">
+    <name>B_Cr_BishopsMace01_VFX_Body</name>
+  </effect>
+  <effect id="576">
+    <name>B_Cr_CoffinMace01_VFX_Body</name>
+  </effect>
+  <effect id="577">
+    <name>B_flx_PickFlail01_VFX_Body</name>
+  </effect>
+  <effect id="578">
+    <name>B_flx_SpikedFlail01_VFX_Body</name>
+  </effect>
+  <effect id="579">
+    <name>B_Po_MilitaryFork01_VFX_Body</name>
+  </effect>
+  <effect id="580">
+    <name>B_Po_SaracenGlaive01_VFX_Body</name>
+  </effect>
+  <effect id="581">
+    <name>B_Po_TallHammer01_VFX_Body</name>
+  </effect>
+  <effect id="582">
+    <name>B_sl_Cinquedea01_VFX_Body</name>
+  </effect>
+  <effect id="583">
+    <name>B_sl_Falchion01_VFX_Body</name>
+  </effect>
+  <effect id="584">
+    <name>b_st_magestaff01_VFX_Body</name>
+  </effect>
+  <effect id="585">
+    <name>B_st_SpikedStaffMace01_VFX_Body</name>
+  </effect>
+  <effect id="586">
+    <name>B_th_DuelistsDagger01_VFX_Body</name>
+  </effect>
+  <effect id="587">
+    <name>B_th_DuelistsRapier01_VFX_Body</name>
+  </effect>
+  <effect id="588">
+    <name>B_xbo_SkinnersCrossbow01_VFX_Body</name>
+  </effect>
+  <effect id="589">
+    <name>H_1h_FirbolgLongSword01_VFX_Body</name>
+  </effect>
+  <effect id="590">
+    <name>H_1h_FirbolgShortSword01_VFX_Body</name>
+  </effect>
+  <effect id="591">
+    <name>H_2h_FirbolgHammer01_VFX_Body</name>
+  </effect>
+  <effect id="592">
+    <name>H_2h_FirbolgTrollSplitter01_VFX_Body</name>
+  </effect>
+  <effect id="593">
+    <name>H_bl_CelticHammer01_VFX_Body</name>
+  </effect>
+  <effect id="594">
+    <name>H_bl_FirbolgHammer01_VFX_Body</name>
+  </effect>
+  <effect id="595">
+    <name>H_bo_ElvenLongbow01_VFX_Body</name>
+  </effect>
+  <effect id="596">
+    <name>H_bo_ElvenShortBow01_VFX_Body</name>
+  </effect>
+  <effect id="597">
+    <name>H_sc_FirbolgScythe01_VFX_Body</name>
+  </effect>
+  <effect id="598">
+    <name>H_Sp_FirbolgSpear01_VFX_Body</name>
+  </effect>
+  <effect id="599">
+    <name>h_st_staff07_VFX_Body</name>
+  </effect>
+  <effect id="600">
+    <name>h_st_staff09_VFX_Body</name>
+  </effect>
+  <effect id="601">
+    <name>H_th_FirbolgAdze01_VFX_Body</name>
+  </effect>
+  <effect id="602">
+    <name>H_th_WarAdze01_VFX_Body</name>
+  </effect>
+  <effect id="603">
+    <name>N_1h_DwarvenWarAxe01_VFX_Body</name>
+  </effect>
+  <effect id="604">
+    <name>N_1h_TrollBroadSword01_VFX_Body</name>
+  </effect>
+  <effect id="605">
+    <name>N_1h_TrollWarAxe01_VFX_Body</name>
+  </effect>
+  <effect id="606">
+    <name>N_1h_TrollWarHammer01_VFX_Body</name>
+  </effect>
+  <effect id="607">
+    <name>N_2h_DwarvenSpear01_VFX_Body</name>
+  </effect>
+  <effect id="608">
+    <name>N_2h_KoboldGreatAxe01_VFX_Body</name>
+  </effect>
+  <effect id="609">
+    <name>N_2h_KoboldGreatClub01_VFX_Body</name>
+  </effect>
+  <effect id="610">
+    <name>N_2h_KoboldGreatSword01_VFX_Body</name>
+  </effect>
+  <effect id="611">
+    <name>N_bo_VikingBeardedBow01_VFX_Body</name>
+  </effect>
+  <effect id="612">
+    <name>N_hth_GreatBladedClawGreave01_VFX_Body</name>
+  </effect>
+  <effect id="613">
+    <name>N_hth_GreatBladedFangGreave01_VFX_Body</name>
+  </effect>
+  <effect id="614">
+    <name>B_2h_Coffinhammer01_VFX_Air</name>
+  </effect>
+  <effect id="615">
+    <name>B_2h_InquisitorsPick01_VFX_Air</name>
+  </effect>
+  <effect id="616">
+    <name>B_2h_RoyalScimitar01_VFX_Air</name>
+  </effect>
+  <effect id="617">
+    <name>B_bo_SaracenShortbow01_VFX_Air</name>
+  </effect>
+  <effect id="618">
+    <name>B_bo_ThornBow01_VFX_Air</name>
+  </effect>
+  <effect id="619">
+    <name>B_Cr_BishopsMace01_VFX_Air</name>
+  </effect>
+  <effect id="620">
+    <name>B_Cr_CoffinMace01_VFX_Air</name>
+  </effect>
+  <effect id="621">
+    <name>B_flx_PickFlail01_VFX_Air</name>
+  </effect>
+  <effect id="622">
+    <name>B_flx_SpikedFlail01_VFX_Air</name>
+  </effect>
+  <effect id="623">
+    <name>B_Po_MilitaryFork01_VFX_Air</name>
+  </effect>
+  <effect id="624">
+    <name>B_Po_SaracenGlaive01_VFX_Air</name>
+  </effect>
+  <effect id="625">
+    <name>B_Po_TallHammer01_VFX_Air</name>
+  </effect>
+  <effect id="626">
+    <name>B_sl_Cinquedea01_VFX_Air</name>
+  </effect>
+  <effect id="627">
+    <name>B_sl_Falchion01_VFX_Air</name>
+  </effect>
+  <effect id="628">
+    <name>b_st_magestaff01_VFX_Air</name>
+  </effect>
+  <effect id="629">
+    <name>B_st_SpikedStaffMace01_VFX_Air</name>
+  </effect>
+  <effect id="630">
+    <name>B_th_DuelistsDagger01_VFX_Air</name>
+  </effect>
+  <effect id="631">
+    <name>B_th_DuelistsRapier01_VFX_Air</name>
+  </effect>
+  <effect id="632">
+    <name>B_xbo_SkinnersCrossbow01_VFX_Air</name>
+  </effect>
+  <effect id="633">
+    <name>H_1h_FirbolgLongSword01_VFX_Air</name>
+  </effect>
+  <effect id="634">
+    <name>H_1h_FirbolgShortSword01_VFX_Air</name>
+  </effect>
+  <effect id="635">
+    <name>H_2h_FirbolgHammer01_VFX_Air</name>
+  </effect>
+  <effect id="636">
+    <name>H_2h_FirbolgTrollSplitter01_VFX_Air</name>
+  </effect>
+  <effect id="637">
+    <name>H_bl_CelticHammer01_VFX_Air</name>
+  </effect>
+  <effect id="638">
+    <name>H_bl_FirbolgHammer01_VFX_Air</name>
+  </effect>
+  <effect id="639">
+    <name>H_bo_ElvenLongbow01_VFX_Air</name>
+  </effect>
+  <effect id="640">
+    <name>H_bo_ElvenShortBow01_VFX_Air</name>
+  </effect>
+  <effect id="641">
+    <name>H_sc_FirbolgScythe01_VFX_Air</name>
+  </effect>
+  <effect id="642">
+    <name>H_Sp_FirbolgSpear01_VFX_Air</name>
+  </effect>
+  <effect id="643">
+    <name>h_st_staff07_VFX_Air</name>
+  </effect>
+  <effect id="644">
+    <name>h_st_staff09_VFX_Air</name>
+  </effect>
+  <effect id="645">
+    <name>H_th_FirbolgAdze01_VFX_Air</name>
+  </effect>
+  <effect id="646">
+    <name>H_th_WarAdze01_VFX_Air</name>
+  </effect>
+  <effect id="647">
+    <name>N_1h_DwarvenWarAxe01_VFX_Air</name>
+  </effect>
+  <effect id="648">
+    <name>N_1h_TrollBroadSword01_VFX_Air</name>
+  </effect>
+  <effect id="649">
+    <name>N_1h_TrollWarAxe01_VFX_Air</name>
+  </effect>
+  <effect id="650">
+    <name>N_1h_TrollWarHammer01_VFX_Air</name>
+  </effect>
+  <effect id="651">
+    <name>N_2h_DwarvenSpear01_VFX_Air</name>
+  </effect>
+  <effect id="652">
+    <name>N_2h_KoboldGreatAxe01_VFX_Air</name>
+  </effect>
+  <effect id="653">
+    <name>N_2h_KoboldGreatClub01_VFX_Air</name>
+  </effect>
+  <effect id="654">
+    <name>N_2h_KoboldGreatSword01_VFX_Air</name>
+  </effect>
+  <effect id="655">
+    <name>N_bo_VikingBeardedBow01_VFX_Air</name>
+  </effect>
+  <effect id="656">
+    <name>N_hth_GreatBladedClawGreave01_VFX_Air</name>
+  </effect>
+  <effect id="657">
+    <name>N_hth_GreatBladedFangGreave01_VFX_Air</name>
+  </effect>
+  <effect id="658">
+    <name>B_2h_Coffinhammer01_VFX_Earth</name>
+  </effect>
+  <effect id="659">
+    <name>B_2h_InquisitorsPick01_VFX_Earth</name>
+  </effect>
+  <effect id="660">
+    <name>B_2h_RoyalScimitar01_VFX_Earth</name>
+  </effect>
+  <effect id="661">
+    <name>B_bo_SaracenShortbow01_VFX_Earth</name>
+  </effect>
+  <effect id="662">
+    <name>B_bo_ThornBow01_VFX_Earth</name>
+  </effect>
+  <effect id="663">
+    <name>B_Cr_BishopsMace01_VFX_Earth</name>
+  </effect>
+  <effect id="664">
+    <name>B_Cr_CoffinMace01_VFX_Earth</name>
+  </effect>
+  <effect id="665">
+    <name>B_flx_PickFlail01_VFX_Earth</name>
+  </effect>
+  <effect id="666">
+    <name>B_flx_SpikedFlail01_VFX_Earth</name>
+  </effect>
+  <effect id="667">
+    <name>B_Po_MilitaryFork01_VFX_Earth</name>
+  </effect>
+  <effect id="668">
+    <name>B_Po_SaracenGlaive01_VFX_Earth</name>
+  </effect>
+  <effect id="669">
+    <name>B_Po_TallHammer01_VFX_Earth</name>
+  </effect>
+  <effect id="670">
+    <name>B_sl_Cinquedea01_VFX_Earth</name>
+  </effect>
+  <effect id="671">
+    <name>B_sl_Falchion01_VFX_Earth</name>
+  </effect>
+  <effect id="672">
+    <name>b_st_magestaff01_VFX_Earth</name>
+  </effect>
+  <effect id="673">
+    <name>B_st_SpikedStaffMace01_VFX_Earth</name>
+  </effect>
+  <effect id="674">
+    <name>B_th_DuelistsDagger01_VFX_Earth</name>
+  </effect>
+  <effect id="675">
+    <name>B_th_DuelistsRapier01_VFX_Earth</name>
+  </effect>
+  <effect id="676">
+    <name>B_xbo_SkinnersCrossbow01_VFX_Earth</name>
+  </effect>
+  <effect id="677">
+    <name>H_1h_FirbolgLongSword01_VFX_Earth</name>
+  </effect>
+  <effect id="678">
+    <name>H_1h_FirbolgShortSword01_VFX_Earth</name>
+  </effect>
+  <effect id="679">
+    <name>H_2h_FirbolgHammer01_VFX_Earth</name>
+  </effect>
+  <effect id="680">
+    <name>H_2h_FirbolgTrollSplitter01_VFX_Earth</name>
+  </effect>
+  <effect id="681">
+    <name>H_bl_CelticHammer01_VFX_Earth</name>
+  </effect>
+  <effect id="682">
+    <name>H_bl_FirbolgHammer01_VFX_Earth</name>
+  </effect>
+  <effect id="683">
+    <name>H_bo_ElvenLongbow01_VFX_Earth</name>
+  </effect>
+  <effect id="684">
+    <name>H_bo_ElvenShortBow01_VFX_Earth</name>
+  </effect>
+  <effect id="685">
+    <name>H_sc_FirbolgScythe01_VFX_Earth</name>
+  </effect>
+  <effect id="686">
+    <name>H_Sp_FirbolgSpear01_VFX_Earth</name>
+  </effect>
+  <effect id="687">
+    <name>h_st_staff07_VFX_Earth</name>
+  </effect>
+  <effect id="688">
+    <name>h_st_staff09_VFX_Earth</name>
+  </effect>
+  <effect id="689">
+    <name>H_th_FirbolgAdze01_VFX_Earth</name>
+  </effect>
+  <effect id="690">
+    <name>H_th_WarAdze01_VFX_Earth</name>
+  </effect>
+  <effect id="691">
+    <name>N_1h_DwarvenWarAxe01_VFX_Earth</name>
+  </effect>
+  <effect id="692">
+    <name>N_1h_TrollBroadSword01_VFX_Earth</name>
+  </effect>
+  <effect id="693">
+    <name>N_1h_TrollWarAxe01_VFX_Earth</name>
+  </effect>
+  <effect id="694">
+    <name>N_1h_TrollWarHammer01_VFX_Earth</name>
+  </effect>
+  <effect id="695">
+    <name>N_2h_DwarvenSpear01_VFX_Earth</name>
+  </effect>
+  <effect id="696">
+    <name>N_2h_KoboldGreatAxe01_VFX_Earth</name>
+  </effect>
+  <effect id="697">
+    <name>N_2h_KoboldGreatClub01_VFX_Earth</name>
+  </effect>
+  <effect id="698">
+    <name>N_2h_KoboldGreatSword01_VFX_Earth</name>
+  </effect>
+  <effect id="699">
+    <name>N_bo_VikingBeardedBow01_VFX_Earth</name>
+  </effect>
+  <effect id="700">
+    <name>N_hth_GreatBladedClawGreave01_VFX_Earth</name>
+  </effect>
+  <effect id="701">
+    <name>N_hth_GreatBladedFangGreave01_VFX_Earth</name>
+  </effect>
+  <effect id="702">
+    <name>B_2h_Coffinhammer01_VFX_Fire</name>
+  </effect>
+  <effect id="703">
+    <name>B_2h_InquisitorsPick01_VFX_Fire</name>
+  </effect>
+  <effect id="704">
+    <name>B_2h_RoyalScimitar01_VFX_Fire</name>
+  </effect>
+  <effect id="705">
+    <name>B_bo_SaracenShortbow01_VFX_Fire</name>
+  </effect>
+  <effect id="706">
+    <name>B_bo_ThornBow01_VFX_Fire</name>
+  </effect>
+  <effect id="707">
+    <name>B_Cr_BishopsMace01_VFX_Fire</name>
+  </effect>
+  <effect id="708">
+    <name>B_Cr_CoffinMace01_VFX_Fire</name>
+  </effect>
+  <effect id="709">
+    <name>B_flx_PickFlail01_VFX_Fire</name>
+  </effect>
+  <effect id="710">
+    <name>B_flx_SpikedFlail01_VFX_Fire</name>
+  </effect>
+  <effect id="711">
+    <name>B_Po_MilitaryFork01_VFX_Fire</name>
+  </effect>
+  <effect id="712">
+    <name>B_Po_SaracenGlaive01_VFX_Fire</name>
+  </effect>
+  <effect id="713">
+    <name>B_Po_TallHammer01_VFX_Fire</name>
+  </effect>
+  <effect id="714">
+    <name>B_sl_Cinquedea01_VFX_Fire</name>
+  </effect>
+  <effect id="715">
+    <name>B_sl_Falchion01_VFX_Fire</name>
+  </effect>
+  <effect id="716">
+    <name>b_st_magestaff01_VFX_Fire</name>
+  </effect>
+  <effect id="717">
+    <name>B_st_SpikedStaffMace01_VFX_Fire</name>
+  </effect>
+  <effect id="718">
+    <name>B_th_DuelistsDagger01_VFX_Fire</name>
+  </effect>
+  <effect id="719">
+    <name>B_th_DuelistsRapier01_VFX_Fire</name>
+  </effect>
+  <effect id="720">
+    <name>B_xbo_SkinnersCrossbow01_VFX_Fire</name>
+  </effect>
+  <effect id="721">
+    <name>H_1h_FirbolgLongSword01_VFX_Fire</name>
+  </effect>
+  <effect id="722">
+    <name>H_1h_FirbolgShortSword01_VFX_Fire</name>
+  </effect>
+  <effect id="723">
+    <name>H_2h_FirbolgHammer01_VFX_Fire</name>
+  </effect>
+  <effect id="724">
+    <name>H_2h_FirbolgTrollSplitter01_VFX_Fire</name>
+  </effect>
+  <effect id="725">
+    <name>H_bl_CelticHammer01_VFX_Fire</name>
+  </effect>
+  <effect id="726">
+    <name>H_bl_FirbolgHammer01_VFX_Fire</name>
+  </effect>
+  <effect id="727">
+    <name>H_bo_ElvenLongbow01_VFX_Fire</name>
+  </effect>
+  <effect id="728">
+    <name>H_bo_ElvenShortBow01_VFX_Fire</name>
+  </effect>
+  <effect id="729">
+    <name>H_sc_FirbolgScythe01_VFX_Fire</name>
+  </effect>
+  <effect id="730">
+    <name>H_Sp_FirbolgSpear01_VFX_Fire</name>
+  </effect>
+  <effect id="731">
+    <name>h_st_staff07_VFX_Fire</name>
+  </effect>
+  <effect id="732">
+    <name>h_st_staff09_VFX_Fire</name>
+  </effect>
+  <effect id="733">
+    <name>H_th_FirbolgAdze01_VFX_Fire</name>
+  </effect>
+  <effect id="734">
+    <name>H_th_WarAdze01_VFX_Fire</name>
+  </effect>
+  <effect id="735">
+    <name>N_1h_DwarvenWarAxe01_VFX_Fire</name>
+  </effect>
+  <effect id="736">
+    <name>N_1h_TrollBroadSword01_VFX_Fire</name>
+  </effect>
+  <effect id="737">
+    <name>N_1h_TrollWarAxe01_VFX_Fire</name>
+  </effect>
+  <effect id="738">
+    <name>N_1h_TrollWarHammer01_VFX_Fire</name>
+  </effect>
+  <effect id="739">
+    <name>N_2h_DwarvenSpear01_VFX_Fire</name>
+  </effect>
+  <effect id="740">
+    <name>N_2h_KoboldGreatAxe01_VFX_Fire</name>
+  </effect>
+  <effect id="741">
+    <name>N_2h_KoboldGreatClub01_VFX_Fire</name>
+  </effect>
+  <effect id="742">
+    <name>N_2h_KoboldGreatSword01_VFX_Fire</name>
+  </effect>
+  <effect id="743">
+    <name>N_bo_VikingBeardedBow01_VFX_Fire</name>
+  </effect>
+  <effect id="744">
+    <name>N_hth_GreatBladedClawGreave01_VFX_Fire</name>
+  </effect>
+  <effect id="745">
+    <name>N_hth_GreatBladedFangGreave01_VFX_Fire</name>
+  </effect>
+  <effect id="746">
+    <name>B_2h_Coffinhammer01_VFX_Water</name>
+  </effect>
+  <effect id="747">
+    <name>B_2h_InquisitorsPick01_VFX_Water</name>
+  </effect>
+  <effect id="748">
+    <name>B_2h_RoyalScimitar01_VFX_Water</name>
+  </effect>
+  <effect id="749">
+    <name>B_bo_SaracenShortbow01_VFX_Water</name>
+  </effect>
+  <effect id="750">
+    <name>B_bo_ThornBow01_VFX_Water</name>
+  </effect>
+  <effect id="751">
+    <name>B_Cr_BishopsMace01_VFX_Water</name>
+  </effect>
+  <effect id="752">
+    <name>B_Cr_CoffinMace01_VFX_Water</name>
+  </effect>
+  <effect id="753">
+    <name>B_flx_PickFlail01_VFX_Water</name>
+  </effect>
+  <effect id="754">
+    <name>B_flx_SpikedFlail01_VFX_Water</name>
+  </effect>
+  <effect id="755">
+    <name>B_Po_MilitaryFork01_VFX_Water</name>
+  </effect>
+  <effect id="756">
+    <name>B_Po_SaracenGlaive01_VFX_Water</name>
+  </effect>
+  <effect id="757">
+    <name>B_Po_TallHammer01_VFX_Water</name>
+  </effect>
+  <effect id="758">
+    <name>B_sl_Cinquedea01_VFX_Water</name>
+  </effect>
+  <effect id="759">
+    <name>B_sl_Falchion01_VFX_Water</name>
+  </effect>
+  <effect id="760">
+    <name>b_st_magestaff01_VFX_Water</name>
+  </effect>
+  <effect id="761">
+    <name>B_st_SpikedStaffMace01_VFX_Water</name>
+  </effect>
+  <effect id="762">
+    <name>B_th_DuelistsDagger01_VFX_Water</name>
+  </effect>
+  <effect id="763">
+    <name>B_th_DuelistsRapier01_VFX_Water</name>
+  </effect>
+  <effect id="764">
+    <name>B_xbo_SkinnersCrossbow01_VFX_Water</name>
+  </effect>
+  <effect id="765">
+    <name>H_1h_FirbolgLongSword01_VFX_Water</name>
+  </effect>
+  <effect id="766">
+    <name>H_1h_FirbolgShortSword01_VFX_Water</name>
+  </effect>
+  <effect id="767">
+    <name>H_2h_FirbolgHammer01_VFX_Water</name>
+  </effect>
+  <effect id="768">
+    <name>H_2h_FirbolgTrollSplitter01_VFX_Water</name>
+  </effect>
+  <effect id="769">
+    <name>H_bl_CelticHammer01_VFX_Water</name>
+  </effect>
+  <effect id="770">
+    <name>H_bl_FirbolgHammer01_VFX_Water</name>
+  </effect>
+  <effect id="771">
+    <name>H_bo_ElvenLongbow01_VFX_Water</name>
+  </effect>
+  <effect id="772">
+    <name>H_bo_ElvenShortBow01_VFX_Water</name>
+  </effect>
+  <effect id="773">
+    <name>H_sc_FirbolgScythe01_VFX_Water</name>
+  </effect>
+  <effect id="774">
+    <name>H_Sp_FirbolgSpear01_VFX_Water</name>
+  </effect>
+  <effect id="775">
+    <name>h_st_staff07_VFX_Water</name>
+  </effect>
+  <effect id="776">
+    <name>h_st_staff09_VFX_Water</name>
+  </effect>
+  <effect id="777">
+    <name>H_th_FirbolgAdze01_VFX_Water</name>
+  </effect>
+  <effect id="778">
+    <name>H_th_WarAdze01_VFX_Water</name>
+  </effect>
+  <effect id="779">
+    <name>N_1h_DwarvenWarAxe01_VFX_Water</name>
+  </effect>
+  <effect id="780">
+    <name>N_1h_TrollBroadSword01_VFX_Water</name>
+  </effect>
+  <effect id="781">
+    <name>N_1h_TrollWarAxe01_VFX_Water</name>
+  </effect>
+  <effect id="782">
+    <name>N_1h_TrollWarHammer01_VFX_Water</name>
+  </effect>
+  <effect id="783">
+    <name>N_2h_DwarvenSpear01_VFX_Water</name>
+  </effect>
+  <effect id="784">
+    <name>N_2h_KoboldGreatAxe01_VFX_Water</name>
+  </effect>
+  <effect id="785">
+    <name>N_2h_KoboldGreatClub01_VFX_Water</name>
+  </effect>
+  <effect id="786">
+    <name>N_2h_KoboldGreatSword01_VFX_Water</name>
+  </effect>
+  <effect id="787">
+    <name>N_bo_VikingBeardedBow01_VFX_Water</name>
+  </effect>
+  <effect id="788">
+    <name>N_hth_GreatBladedClawGreave01_VFX_Water</name>
+  </effect>
+  <effect id="789">
+    <name>N_hth_GreatBladedFangGreave01_VFX_Water</name>
+  </effect>
+  <effect id="790">
+    <name>Helmet VFX hothead</name>
+  </effect>
+  <effect id="791">
+    <name>Helmet VFX sunburst</name>
+  </effect>
+  <effect id="792">
+    <name>VFX_head_orbit01</name>
+  </effect>
+  <effect id="793">
+    <name>VFX_head_orbit02</name>
+  </effect>
+  <effect id="794">
+    <name>VFX_fire_eyes01</name>
+  </effect>
+  <effect id="795">
+    <name>VFX_fire_eyes01_blue</name>
+  </effect>
+  <effect id="796">
+    <name>VFX_fire_eyes01_green</name>
+  </effect>
+	<!-- Section colors -->
+	<color id="0">
+		<name>none</name>
+	</color>
+	<color id="1">
+		<name>Old Red</name>
+	</color>
+	<color id="2">
+		<name>Old Green</name>
+	</color>
+	<color id="3">
+		<name>Old Blue</name>
+	</color>
+	<color id="4">
+		<name>Old Yellow</name>
+	</color>
+	<color id="5">
+		<name>Old Purple</name>
+	</color>
+	<color id="6">
+		<name>Gray</name>
+	</color>
+	<color id="7">
+		<name>Old Turquoise</name>
+	</color>
+	<color id="8">
+		<name>Leather Yellow</name>
+	</color>
+	<color id="9">
+		<name>Leather Red</name>
+	</color>
+	<color id="10">
+		<name>Leather Green</name>
+	</color>
+	<color id="11">
+		<name>Leather Orange</name>
+	</color>
+	<color id="12">
+		<name>Leather Violet</name>
+	</color>
+	<color id="13">
+		<name>Leather Forest Green</name>
+	</color>
+	<color id="14">
+		<name>Leather Blue</name>
+	</color>
+	<color id="15">
+		<name>Leather Purple</name>
+	</color>
+	<color id="16">
+		<name>Bronze</name>
+	</color>
+	<color id="17">
+		<name>Iron</name>
+	</color>
+	<color id="18">
+		<name>Steel</name>
+	</color>
+	<color id="19">
+		<name>Alloy</name>
+	</color>
+	<color id="20">
+		<name>Fine Alloy</name>
+	</color>
+	<color id="21">
+		<name>Mithril</name>
+	</color>
+	<color id="22">
+		<name>Asterite</name>
+	</color>
+	<color id="23">
+		<name>Eog</name>
+	</color>
+	<color id="24">
+		<name>Xenium</name>
+	</color>
+	<color id="25">
+		<name>Vaanum</name>
+	</color>
+	<color id="26">
+		<name>Adamantium</name>
+	</color>
+	<color id="27">
+		<name>Red Cloth</name>
+	</color>
+	<color id="28">
+		<name>Orange Cloth</name>
+	</color>
+	<color id="29">
+		<name>Yellow-Orange Cloth</name>
+	</color>
+	<color id="30">
+		<name>Yellow Cloth</name>
+	</color>
+	<color id="31">
+		<name>Yellow-Green Cloth</name>
+	</color>
+	<color id="32">
+		<name>Green Cloth</name>
+	</color>
+	<color id="33">
+		<name>Blue-Green Cloth</name>
+	</color>
+	<color id="34">
+		<name>Turquoise Cloth</name>
+	</color>
+	<color id="35">
+		<name>Light Blue Cloth</name>
+	</color>
+	<color id="36">
+		<name>Blue Cloth</name>
+	</color>
+	<color id="37">
+		<name>Blue-Violet Cloth</name>
+	</color>
+	<color id="38">
+		<name>Violet Cloth</name>
+	</color>
+	<color id="39">
+		<name>Bright Violet Cloth</name>
+	</color>
+	<color id="40">
+		<name>Purple Cloth</name>
+	</color>
+	<color id="41">
+		<name>Bright Purple Cloth</name>
+	</color>
+	<color id="42">
+		<name>Purple-Red Cloth</name>
+	</color>
+	<color id="43">
+		<name>Black Cloth</name>
+	</color>
+	<color id="44">
+		<name>Brown Cloth</name>
+	</color>
+	<color id="45">
+		<name>Blue Metal</name>
+	</color>
+	<color id="46">
+		<name>Green Metal</name>
+	</color>
+	<color id="47">
+		<name>Yellow Metal</name>
+	</color>
+	<color id="48">
+		<name>Gold Metal</name>
+	</color>
+	<color id="49">
+		<name>Red Metal</name>
+	</color>
+	<color id="50">
+		<name>Purple Metal</name>
+	</color>
+	<color id="51">
+		<name>Blue 1</name>
+	</color>
+	<color id="52">
+		<name>Blue 2</name>
+	</color>
+	<color id="53">
+		<name>Blue 3</name>
+	</color>
+	<color id="54">
+		<name>Blue 4</name>
+	</color>
+	<color id="55">
+		<name>Turquoise 1</name>
+	</color>
+	<color id="56">
+		<name>Turquoise 2</name>
+	</color>
+	<color id="57">
+		<name>Turquoise 3</name>
+	</color>
+	<color id="58">
+		<name>Teal 1</name>
+	</color>
+	<color id="59">
+		<name>Teal 2</name>
+	</color>
+	<color id="60">
+		<name>Teal 3</name>
+	</color>
+	<color id="61">
+		<name>Brown 1</name>
+	</color>
+	<color id="62">
+		<name>Brown 2</name>
+	</color>
+	<color id="63">
+		<name>Brown 3</name>
+	</color>
+	<color id="64">
+		<name>Red 1</name>
+	</color>
+	<color id="65">
+		<name>Red 2</name>
+	</color>
+	<color id="66">
+		<name>Red 3</name>
+	</color>
+	<color id="67">
+		<name>Red 4</name>
+	</color>
+	<color id="68">
+		<name>Green 1</name>
+	</color>
+	<color id="69">
+		<name>Green 2</name>
+	</color>
+	<color id="70">
+		<name>Green 3</name>
+	</color>
+	<color id="71">
+		<name>Green 4</name>
+	</color>
+	<color id="72">
+		<name>Gray 1</name>
+	</color>
+	<color id="73">
+		<name>Gray 2</name>
+	</color>
+	<color id="74">
+		<name>Gray 3</name>
+	</color>
+	<color id="75">
+		<name>Orange 1</name>
+	</color>
+	<color id="76">
+		<name>Orange 2</name>
+	</color>
+	<color id="77">
+		<name>Orange 3</name>
+	</color>
+	<color id="78">
+		<name>Purple 1</name>
+	</color>
+	<color id="79">
+		<name>Purple 2</name>
+	</color>
+	<color id="80">
+		<name>Purple 3</name>
+	</color>
+	<color id="81">
+		<name>Yellow 1</name>
+	</color>
+	<color id="82">
+		<name>Yellow 2</name>
+	</color>
+	<color id="83">
+		<name>Yelow 3</name>
+	</color>
+	<color id="84">
+		<name>violet</name>
+	</color>
+	<color id="85">
+		<name>mauve</name>
+	</color>
+	<color id="86">
+		<name>Blue 4</name>
+	</color>
+	<color id="87">
+		<name>Purple 4</name>
+	</color>
+	<color id="100">
+		<name>Ship Red</name>
+	</color>
+	<color id="101">
+		<name>Ship Red 2</name>
+	</color>
+	<color id="102">
+		<name>Ship Orange</name>
+	</color>
+	<color id="103">
+		<name>Ship Orange 2</name>
+	</color>
+	<color id="104">
+		<name>Orange 3</name>
+	</color>
+	<color id="105">
+		<name>Ship Yellow</name>
+	</color>
+	<color id="106">
+		<name>Ship Lime Green</name>
+	</color>
+	<color id="107">
+		<name>Ship Green</name>
+	</color>
+	<color id="108">
+		<name>Ship Green 2</name>
+	</color>
+	<color id="109">
+		<name>Ship Turquiose</name>
+	</color>
+	<color id="110">
+		<name>Ship Turqiose 2</name>
+	</color>
+	<color id="111">
+		<name>Ship Blue</name>
+	</color>
+	<color id="112">
+		<name>Ship Blue 2</name>
+	</color>
+	<color id="113">
+		<name>Ship Blue 3</name>
+	</color>
+	<color id="114">
+		<name>Ship Purple</name>
+	</color>
+	<color id="115">
+		<name>Ship Purple 2</name>
+	</color>
+	<color id="116">
+		<name>Ship Purple 3</name>
+	</color>
+	<color id="117">
+		<name>Ship Pink</name>
+	</color>
+	<color id="118">
+		<name>Ship Charcoal</name>
+	</color>
+	<color id="119">
+		<name>Ship Charcoal 2</name>
+	</color>
+	<color id="120">
+		<name>red - crafter only</name>
+	</color>
+	<color id="121">
+		<name>plum - crafter only</name>
+	</color>
+	<color id="122">
+		<name>purple - crafter only</name>
+	</color>
+	<color id="123">
+		<name>dark purple - crafter only</name>
+	</color>
+	<color id="124">
+		<name>dusky purple - crafter only</name>
+	</color>
+	<color id="125">
+		<name>light gold - crafter only</name>
+	</color>
+	<color id="126">
+		<name>dark gold - crafter only</name>
+	</color>
+	<color id="127">
+		<name>dirty orange - crafter only</name>
+	</color>
+	<color id="128">
+		<name>dark tan - crafter only</name>
+	</color>
+	<color id="129">
+		<name>brown - crafter only</name>
+	</color>
+	<color id="130">
+		<name>light green - crafter only</name>
+	</color>
+	<color id="131">
+		<name>olive green - crafter only</name>
+	</color>
+	<color id="132">
+		<name>cornflower blue - crafter only</name>
+	</color>
+	<color id="133">
+		<name>light gray - crafter only</name>
+	</color>
+	<color id="134">
+		<name>hot pink - crafter only</name>
+	</color>
+	<color id="135">
+		<name>dusky rose - crafter only</name>
+	</color>
+	<color id="136">
+		<name>sage green - crafter only</name>
+	</color>
+	<color id="137">
+		<name>lime green - crafter only</name>
+	</color>
+	<color id="138">
+		<name>gray teal - crafter only</name>
+	</color>
+	<color id="139">
+		<name>gray blue - crafter only</name>
+	</color>
+	<color id="140">
+		<name>olive gray - crafter only</name>
+	</color>
+	<color id="141">
+		<name>Navy Blue - crafter only</name>
+	</color>
+	<color id="142">
+		<name>Forest Green - crafter only</name>
+	</color>
+	<color id="143">
+		<name>Burgundy - crafter only</name>
+	</color>
+	<!-- section extensions -->
+	<extension id="0">
+		<name>none</name>
+	</extension>
+	<extension id="1">
+		<name>Slight</name>
+	</extension>
+	<extension id="2">
+		<name>Some</name>
+	</extension>
+	<extension id="3">
+		<name>Medium</name>
+	</extension>
+	<extension id="4">
+		<name>Heavy</name>
+	</extension>
+	<extension id="5">
+		<name>Extra Heavy</name>
+	</extension>
+	<!-- Genders -->
+	<gender id="0"><name>Neutral</name></gender>
+	<gender id="1"><name>Male</name></gender>
+	<gender id="2"><name>Female</name></gender>
+	<!-- Body types -->
+	<bodyType id="0">
+		<name>None</name>
+	</bodyType>
+	<bodyType id="1">
+		<name>Animal</name>
+	</bodyType>
+	<bodyType id="2">
+		<name>Demon</name>
+	</bodyType>
+	<bodyType id="3">
+		<name>Dragon</name>
+	</bodyType>
+	<bodyType id="4">
+		<name>Elemental</name>
+	</bodyType>
+	<bodyType id="5">
+		<name>Giant</name>
+	</bodyType>
+	<bodyType id="6">
+		<name>Humanoid</name>
+	</bodyType>
+	<bodyType id="7">
+		<name>Insect</name>
+	</bodyType>
+	<bodyType id="8">
+		<name>Magical</name>
+	</bodyType>
+	<bodyType id="9">
+		<name>Reptile</name>
+	</bodyType>
+	<bodyType id="10">
+		<name>Plant</name>
+	</bodyType>
+	<bodyType id="11">
+		<name>Undead</name>
+	</bodyType>
+
+</BaseXMLData>

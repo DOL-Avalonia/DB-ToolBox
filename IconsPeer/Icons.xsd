@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Icons" targetNamespace="http://tempuri.org/Icons.xsd" xmlns:mstns="http://tempuri.org/Icons.xsd" xmlns="http://tempuri.org/Icons.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Icons" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="Icons" msprop:Generator_UserDSName="Icons" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="IconFiles" msprop:Generator_UserTableName="IconFiles" msprop:Generator_RowDeletedName="IconFilesRowDeleted" msprop:Generator_TableClassName="IconFilesDataTable" msprop:Generator_RowChangedName="IconFilesRowChanged" msprop:Generator_RowClassName="IconFilesRow" msprop:Generator_RowChangingName="IconFilesRowChanging" msprop:Generator_RowEvArgName="IconFilesRowChangeEvent" msprop:Generator_RowEvHandlerName="IconFilesRowChangeEventHandler" msprop:Generator_TablePropName="IconFiles" msprop:Generator_TableVarName="tableIconFiles" msprop:Generator_RowDeletingName="IconFilesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" />
+              <xs:element name="category" msprop:Generator_UserColumnName="category" msprop:Generator_ColumnPropNameInRow="category" msprop:Generator_ColumnVarNameInTable="columncategory" msprop:Generator_ColumnPropNameInTable="categoryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="file" msprop:Generator_UserColumnName="file" msprop:Generator_ColumnPropNameInRow="file" msprop:Generator_ColumnVarNameInTable="columnfile" msprop:Generator_ColumnPropNameInTable="fileColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="fullPath" msprop:Generator_UserColumnName="fullPath" msprop:Generator_ColumnPropNameInRow="fullPath" msprop:Generator_ColumnVarNameInTable="columnfullPath" msprop:Generator_ColumnPropNameInTable="fullPathColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IconValues" msprop:Generator_UserTableName="IconValues" msprop:Generator_RowDeletedName="IconValuesRowDeleted" msprop:Generator_TableClassName="IconValuesDataTable" msprop:Generator_RowChangedName="IconValuesRowChanged" msprop:Generator_RowClassName="IconValuesRow" msprop:Generator_RowChangingName="IconValuesRowChanging" msprop:Generator_RowEvArgName="IconValuesRowChangeEvent" msprop:Generator_RowEvHandlerName="IconValuesRowChangeEventHandler" msprop:Generator_TablePropName="IconValues" msprop:Generator_TableVarName="tableIconValues" msprop:Generator_RowDeletingName="IconValuesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" />
+              <xs:element name="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInTable="nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="baseIconId" msprop:Generator_UserColumnName="baseIconId" msprop:Generator_ColumnPropNameInRow="baseIconId" msprop:Generator_ColumnVarNameInTable="columnbaseIconId" msprop:Generator_ColumnPropNameInTable="baseIconIdColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="borderId" msprop:Generator_UserColumnName="borderId" msprop:Generator_ColumnPropNameInRow="borderId" msprop:Generator_ColumnVarNameInTable="columnborderId" msprop:Generator_ColumnPropNameInTable="borderIdColumn" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="up_left" msprop:Generator_UserColumnName="up_left" msprop:Generator_ColumnPropNameInRow="up_left" msprop:Generator_ColumnVarNameInTable="columnup_left" msprop:Generator_ColumnPropNameInTable="up_leftColumn" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="up" msprop:Generator_UserColumnName="up" msprop:Generator_ColumnPropNameInRow="up" msprop:Generator_ColumnVarNameInTable="columnup" msprop:Generator_ColumnPropNameInTable="upColumn" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="up_right" msprop:Generator_UserColumnName="up_right" msprop:Generator_ColumnPropNameInRow="up_right" msprop:Generator_ColumnVarNameInTable="columnup_right" msprop:Generator_ColumnPropNameInTable="up_rightColumn" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="right" msprop:Generator_UserColumnName="right" msprop:Generator_ColumnPropNameInRow="right" msprop:Generator_ColumnVarNameInTable="columnright" msprop:Generator_ColumnPropNameInTable="rightColumn" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="down_right" msprop:Generator_UserColumnName="down_right" msprop:Generator_ColumnPropNameInRow="down_right" msprop:Generator_ColumnVarNameInTable="columndown_right" msprop:Generator_ColumnPropNameInTable="down_rightColumn" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="down" msprop:Generator_UserColumnName="down" msprop:Generator_ColumnPropNameInRow="down" msprop:Generator_ColumnVarNameInTable="columndown" msprop:Generator_ColumnPropNameInTable="downColumn" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="left" msprop:Generator_UserColumnName="left" msprop:Generator_ColumnPropNameInRow="left" msprop:Generator_ColumnVarNameInTable="columnleft" msprop:Generator_ColumnPropNameInTable="leftColumn" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="spell" msprop:Generator_UserColumnName="spell" msprop:Generator_ColumnPropNameInRow="spell" msprop:Generator_ColumnVarNameInTable="columnspell" msprop:Generator_ColumnPropNameInTable="spellColumn" type="xs:int" default="-1" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:IconFiles" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="IconValues_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:IconValues" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

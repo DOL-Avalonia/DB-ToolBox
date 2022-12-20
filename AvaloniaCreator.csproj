@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8CF8648-CD04-4117-BE7F-157A995A83CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AmteCreator</RootNamespace>
+    <AssemblyName>AvaloniaCreator</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DOLBase, Version=1.9.7.41102, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\DOLBase.dll</HintPath>
+    </Reference>
+    <Reference Include="DOLDatabase, Version=1.9.7.41102, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\DOLDatabase.dll</HintPath>
+    </Reference>
+    <Reference Include="GameServer, Version=1.9.7.990, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\GameServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.14.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="LumenWorks.Framework.IO">
+      <HintPath>Libs\LumenWorks.Framework.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="MPKLib">
+      <HintPath>Libs\MPKLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BonusTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BonusTab.Designer.cs">
+      <DependentUpon>BonusTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BugReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BugReportForm.Designer.cs">
+      <DependentUpon>BugReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlList.Designer.cs">
+      <DependentUpon>ControlList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IconImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\IconImageControl.designer.cs">
+      <DependentUpon>IconImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModelItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ModelItemControl.Designer.cs">
+      <DependentUpon>ModelItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModelSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ModelSelector.designer.cs">
+      <DependentUpon>ModelSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataQuestRewardQuests\DataQuestRewardQuests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataQuestRewardQuests\DataQuestRewardQuests.designer.cs">
+      <DependentUpon>DataQuestRewardQuests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataQuestRewardQuests\eCharacterClass.cs" />
+    <Compile Include="DataQuestRewardQuests\ERace.cs" />
+    <Compile Include="DataQuestRewardQuests\GoalType.cs" />
+    <Compile Include="Internal\DBDQRewardQTemplate.cs" />
+    <Compile Include="Internal\GoalEvent.cs" />
+    <Compile Include="Internal\Race.cs" />
+    <Compile Include="Internal\NPCTemplate.cs" />
+    <Compile Include="NPCTemplates\NPCTemplates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NPCTemplates\NPCTemplates.Designer.cs">
+      <DependentUpon>NPCTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeneralTab.Designer.cs">
+      <DependentUpon>GeneralTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IconsPeer\Icons.cs">
+      <DependentUpon>Icons.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IconsPeer\Icons1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icons.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IconsPeer\IconSelectorPeer.cs" />
+    <Compile Include="IconsPeer\Objects.cs">
+      <DependentUpon>Objects.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IconsPeer\Objects.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Objects.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Constants.cs" />
+    <Compile Include="Internal\MobXLootTemplate.cs" />
+    <Compile Include="Internal\ImbuePointCalc.cs" />
+    <Compile Include="Internal\ItemTemplate.cs" />
+    <Compile Include="Internal\LootTemplate.cs" />
+    <Compile Include="Internal\Server.cs" />
+    <Compile Include="Internal\Utils.cs" />
+    <Compile Include="Json\IRestUriTransformer.cs" />
+    <Compile Include="Json\JsonArray.cs" />
+    <Compile Include="Json\JsonObject.cs" />
+    <Compile Include="Json\JsonReader.cs" />
+    <Compile Include="Json\JsonWriter.cs" />
+    <Compile Include="Json\RestCallback.cs" />
+    <Compile Include="Json\RestClient.cs" />
+    <Compile Include="Json\RestOperation.cs" />
+    <Compile Include="Json\RestService.cs" />
+    <Compile Include="Json\XmlNode.cs" />
+    <Compile Include="Json\XmlNodeList.cs" />
+    <Compile Include="Libs\RegExTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Libs\RegExTextBox.designer.cs">
+      <DependentUpon>RegExTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LootTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LootTab.Designer.cs">
+      <DependentUpon>LootTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NPCTemplates\RaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPCTemplates\RaceForm.Designer.cs">
+      <DependentUpon>RaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NPCTemplates\OpenNPCTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPCTemplates\OpenNPCTemplateForm.Designer.cs">
+      <DependentUpon>OpenNPCTemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenTemplateForm.Designer.cs">
+      <DependentUpon>OpenTemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BonusTab.resx">
+      <DependentUpon>BonusTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BugReportForm.resx">
+      <DependentUpon>BugReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlList.resx">
+      <DependentUpon>ControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\IconImageControl.resx">
+      <DependentUpon>IconImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ModelItemControl.resx">
+      <DependentUpon>ModelItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ModelSelector.resx">
+      <DependentUpon>ModelSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataQuestRewardQuests\DataQuestRewardQuests.resx">
+      <DependentUpon>DataQuestRewardQuests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPCTemplates\NPCTemplates.resx">
+      <DependentUpon>NPCTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralTab.resx">
+      <DependentUpon>GeneralTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libs\RegExTextBox.resx">
+      <DependentUpon>RegExTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LootTab.resx">
+      <DependentUpon>LootTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPCTemplates\RaceForm.resx">
+      <DependentUpon>RaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPCTemplates\OpenNPCTemplateForm.resx">
+      <DependentUpon>OpenNPCTemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenTemplateForm.resx">
+      <DependentUpon>OpenTemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="IconsPeer\Icons.xsc">
+      <DependentUpon>Icons.xsd</DependentUpon>
+    </None>
+    <None Include="IconsPeer\Icons.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Icons1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IconsPeer\Icons.xss">
+      <DependentUpon>Icons.xsd</DependentUpon>
+    </None>
+    <None Include="IconsPeer\Objects.xsc">
+      <DependentUpon>Objects.xsd</DependentUpon>
+    </None>
+    <None Include="IconsPeer\Objects.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Objects.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IconsPeer\Objects.xss">
+      <DependentUpon>Objects.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AmteCreator.Internal.ItemTemplate.datasource" />
+    <None Include="Properties\DataSources\AmteCreator.Internal.NPCTemplate.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="gameupdate-url.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="url.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DOLBase.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DOLDatabase.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameServer.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\base.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IconsPeer\default_icon.png" />
+    <EmbeddedResource Include="IconsPeer\icon_bg.png" />
+    <EmbeddedResource Include="IconsPeer\icon_bg_selected.png" />
+    <EmbeddedResource Include="IconsPeer\icon_borders.png" />
+    <EmbeddedResource Include="IconsPeer\icon_spell_values.png" />
+    <EmbeddedResource Include="IconsPeer\icon_stats.png" />
+    <EmbeddedResource Include="IconsPeer\icon_stats_styles.png" />
+    <Content Include="Res\base.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
