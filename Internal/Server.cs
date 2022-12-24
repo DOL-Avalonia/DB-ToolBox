@@ -46,7 +46,9 @@ namespace AmteCreator.Internal
 				count = resp.GetResponseStream().Read(buffer, 0, buffer.Length);
 				ms.Write(buffer, 0, count);
 			} while (count > 0);
-			return Encoding.GetEncoding(string.IsNullOrEmpty(resp.ContentEncoding) ? "UTF-8" : resp.ContentEncoding).GetString(ms.GetBuffer());
+			Encoding encode = Encoding.GetEncoding(string.IsNullOrEmpty(resp.ContentEncoding) ? "UTF-8" : resp.ContentEncoding);
+			string res = encode.GetString(ms.GetBuffer());
+			return res;
 		}
 
 		public static dynamic Query(string url, IEnumerable<KeyValuePair<string, string>> postData = null, bool login = false)

@@ -1,1 +1,1 @@
-﻿http://game.avalonia.fr:81
+﻿http://localhost
