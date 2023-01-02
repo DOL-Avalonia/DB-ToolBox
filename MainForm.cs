@@ -105,7 +105,7 @@ namespace AmteCreator
 			}
 			if (Options == null || Options.Count < 2)
 				_DisplayOptions(null, null);
-			dynamic resp = Server.Query("", from a in Options where a.Key == "login" || a.Key == "password" select a);
+			dynamic resp = Server.Query("", from a in Options where a.Key == "login" || a.Key == "password" || a.Key == "database" select a);
 			try
 			{
 				if (!resp.login)
@@ -134,11 +134,12 @@ namespace AmteCreator
 		private void _DisplayOptions(object sender, EventArgs e)
 		{
 			var of = new OptionsForm(
-				(login, pass) =>
+				(login, pass, dbname) =>
 				{
 					var loginData = new Dictionary<string, string>
 										{
 											{"login", login},
+								  			{"database", dbname},
 											{"password", pass}
 										};
 					Server.Query("?disconnect");
@@ -150,6 +151,7 @@ namespace AmteCreator
 							  {
 								  {"login", of.Login},
 								  {"password", of.Password},
+								  {"database", of.DBName},
 								  {"daoc_path", of.DaocPath}
 							  };
 				_SaveOptions();

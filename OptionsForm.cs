@@ -8,11 +8,12 @@ namespace AmteCreator
     {
         public string Login { get { return login.Text; } }
         public string Password { get { return password.Text; } }
+        public string DBName { get { return dBName.Text; } }
         public string DaocPath { get { return daocPath.Text; } }
 
-        private readonly Func<string, string, bool> _testFunction;
+        private readonly Func<string, string, string, bool> _testFunction;
 
-        public OptionsForm(Func<string, string, bool> testFunction)
+        public OptionsForm(Func<string, string, string, bool> testFunction)
         {
             _testFunction = testFunction;
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace AmteCreator
             bool ok = false;
             try
             {
-                if ((ok = _testFunction(login.Text, password.Text)) == true)
+                if ((ok = _testFunction(login.Text, password.Text, dBName.Text)) == true)
                     MessageBox.Show(this, "Connexion réussie", "Options", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show(this, "Mauvais login ?!", "Options", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -45,7 +46,7 @@ namespace AmteCreator
         {
             try
             {
-                if (_testFunction(login.Text, password.Text))
+                if (_testFunction(login.Text, password.Text, dBName.Text))
                     MessageBox.Show(this, "Connexion réussie", "Options", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show(this, "Mauvais login ?!", "Options", MessageBoxButtons.OK, MessageBoxIcon.Warning);
