@@ -2264,9 +2264,10 @@ namespace AmteCreator.DataQuestRewardQuests
 
         private void Reputation_TextChanged(object sender, EventArgs e)
         {
-            if (!int.TryParse(Reputation.Text, out int val))
+            if (Reputation.Text != "-" && (!float.TryParse(Reputation.Text, out float val) || val > 0))
             {
-                reputation = string.Empty;
+                reputation = "0";
+                Reputation.Text = "0";
             }
             else
             {
@@ -2277,7 +2278,7 @@ namespace AmteCreator.DataQuestRewardQuests
         private void ReputationReward_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Verify that the pressed key isn't CTRL or any non-numeric digit
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if ( !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }

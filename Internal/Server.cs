@@ -37,7 +37,7 @@ namespace AmteCreator.Internal
 			try { resp = (HttpWebResponse)hwr.GetResponse(); }
 			catch (WebException e) { resp = (HttpWebResponse)e.Response; }
 			if (resp == null)
-				return "";
+				return "no response";
 			var buffer = new byte[8192];
 			var ms = new MemoryStream();
 			int count = 0;
