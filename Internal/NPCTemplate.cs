@@ -39,7 +39,6 @@ namespace AmteCreator.Internal
 		public string Abilities { get; set; }
 		public int AggroLevel { get; set; } = 0;
 		public int AggroRange { get; set; } = 0;
-		public string ClassType { get; set; } = "";
 		public string Level { get; set; } = "1";
 		public int Race { get; set; } = 0;
 		public int BodyType { get; set; } = 0;
@@ -97,7 +96,6 @@ namespace AmteCreator.Internal
 			Abilities = tmpl.Abilities;
 			AggroLevel = int.Parse(tmpl.AggroLevel);
 			AggroRange = int.Parse(tmpl.AggroRange);
-			ClassType = tmpl.ClassType;
 			Level = tmpl.Level;
 			Race = int.Parse(tmpl.Race);
 			BodyType = int.Parse(tmpl.BodyType);
@@ -132,7 +130,6 @@ namespace AmteCreator.Internal
 			fields.Add("GuildName", GuildName);
 			fields.Add("Model", Model);
 			fields.Add("Size", Size);
-			fields.Add("ClassType", ClassType);
 			fields.Add("Suffix", Suffix);
 			fields.Add("Gender", Gender);
 
@@ -256,7 +253,6 @@ namespace AmteCreator.Internal
 			tmpl.Abilities = Abilities;
 			tmpl.AggroLevel = AggroLevel;
 			tmpl.AggroRange = AggroRange;
-			tmpl.ClassType = ClassType;
 			tmpl.Level = Level;
 			tmpl.Race = Race;
 			tmpl.BodyType = BodyType;
@@ -310,7 +306,6 @@ namespace AmteCreator.Internal
 			&& lhs.Abilities == rhs.Abilities
 			&& lhs.AggroLevel == rhs.AggroLevel
 			&& lhs.AggroRange == rhs.AggroRange
-			&& lhs.ClassType == rhs.ClassType
 			&& lhs.Level == rhs.Level
 			&& lhs.Race == rhs.Race
 			&& lhs.BodyType == rhs.BodyType

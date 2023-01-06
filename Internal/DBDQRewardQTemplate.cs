@@ -13,7 +13,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// The name of this quest
         /// </summary>
-        public string QuestName
+        public string Name
         {
             get; set;
         }
@@ -22,7 +22,7 @@ namespace AmteCreator.Internal
         /// The name of the object that starts this quest
         /// </summary>
         
-        public string StartNPC
+        public string NpcName
         {
             get; set;
         }
@@ -31,7 +31,7 @@ namespace AmteCreator.Internal
         /// The region id where this quest starts
         /// </summary>
         
-        public ushort StartRegionID
+        public ushort NpcRegion
         {
             get; set;
         }
@@ -40,7 +40,7 @@ namespace AmteCreator.Internal
         /// The quest story shown to player upon being offered the quest
         /// </summary>
         
-        public string StoryText
+        public string Story
         {
             get; set;
         }
@@ -59,206 +59,6 @@ namespace AmteCreator.Internal
         /// </summary>
         
         public string AcceptText
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Goal description and what step it is given. 
-        /// Format: kill two bandits;1
-        /// </summary>
-        
-        public string QuestGoals
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Type of each step (kill, give, collect, etc)		
-        /// </summary>
-        
-        public string GoalType
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Description to show to start quest
-        /// Not Used
-        /// </summary>
-        
-        public string Description
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Who to talk to for each step
-        /// Format: SourceName;RegionID|SourceName;RegionID
-        /// Not Used
-        /// </summary>
-        
-        public string SourceName
-        {
-            get; set;
-        }
-
-
-        /// <summary>
-        /// The text for each source
-        /// Format:  Step 1 Source text|Step 2 Source text
-        /// Not Used
-        /// </summary>
-        
-        public string SourceText
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Type of each step (kill, give, collect, etc)
-        /// Format: Step1Type|Step2Type
-        /// not used
-        /// </summary>
-        
-        public string StepType
-        { 
-            get; set;
-        }
-
-        /// <summary>
-        /// Items given to the player at a step
-        /// Format: id_nb|idnb
-        /// </summary>
-        
-        public string StepItemTemplates
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Name of the target for each step
-        /// Format: TargetName;RegionID|TargetName;RegionID
-        /// not used
-        /// </summary>
-        
-        public string TargetName
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Text for each target
-        /// not used
-        /// Format:  Step 1 Target text|Step 2 Target text| ...
-        /// </summary>
-        
-        public string TargetText
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Description text for each step
-        /// Format: Step 1 Text|Step 2 Text
-        /// </summary>
-        
-        public string StepText
-        {
-            get; set;
-        }
-
-
-
-        /// <summary>
-        /// how many times goal must be repeated to be achieved
-        /// </summary>
-        
-        public string GoalRepeatNo
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Name of the target for each step		
-        /// </summary>
-        
-        public string GoalTargetName
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// The name of this quest
-        /// </summary>
-        public string Name
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// The name of the object that starts this quest
-        /// not used
-        /// </summary>
-        
-        public string StartName
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// The start type of this quest (eStartType)
-        /// not used
-        /// </summary>
-        
-        public byte StartType
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Text a target will say to player 		
-        /// </summary>
-        
-        public string GoalTargetText
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// How many steps in this quest? used to display goals at certain stages of quest
-        /// </summary>
-        
-        public int StepCount
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// The NPC name who finishes the quest
-        /// </summary>
-        
-        public string FinishNPC
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// Text required to advance to the next step
-        /// Format: Step 1 Text|Step 2 Text
-        /// </summary>
-        
-        public string AdvanceText
-        {
-            get; set;
-        }
-
-        /// <summary>
-        /// ItemTemplate id_nb to be collected to finish the current step
-        /// Format: id_nb|id_nb||  steps with no item to collect should be blank
-        /// </summary>
-        
-        public string CollectItemTemplate
         {
             get; set;
         }
@@ -299,7 +99,7 @@ namespace AmteCreator.Internal
             get; set;
         }
 
-        public int RewardReputation
+        public long RewardReputation
         {
             get; set;
         }
@@ -364,7 +164,7 @@ namespace AmteCreator.Internal
         /// Text to show the user once the quest is finished.
         /// </summary>
         
-        public string FinishText
+        public string Conclusion
         {
             get; set;
         }
@@ -402,50 +202,23 @@ namespace AmteCreator.Internal
             get; set;
         }
 
-        /// <summary>
-        /// Code that can be used for various quest activities		
-        /// </summary>
-        
-        public string ClassType
-        {
-            get; set;
-        }
-
-        //the following is used for adding the quest marker on the map // patch 0026
-        /// <summary>
-        /// Xloc of a goal target. Used to display red dot on map
-        /// Value is from the /loc command
-        /// Format: value1|value2|value3
-        /// can be 0 for the interactFinish goal
-        /// </summary>
-        
-        public string XOffset
-        {
-            get; set;
-        }
-        /// <summary>
-        /// Yloc of a goal target. Used to display red dot on map
-        /// Value is from the /loc command
-        /// Format: value1|value2|value3
-        /// can be 0 for the interactFinish goal
-        /// </summary>
-        
-        public string YOffset
-        {
-            get; set;
-        }
-        /// <summary>
-        /// ZoneID (not RegionID!) of a goal target. Used to display red dot on map        
-        /// Format: value1|value2|value3
-        /// can be 0 for the interactFinish goal
-        /// </summary>
-        
-        public string ZoneID
-        {
-            get; set;
-        }
-
         public string Reputation
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Json with all the goal data
+        /// </summary>
+        public string GoalsJson
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Number of optional items to choose from
+        /// </summary>
+        public int NbChooseOptionalItems 
         {
             get; set;
         }
@@ -456,6 +229,7 @@ namespace AmteCreator.Internal
 
         public static DBDQRewardQTemplate GetQuestFromJson(dynamic model)
         {
+            //model is from db with db names
             bool isRenaissance;
             if (!bool.TryParse(model.IsRenaissance, out isRenaissance))
             {
@@ -468,50 +242,29 @@ namespace AmteCreator.Internal
                 AcceptText = model.AcceptText,
                 AllowedClasses = model.AllowedClasses,
                 AllowedRaces = model.AllowedRaces,
-                ClassType = model.ClassType,
-                CollectItemTemplate = model.CollectItemTemplate,
-                Description = model.Description,
                 FinalRewardItemTemplates = model.FinalRewardItemTemplates,
-                FinishNPC = model.FinishNPC,
-                FinishText = model.FinishText,
-                GoalRepeatNo = model.GoalRepeatNo,
-                GoalTargetName = model.GoalTargetName,
-                GoalTargetText = model.GoalTargetText,
-                GoalType = model.GoalType,
-                ID = int.Parse(model.ID),
+                Conclusion = model.Conclusion,
+                ID = int.Parse(model.Id),
                 IsRenaissance = isRenaissance,
                 MaxCount = ushort.Parse(model.MaxCount),
                 MaxLevel = byte.Parse(model.MaxLevel),
                 MinLevel = byte.Parse(model.MinLevel),
                 Name = model.Name,
+                NpcName = model.NpcName,
+                NpcRegion = ushort.Parse(model.NpcRegion),
                 OptionalRewardItemTemplates = model.OptionalRewardItemTemplates,
                 QuestDependency = model.QuestDependency,
-                QuestGoals = model.QuestGoals,
-                QuestName = model.QuestName,
                 RewardBP = long.Parse(model.RewardBP),
                 RewardCLXP = long.Parse(model.RewardCLXP),
                 RewardMoney = long.Parse(model.RewardMoney),
                 RewardRP = long.Parse(model.RewardRP),
                 RewardXP = long.Parse(model.RewardXP),
-                SourceName = model.SourceName,
-                SourceText = model.SourceText,
-                StartName = model.StartName,
-                StartNPC = model.StartNPC,
-                StartRegionID = ushort.Parse(model.StartRegionID),
-                StartType = byte.Parse(model.StartType),
-                StepCount = int.Parse(model.StepCount),
-                StepItemTemplates = model.StepItemTemplates,
-                StepText = model.StepText,
-                StepType = model.StepType,
-                StoryText = model.StoryText,
+                Story = model.Story,
                 Summary = model.Summary,
-                TargetName = model.TargetName,
-                TargetText = model.TargetText,
-                XOffset = model.XOffset,
-                YOffset = model.YOffset,
-                ZoneID = model.ZoneID,
-                AdvanceText = model.AdvanceText,
-                Reputation = model.Reputation ?? string.Empty               
+                Reputation = model.Reputation ?? string.Empty,
+                RewardReputation = long.Parse(model.RewardReputation),
+                GoalsJson = model.GoalsJson,
+                NbChooseOptionalItems = int.Parse(model.NbChooseOptionalItems),
             };
         }
     }

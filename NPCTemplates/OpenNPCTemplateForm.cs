@@ -100,14 +100,14 @@ namespace AmteCreator
                 {
                     _templates.Add(new NPCTemplate(item));
                 } 
-                else if (this.DataTableName == "dataquestrewardquest")
+                else if (this.DataTableName == "dataquestjson")
                 {
                     DBDQRewardQTemplate quest = DBDQRewardQTemplate.GetQuestFromJson(item);
                     _templates.Add(quest); 
                 }
             }
 
-            if (this.DataTableName == "dataquestrewardquest")
+            if (this.DataTableName == "dataquestjson")
             {     
                 this.Text = "Chercher une QuestReward...";
             }

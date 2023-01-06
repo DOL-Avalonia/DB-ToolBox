@@ -34,9 +34,8 @@
             this.questSearch = new System.Windows.Forms.Button();
             this.questSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Reputation = new System.Windows.Forms.TextBox();
             this.Reputation_Label = new System.Windows.Forms.Label();
-            this.finishNPCLabel = new System.Windows.Forms.Label();
-            this._FinishNPC = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this._IsRenaissance = new System.Windows.Forms.CheckBox();
             this.IsRenaissanceLabel = new System.Windows.Forms.Label();
@@ -47,30 +46,33 @@
             this.listClasses = new System.Windows.Forms.ListBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this._StartRegionID = new System.Windows.Forms.TextBox();
+            this._NpcRegion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this._MinLevel = new System.Windows.Forms.TextBox();
             this._MaxCount = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this._MaxLevel = new System.Windows.Forms.TextBox();
             this._QuestDependency = new System.Windows.Forms.TextBox();
-            this._ClassType = new System.Windows.Forms.TextBox();
-            this._StartNPC = new System.Windows.Forms.TextBox();
-            this._QuestName = new System.Windows.Forms.TextBox();
+            this._NpcName = new System.Windows.Forms.TextBox();
+            this._Name = new System.Windows.Forms.TextBox();
             this._ID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.classTypeLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.summaryLabel = new System.Windows.Forms.Label();
             this._StoryText = new System.Windows.Forms.RichTextBox();
             this._Summary = new System.Windows.Forms.RichTextBox();
             this.individualStepBox = new System.Windows.Forms.GroupBox();
-            this.StepTextLabel = new System.Windows.Forms.Label();
+            this.richTextBoxDone = new System.Windows.Forms.RichTextBox();
+            this.labelDone = new System.Windows.Forms.Label();
+            this.labelAborted = new System.Windows.Forms.Label();
+            this.richTextBoxAborted = new System.Windows.Forms.RichTextBox();
             this._suppressGoal = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.labelStarted = new System.Windows.Forms.Label();
             this.labelGoalInteract = new System.Windows.Forms.Label();
             this._GoalTargetText = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxStarted = new System.Windows.Forms.RichTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this._StepItemTemplate = new System.Windows.Forms.TextBox();
             this._targetRegionLabel = new System.Windows.Forms.Label();
@@ -98,6 +100,8 @@
             this.nextGoal = new System.Windows.Forms.Button();
             this.GoalNumber = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ReputationReward = new System.Windows.Forms.TextBox();
             this._RewardBP = new System.Windows.Forms.TextBox();
             this._RewardCLXP = new System.Windows.Forms.TextBox();
             this._RewardRP = new System.Windows.Forms.TextBox();
@@ -108,8 +112,8 @@
             this.label27 = new System.Windows.Forms.Label();
             this._RewardMoney = new System.Windows.Forms.TextBox();
             this._RewardXP = new System.Windows.Forms.TextBox();
-            this._FinishText = new System.Windows.Forms.RichTextBox();
-            this.finishTextLabel = new System.Windows.Forms.Label();
+            this._Conclusion = new System.Windows.Forms.RichTextBox();
+            this.conclusionLabel = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label26 = new System.Windows.Forms.Label();
             this.OptRewardUpDown = new System.Windows.Forms.NumericUpDown();
@@ -137,10 +141,8 @@
             this._targetRegion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.NewQuestButton = new System.Windows.Forms.Button();
-            this._StepText = new System.Windows.Forms.RichTextBox();
-            this.Reputation = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.ReputationReward = new System.Windows.Forms.TextBox();
+            this.richTextBoxCompleted = new System.Windows.Forms.RichTextBox();
+            this.labelCompleted = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.individualStepBox.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -159,7 +161,7 @@
             this._StepItemLabel.Name = "_StepItemLabel";
             this._StepItemLabel.Size = new System.Drawing.Size(99, 13);
             this._StepItemLabel.TabIndex = 112;
-            this._StepItemLabel.Text = "Step Item Template";
+            this._StepItemLabel.Text = "Give Item Template";
             // 
             // questDelete
             // 
@@ -196,8 +198,6 @@
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Controls.Add(this.Reputation);
             this.groupBox1.Controls.Add(this.Reputation_Label);
-            this.groupBox1.Controls.Add(this.finishNPCLabel);
-            this.groupBox1.Controls.Add(this._FinishNPC);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this._IsRenaissance);
             this.groupBox1.Controls.Add(this.IsRenaissanceLabel);
@@ -208,19 +208,17 @@
             this.groupBox1.Controls.Add(this.listClasses);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this._StartRegionID);
+            this.groupBox1.Controls.Add(this._NpcRegion);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this._MinLevel);
             this.groupBox1.Controls.Add(this._MaxCount);
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.Controls.Add(this._MaxLevel);
             this.groupBox1.Controls.Add(this._QuestDependency);
-            this.groupBox1.Controls.Add(this._ClassType);
-            this.groupBox1.Controls.Add(this._StartNPC);
-            this.groupBox1.Controls.Add(this._QuestName);
+            this.groupBox1.Controls.Add(this._NpcName);
+            this.groupBox1.Controls.Add(this._Name);
             this.groupBox1.Controls.Add(this._ID);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.classTypeLabel);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(3, 32);
@@ -229,6 +227,16 @@
             this.groupBox1.TabIndex = 76;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Constant Quest Attributes";
+            // 
+            // Reputation
+            // 
+            this.Reputation.BackColor = System.Drawing.Color.White;
+            this.Reputation.ForeColor = System.Drawing.Color.Black;
+            this.Reputation.Location = new System.Drawing.Point(193, 97);
+            this.Reputation.Name = "Reputation";
+            this.Reputation.Size = new System.Drawing.Size(29, 20);
+            this.Reputation.TabIndex = 122;
+            this.Reputation.TextChanged += new System.EventHandler(this.Reputation_TextChanged);
             // 
             // Reputation_Label
             // 
@@ -239,24 +247,6 @@
             this.Reputation_Label.TabIndex = 121;
             this.Reputation_Label.Text = "Reputation";
             this.Reputation_Label.UseMnemonic = false;
-            // 
-            // finishNPCLabel
-            // 
-            this.finishNPCLabel.AutoSize = true;
-            this.finishNPCLabel.Location = new System.Drawing.Point(168, 162);
-            this.finishNPCLabel.Name = "finishNPCLabel";
-            this.finishNPCLabel.Size = new System.Drawing.Size(59, 13);
-            this.finishNPCLabel.TabIndex = 120;
-            this.finishNPCLabel.Text = "Finish NPC";
-            // 
-            // _FinishNPC
-            // 
-            this._FinishNPC.BackColor = System.Drawing.Color.White;
-            this._FinishNPC.ForeColor = System.Drawing.Color.Black;
-            this._FinishNPC.Location = new System.Drawing.Point(159, 178);
-            this._FinishNPC.Name = "_FinishNPC";
-            this._FinishNPC.Size = new System.Drawing.Size(77, 20);
-            this._FinishNPC.TabIndex = 119;
             // 
             // label6
             // 
@@ -423,15 +413,15 @@
             this.label17.MouseLeave += new System.EventHandler(this.label17_MouseLeave);
             this.label17.MouseHover += new System.EventHandler(this.label17_MouseHover);
             // 
-            // _StartRegionID
+            // _NpcRegion
             // 
-            this._StartRegionID.BackColor = System.Drawing.Color.White;
-            this._StartRegionID.ForeColor = System.Drawing.Color.Black;
-            this._StartRegionID.Location = new System.Drawing.Point(119, 178);
-            this._StartRegionID.Name = "_StartRegionID";
-            this._StartRegionID.Size = new System.Drawing.Size(29, 20);
-            this._StartRegionID.TabIndex = 8;
-            this._StartRegionID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StartRegionID_KeyPress);
+            this._NpcRegion.BackColor = System.Drawing.Color.White;
+            this._NpcRegion.ForeColor = System.Drawing.Color.Black;
+            this._NpcRegion.Location = new System.Drawing.Point(119, 178);
+            this._NpcRegion.Name = "_NpcRegion";
+            this._NpcRegion.Size = new System.Drawing.Size(29, 20);
+            this._NpcRegion.TabIndex = 8;
+            this._NpcRegion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NpcRegion_KeyPress);
             // 
             // label12
             // 
@@ -493,32 +483,23 @@
             this._QuestDependency.TabIndex = 10;
             this._QuestDependency.MouseHover += new System.EventHandler(this._QuestDependency_MouseHover);
             // 
-            // _ClassType
+            // _NpcName
             // 
-            this._ClassType.BackColor = System.Drawing.Color.White;
-            this._ClassType.ForeColor = System.Drawing.Color.Black;
-            this._ClassType.Location = new System.Drawing.Point(249, 178);
-            this._ClassType.Name = "_ClassType";
-            this._ClassType.Size = new System.Drawing.Size(119, 20);
-            this._ClassType.TabIndex = 9;
+            this._NpcName.BackColor = System.Drawing.Color.White;
+            this._NpcName.ForeColor = System.Drawing.Color.Black;
+            this._NpcName.Location = new System.Drawing.Point(9, 178);
+            this._NpcName.Name = "_NpcName";
+            this._NpcName.Size = new System.Drawing.Size(104, 20);
+            this._NpcName.TabIndex = 7;
             // 
-            // _StartNPC
+            // _Name
             // 
-            this._StartNPC.BackColor = System.Drawing.Color.White;
-            this._StartNPC.ForeColor = System.Drawing.Color.Black;
-            this._StartNPC.Location = new System.Drawing.Point(9, 178);
-            this._StartNPC.Name = "_StartNPC";
-            this._StartNPC.Size = new System.Drawing.Size(104, 20);
-            this._StartNPC.TabIndex = 7;
-            // 
-            // _QuestName
-            // 
-            this._QuestName.BackColor = System.Drawing.Color.White;
-            this._QuestName.ForeColor = System.Drawing.Color.Black;
-            this._QuestName.Location = new System.Drawing.Point(9, 119);
-            this._QuestName.Name = "_QuestName";
-            this._QuestName.Size = new System.Drawing.Size(212, 20);
-            this._QuestName.TabIndex = 6;
+            this._Name.BackColor = System.Drawing.Color.White;
+            this._Name.ForeColor = System.Drawing.Color.Black;
+            this._Name.Location = new System.Drawing.Point(9, 119);
+            this._Name.Name = "_Name";
+            this._Name.Size = new System.Drawing.Size(212, 20);
+            this._Name.TabIndex = 6;
             // 
             // _ID
             // 
@@ -541,17 +522,6 @@
             this.label7.Text = "Allowed Classes:";
             this.label7.MouseLeave += new System.EventHandler(this.label7_MouseLeave);
             this.label7.MouseHover += new System.EventHandler(this.label7_MouseHover);
-            // 
-            // classTypeLabel
-            // 
-            this.classTypeLabel.AutoSize = true;
-            this.classTypeLabel.Location = new System.Drawing.Point(262, 162);
-            this.classTypeLabel.Name = "classTypeLabel";
-            this.classTypeLabel.Size = new System.Drawing.Size(91, 13);
-            this.classTypeLabel.TabIndex = 5;
-            this.classTypeLabel.Text = "Script/ClassType:";
-            this.classTypeLabel.MouseLeave += new System.EventHandler(this.classTypeLabel_MouseLeave);
-            this.classTypeLabel.MouseHover += new System.EventHandler(this.classTypeLabel_MouseHover);
             // 
             // label2
             // 
@@ -607,7 +577,10 @@
             // individualStepBox
             // 
             this.individualStepBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.individualStepBox.Controls.Add(this.StepTextLabel);
+            this.individualStepBox.Controls.Add(this.richTextBoxDone);
+            this.individualStepBox.Controls.Add(this.labelDone);
+            this.individualStepBox.Controls.Add(this.labelAborted);
+            this.individualStepBox.Controls.Add(this.richTextBoxAborted);
             this.individualStepBox.Controls.Add(this._suppressGoal);
             this.individualStepBox.Controls.Add(this.groupBox4);
             this.individualStepBox.Controls.Add(this.groupBox5);
@@ -615,18 +588,47 @@
             this.individualStepBox.ForeColor = System.Drawing.Color.Black;
             this.individualStepBox.Location = new System.Drawing.Point(383, 3);
             this.individualStepBox.Name = "individualStepBox";
-            this.individualStepBox.Size = new System.Drawing.Size(499, 246);
+            this.individualStepBox.Size = new System.Drawing.Size(499, 256);
             this.individualStepBox.TabIndex = 79;
             this.individualStepBox.TabStop = false;
             // 
-            // StepTextLabel
+            // richTextBoxDone
             // 
-            this.StepTextLabel.AutoSize = true;
-            this.StepTextLabel.Location = new System.Drawing.Point(316, 234);
-            this.StepTextLabel.Name = "StepTextLabel";
-            this.StepTextLabel.Size = new System.Drawing.Size(53, 13);
-            this.StepTextLabel.TabIndex = 112;
-            this.StepTextLabel.Text = "Step Text";
+            this.richTextBoxDone.BackColor = System.Drawing.Color.White;
+            this.richTextBoxDone.ForeColor = System.Drawing.Color.Black;
+            this.richTextBoxDone.Location = new System.Drawing.Point(307, 212);
+            this.richTextBoxDone.Name = "richTextBoxDone";
+            this.richTextBoxDone.Size = new System.Drawing.Size(178, 44);
+            this.richTextBoxDone.TabIndex = 115;
+            this.richTextBoxDone.Text = "";
+            // 
+            // labelDone
+            // 
+            this.labelDone.AutoSize = true;
+            this.labelDone.Location = new System.Drawing.Point(313, 196);
+            this.labelDone.Name = "labelDone";
+            this.labelDone.Size = new System.Drawing.Size(82, 13);
+            this.labelDone.TabIndex = 114;
+            this.labelDone.Text = "Message Done:";
+            // 
+            // labelAborted
+            // 
+            this.labelAborted.AutoSize = true;
+            this.labelAborted.Location = new System.Drawing.Point(313, 133);
+            this.labelAborted.Name = "labelAborted";
+            this.labelAborted.Size = new System.Drawing.Size(93, 13);
+            this.labelAborted.TabIndex = 26;
+            this.labelAborted.Text = "Message Aborted:";
+            // 
+            // richTextBoxAborted
+            // 
+            this.richTextBoxAborted.BackColor = System.Drawing.Color.White;
+            this.richTextBoxAborted.ForeColor = System.Drawing.Color.Black;
+            this.richTextBoxAborted.Location = new System.Drawing.Point(307, 149);
+            this.richTextBoxAborted.Name = "richTextBoxAborted";
+            this.richTextBoxAborted.Size = new System.Drawing.Size(178, 44);
+            this.richTextBoxAborted.TabIndex = 113;
+            this.richTextBoxAborted.Text = "";
             // 
             // _suppressGoal
             // 
@@ -645,18 +647,29 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox4.Controls.Add(this.labelStarted);
             this.groupBox4.Controls.Add(this.labelGoalInteract);
             this.groupBox4.Controls.Add(this._GoalTargetText);
+            this.groupBox4.Controls.Add(this.richTextBoxStarted);
             this.groupBox4.Location = new System.Drawing.Point(307, 16);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(178, 223);
+            this.groupBox4.Size = new System.Drawing.Size(178, 113);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
+            // 
+            // labelStarted
+            // 
+            this.labelStarted.AutoSize = true;
+            this.labelStarted.Location = new System.Drawing.Point(6, 55);
+            this.labelStarted.Name = "labelStarted";
+            this.labelStarted.Size = new System.Drawing.Size(90, 13);
+            this.labelStarted.TabIndex = 25;
+            this.labelStarted.Text = "Message Started:";
             // 
             // labelGoalInteract
             // 
             this.labelGoalInteract.AutoSize = true;
-            this.labelGoalInteract.Location = new System.Drawing.Point(9, 20);
+            this.labelGoalInteract.Location = new System.Drawing.Point(6, -1);
             this.labelGoalInteract.Name = "labelGoalInteract";
             this.labelGoalInteract.Size = new System.Drawing.Size(90, 13);
             this.labelGoalInteract.TabIndex = 17;
@@ -668,11 +681,21 @@
             // 
             this._GoalTargetText.BackColor = System.Drawing.Color.White;
             this._GoalTargetText.ForeColor = System.Drawing.Color.Black;
-            this._GoalTargetText.Location = new System.Drawing.Point(0, 36);
+            this._GoalTargetText.Location = new System.Drawing.Point(0, 15);
             this._GoalTargetText.Name = "_GoalTargetText";
-            this._GoalTargetText.Size = new System.Drawing.Size(178, 175);
+            this._GoalTargetText.Size = new System.Drawing.Size(178, 37);
             this._GoalTargetText.TabIndex = 24;
             this._GoalTargetText.Text = "";
+            // 
+            // richTextBoxStarted
+            // 
+            this.richTextBoxStarted.BackColor = System.Drawing.Color.White;
+            this.richTextBoxStarted.ForeColor = System.Drawing.Color.Black;
+            this.richTextBoxStarted.Location = new System.Drawing.Point(0, 74);
+            this.richTextBoxStarted.Name = "richTextBoxStarted";
+            this.richTextBoxStarted.Size = new System.Drawing.Size(178, 40);
+            this.richTextBoxStarted.TabIndex = 26;
+            this.richTextBoxStarted.Text = "";
             // 
             // groupBox5
             // 
@@ -891,9 +914,9 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(157, 57);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(62, 13);
+            this.label24.Size = new System.Drawing.Size(35, 13);
             this.label24.TabIndex = 25;
-            this.label24.Text = "Repeat No.";
+            this.label24.Text = "Count";
             this.label24.MouseLeave += new System.EventHandler(this.label24_MouseLeave);
             this.label24.MouseHover += new System.EventHandler(this.label24_MouseHover);
             // 
@@ -985,6 +1008,26 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "           Final Rewards";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(-3, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Reputation";
+            // 
+            // ReputationReward
+            // 
+            this.ReputationReward.BackColor = System.Drawing.Color.White;
+            this.ReputationReward.ForeColor = System.Drawing.Color.Black;
+            this.ReputationReward.Location = new System.Drawing.Point(56, 21);
+            this.ReputationReward.Name = "ReputationReward";
+            this.ReputationReward.Size = new System.Drawing.Size(90, 20);
+            this.ReputationReward.TabIndex = 38;
+            this.ReputationReward.Text = "0";
+            this.ReputationReward.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ReputationReward_KeyPress);
             // 
             // _RewardBP
             // 
@@ -1086,26 +1129,26 @@
             this._RewardXP.Text = "0";
             this._RewardXP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RewardXp_KeyPress);
             // 
-            // _FinishText
+            // _Conclusion
             // 
-            this._FinishText.BackColor = System.Drawing.Color.White;
-            this._FinishText.ForeColor = System.Drawing.Color.Black;
-            this._FinishText.Location = new System.Drawing.Point(12, 538);
-            this._FinishText.Name = "_FinishText";
-            this._FinishText.Size = new System.Drawing.Size(358, 59);
-            this._FinishText.TabIndex = 14;
-            this._FinishText.Text = "";
+            this._Conclusion.BackColor = System.Drawing.Color.White;
+            this._Conclusion.ForeColor = System.Drawing.Color.Black;
+            this._Conclusion.Location = new System.Drawing.Point(12, 538);
+            this._Conclusion.Name = "_Conclusion";
+            this._Conclusion.Size = new System.Drawing.Size(358, 59);
+            this._Conclusion.TabIndex = 14;
+            this._Conclusion.Text = "";
             // 
-            // finishTextLabel
+            // conclusionLabel
             // 
-            this.finishTextLabel.AutoSize = true;
-            this.finishTextLabel.Location = new System.Drawing.Point(159, 522);
-            this.finishTextLabel.Name = "finishTextLabel";
-            this.finishTextLabel.Size = new System.Drawing.Size(61, 13);
-            this.finishTextLabel.TabIndex = 8;
-            this.finishTextLabel.Text = "Finish Text:";
-            this.finishTextLabel.MouseLeave += new System.EventHandler(this.finishTextLabel_MouseLeave);
-            this.finishTextLabel.MouseHover += new System.EventHandler(this.finishTextLabel_MouseHover);
+            this.conclusionLabel.AutoSize = true;
+            this.conclusionLabel.Location = new System.Drawing.Point(159, 522);
+            this.conclusionLabel.Name = "conclusionLabel";
+            this.conclusionLabel.Size = new System.Drawing.Size(62, 13);
+            this.conclusionLabel.TabIndex = 8;
+            this.conclusionLabel.Text = "Conclusion:";
+            this.conclusionLabel.MouseLeave += new System.EventHandler(this.conclusionLabel_MouseLeave);
+            this.conclusionLabel.MouseHover += new System.EventHandler(this.conclusionLabel_MouseHover);
             // 
             // groupBox7
             // 
@@ -1125,9 +1168,9 @@
             this.groupBox7.Controls.Add(this.label33);
             this.groupBox7.Controls.Add(this.label34);
             this.groupBox7.ForeColor = System.Drawing.Color.Black;
-            this.groupBox7.Location = new System.Drawing.Point(383, 319);
+            this.groupBox7.Location = new System.Drawing.Point(383, 321);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(358, 104);
+            this.groupBox7.Size = new System.Drawing.Size(316, 109);
             this.groupBox7.TabIndex = 80;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Reward Items";
@@ -1135,7 +1178,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(302, 1);
+            this.label26.Location = new System.Drawing.Point(195, 19);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(46, 13);
             this.label26.TabIndex = 117;
@@ -1157,7 +1200,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(302, 16);
+            this.label25.Location = new System.Drawing.Point(241, 19);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(49, 13);
             this.label25.TabIndex = 115;
@@ -1398,52 +1441,32 @@
             this.NewQuestButton.UseVisualStyleBackColor = true;
             this.NewQuestButton.Click += new System.EventHandler(this.NewQuestButton_Click);
             // 
-            // _StepText
+            // richTextBoxCompleted
             // 
-            this._StepText.BackColor = System.Drawing.Color.White;
-            this._StepText.ForeColor = System.Drawing.Color.Black;
-            this._StepText.Location = new System.Drawing.Point(690, 256);
-            this._StepText.Name = "_StepText";
-            this._StepText.Size = new System.Drawing.Size(178, 46);
-            this._StepText.TabIndex = 25;
-            this._StepText.Text = "";
+            this.richTextBoxCompleted.BackColor = System.Drawing.Color.White;
+            this.richTextBoxCompleted.ForeColor = System.Drawing.Color.Black;
+            this.richTextBoxCompleted.Location = new System.Drawing.Point(690, 278);
+            this.richTextBoxCompleted.Name = "richTextBoxCompleted";
+            this.richTextBoxCompleted.Size = new System.Drawing.Size(178, 46);
+            this.richTextBoxCompleted.TabIndex = 117;
+            this.richTextBoxCompleted.Text = "";
             // 
-            // Reputation
+            // labelCompleted
             // 
-            this.Reputation.BackColor = System.Drawing.Color.White;
-            this.Reputation.ForeColor = System.Drawing.Color.Black;
-            this.Reputation.Location = new System.Drawing.Point(193, 97);
-            this.Reputation.Name = "Reputation";
-            this.Reputation.Size = new System.Drawing.Size(29, 20);
-            this.Reputation.TabIndex = 122;
-            this.Reputation.TextChanged += new System.EventHandler(this.Reputation_TextChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(-3, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 13);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Reputation";
-            // 
-            // ReputationReward
-            // 
-            this.ReputationReward.BackColor = System.Drawing.Color.White;
-            this.ReputationReward.ForeColor = System.Drawing.Color.Black;
-            this.ReputationReward.Location = new System.Drawing.Point(56, 21);
-            this.ReputationReward.Name = "ReputationReward";
-            this.ReputationReward.Size = new System.Drawing.Size(90, 20);
-            this.ReputationReward.TabIndex = 38;
-            this.ReputationReward.Text = "0";
-            this.ReputationReward.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ReputationReward_KeyPress);
+            this.labelCompleted.AutoSize = true;
+            this.labelCompleted.Location = new System.Drawing.Point(696, 262);
+            this.labelCompleted.Name = "labelCompleted";
+            this.labelCompleted.Size = new System.Drawing.Size(106, 13);
+            this.labelCompleted.TabIndex = 116;
+            this.labelCompleted.Text = "Message Completed:";
             // 
             // DataQuestRewardQuests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this._StepText);
+            this.Controls.Add(this.labelCompleted);
+            this.Controls.Add(this.richTextBoxCompleted);
             this.Controls.Add(this.NewQuestButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this._targetRegion);
@@ -1460,8 +1483,8 @@
             this.Controls.Add(this.questSearch);
             this.Controls.Add(this.questSave);
             this.Controls.Add(this._StoryText);
-            this.Controls.Add(this._FinishText);
-            this.Controls.Add(this.finishTextLabel);
+            this.Controls.Add(this._Conclusion);
+            this.Controls.Add(this.conclusionLabel);
             this.Name = "DataQuestRewardQuests";
             this.Size = new System.Drawing.Size(885, 606);
             this.Load += new System.EventHandler(this.RewardQuestControl_Load);
@@ -1500,8 +1523,8 @@
         private System.Windows.Forms.TextBox _MaxLevel;
         private System.Windows.Forms.RichTextBox _StoryText;
         private System.Windows.Forms.TextBox _QuestDependency;
-        private System.Windows.Forms.TextBox _StartNPC;
-        private System.Windows.Forms.TextBox _QuestName;
+        private System.Windows.Forms.TextBox _NpcName;
+        private System.Windows.Forms.TextBox _Name;
         private System.Windows.Forms.TextBox _ID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
@@ -1531,8 +1554,8 @@
         private System.Windows.Forms.Button previousGoal;
         private System.Windows.Forms.Button nextGoal;
         private System.Windows.Forms.Label GoalNumber;
-        private System.Windows.Forms.RichTextBox _FinishText;
-        private System.Windows.Forms.Label finishTextLabel;
+        private System.Windows.Forms.RichTextBox _Conclusion;
+        private System.Windows.Forms.Label conclusionLabel;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label optNumber;
         private System.Windows.Forms.Button optrewardForward;
@@ -1552,7 +1575,7 @@
         private System.Windows.Forms.ComboBox _GoalType;
         private System.Windows.Forms.TextBox _QuestGoals;
         private System.Windows.Forms.Label labelGoalText;
-        private System.Windows.Forms.TextBox _StartRegionID;
+        private System.Windows.Forms.TextBox _NpcRegion;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ListBox listClasses;
@@ -1586,20 +1609,22 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox _IsRenaissance;
         private System.Windows.Forms.Label IsRenaissanceLabel;
-        private System.Windows.Forms.TextBox _ClassType;
-        private System.Windows.Forms.Label classTypeLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button _suppressGoal;
-        private System.Windows.Forms.Label finishNPCLabel;
-        private System.Windows.Forms.TextBox _FinishNPC;
         private System.Windows.Forms.Button NewQuestButton;
-        private System.Windows.Forms.Label StepTextLabel;
-        private System.Windows.Forms.RichTextBox _StepText;
         private System.Windows.Forms.TextBox _StepItemTemplate;
         private System.Windows.Forms.Label _StepItemLabel;
         private System.Windows.Forms.Label Reputation_Label;
         private System.Windows.Forms.TextBox Reputation;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox ReputationReward;
+        private System.Windows.Forms.Label labelStarted;
+        private System.Windows.Forms.RichTextBox richTextBoxStarted;
+        private System.Windows.Forms.RichTextBox richTextBoxDone;
+        private System.Windows.Forms.Label labelDone;
+        private System.Windows.Forms.Label labelAborted;
+        private System.Windows.Forms.RichTextBox richTextBoxAborted;
+        private System.Windows.Forms.RichTextBox richTextBoxCompleted;
+        private System.Windows.Forms.Label labelCompleted;
     }
 }

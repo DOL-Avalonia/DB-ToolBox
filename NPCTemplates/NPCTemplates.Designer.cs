@@ -53,7 +53,6 @@
             this._GuildName = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this._Suffix = new System.Windows.Forms.TextBox();
-            this._ClassType = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -253,7 +252,6 @@
             this.groupBox2.Controls.Add(this._GuildName);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this._Suffix);
-            this.groupBox2.Controls.Add(this._ClassType);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label14);
@@ -412,14 +410,6 @@
             this._Suffix.Name = "_Suffix";
             this._Suffix.Size = new System.Drawing.Size(165, 20);
             this._Suffix.TabIndex = 17;
-            // 
-            // _ClassType
-            // 
-            this._ClassType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingTemplate, "ClassType", true));
-            this._ClassType.Location = new System.Drawing.Point(345, 19);
-            this._ClassType.Name = "_ClassType";
-            this._ClassType.Size = new System.Drawing.Size(277, 20);
-            this._ClassType.TabIndex = 11;
             // 
             // label16
             // 
@@ -1399,7 +1389,6 @@
 		private System.Windows.Forms.TextBox _GuildName;
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.TextBox _Suffix;
-		private System.Windows.Forms.TextBox _ClassType;
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Label label17;
 		private System.Windows.Forms.Label label14;

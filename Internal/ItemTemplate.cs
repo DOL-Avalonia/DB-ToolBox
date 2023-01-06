@@ -103,7 +103,6 @@ namespace AmteCreator.Internal
         public int bonusLevel { get; set; }
 
         public string packageID { get; set; }
-        public string classType { get; set; }
 
         public ItemTemplate()
         {
@@ -174,7 +173,6 @@ namespace AmteCreator.Internal
             levelRequirement = 0;
             description = "";
             packageID = "";
-            classType = "";
         }
 
 
@@ -257,7 +255,6 @@ namespace AmteCreator.Internal
             isNotLosingDur = _Parse(template.IsNotLosingDur) == 1;
             levelRequirement = _Parse(template.LevelRequirement);
             price = long.Parse(String.IsNullOrEmpty(template.Price) ? "0" : template.Price);
-            classType = template.ClassType;
             procChance = byte.Parse(String.IsNullOrEmpty(template.ProcChance) ? "0" : template.ProcChance);
             bonusConditions = template.BonusConditions;
         }
@@ -405,7 +402,6 @@ namespace AmteCreator.Internal
                 .Append("bonusLevel: ").AppendLine(bonusLevel.ToString())
 
                 .Append("packageID: ").AppendLine(packageID)
-                .Append("classType: ").AppendLine(classType)
                 .ToString();
         }
 
@@ -599,7 +595,6 @@ namespace AmteCreator.Internal
                          "'" + flags + "'," +
                          "'" + bonusLevel + "'," +
                          "'AmteCreator'," +
-                         Server.EscapeSql(classType) + "," +
                      (bonusConditions != null ? Server.EscapeSql(bonusConditions) : "''");
             return "?action=INSERT&table=itemtemplate&fields=" +
                    HttpUtility.UrlEncode(
@@ -611,7 +606,7 @@ namespace AmteCreator.Internal
                        "`bonus5Type`,`bonus6Type`,`bonus7Type`,`bonus8Type`,`bonus9Type`,`bonus10Type`,`extrabonusType`," +
                        "`isDropable`,`isPickable`,`isTradable`,`canDropAsLoot`,`canUseInRvR`, `maxCount`,`packSize`,`spellID`," +
                        "`procSpellID`,`maxCharges`,`charges`,`spellID1`,`procSpellID1`,`charges1`,`maxCharges1`,`procChance`,`poisonSpellID`," +
-                       "`poisonMaxCharges`,`poisonCharges`,`realm`,`allowedClasses`,`canUseEvery`,`flags`,`bonusLevel`,`packageID`,`classType`,`bonusConditions`", Encoding.UTF8) +
+                       "`poisonMaxCharges`,`poisonCharges`,`realm`,`allowedClasses`,`canUseEvery`,`flags`,`bonusLevel`,`packageID`,`bonusConditions`", Encoding.UTF8) +
                    "&values=" + HttpUtility.UrlEncode(values, Encoding.UTF8);
         }
 
