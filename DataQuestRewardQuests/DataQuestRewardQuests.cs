@@ -191,7 +191,7 @@ namespace AmteCreator.DataQuestRewardQuests
                 _RewardRP.Text = quest.RewardRP.ToString();
                 GoalNumber.Text = "1";
                 Reputation.Text = quest.Reputation;
-
+                _DescriptionText.Text = quest.Description;
                 //formatted like [{"Id":0,"Type":"DOL.GS.Quests.KillGoal","Data":{"Describtion":"None","TargetName":"Quest82mob","TargetRegion":"330","KillCount":1,}},{"Id":1,"Type":"DOL.GS.Quests.EndGoal","Data":{"Describtion":"None","TargetName":"Quest82","TargetRegion":"330"}}]
                 string GoalsJson = quest.GoalsJson;
 
@@ -799,6 +799,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
             q.ID = !string.IsNullOrEmpty(_ID.Text) ? int.Parse(_ID.Text) : (int?)null;
             q.NpcName = string.IsNullOrWhiteSpace(_NpcName.Text) ? "undefined" : _NpcName.Text;
+            q.Description = _DescriptionText.Text;
             q.NpcRegion = ushort.Parse(string.IsNullOrWhiteSpace(_NpcRegion.Text) ? "0" : _NpcRegion.Text);
             q.Story = string.IsNullOrWhiteSpace(_StoryText.Text) ? "" : _StoryText.Text;
             q.Summary = _Summary.Text;
@@ -1019,6 +1020,7 @@ namespace AmteCreator.DataQuestRewardQuests
             _FinalReward.Text = null;
             _Name.Text = null;
             _NpcName.Text = null;
+            _DescriptionText.Text = null;
             _NpcRegion.Text = null;
             _GoalOptional.Text = null;
             _GoalTargetName.Text = null;

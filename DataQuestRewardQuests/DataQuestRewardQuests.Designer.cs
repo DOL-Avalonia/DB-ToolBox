@@ -143,6 +143,8 @@
             this.NewQuestButton = new System.Windows.Forms.Button();
             this.richTextBoxCompleted = new System.Windows.Forms.RichTextBox();
             this.labelCompleted = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this._DescriptionText = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.individualStepBox.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -196,6 +198,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.Controls.Add(this._DescriptionText);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.Reputation);
             this.groupBox1.Controls.Add(this.Reputation_Label);
             this.groupBox1.Controls.Add(this.label6);
@@ -394,7 +398,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(34, 162);
+            this.label18.Location = new System.Drawing.Point(34, 142);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(54, 13);
             this.label18.TabIndex = 104;
@@ -405,7 +409,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(116, 162);
+            this.label17.Location = new System.Drawing.Point(116, 142);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(41, 13);
             this.label17.TabIndex = 103;
@@ -417,7 +421,7 @@
             // 
             this._NpcRegion.BackColor = System.Drawing.Color.White;
             this._NpcRegion.ForeColor = System.Drawing.Color.Black;
-            this._NpcRegion.Location = new System.Drawing.Point(119, 178);
+            this._NpcRegion.Location = new System.Drawing.Point(119, 158);
             this._NpcRegion.Name = "_NpcRegion";
             this._NpcRegion.Size = new System.Drawing.Size(29, 20);
             this._NpcRegion.TabIndex = 8;
@@ -487,7 +491,7 @@
             // 
             this._NpcName.BackColor = System.Drawing.Color.White;
             this._NpcName.ForeColor = System.Drawing.Color.Black;
-            this._NpcName.Location = new System.Drawing.Point(9, 178);
+            this._NpcName.Location = new System.Drawing.Point(9, 158);
             this._NpcName.Name = "_NpcName";
             this._NpcName.Size = new System.Drawing.Size(104, 20);
             this._NpcName.TabIndex = 7;
@@ -1460,6 +1464,24 @@
             this.labelCompleted.TabIndex = 116;
             this.labelCompleted.Text = "Message Completed:";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 188);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.TabIndex = 123;
+            this.label9.Text = "Description";
+            // 
+            // _DescriptionText
+            // 
+            this._DescriptionText.BackColor = System.Drawing.Color.White;
+            this._DescriptionText.ForeColor = System.Drawing.Color.Black;
+            this._DescriptionText.Location = new System.Drawing.Point(113, 185);
+            this._DescriptionText.Name = "_DescriptionText";
+            this._DescriptionText.Size = new System.Drawing.Size(252, 20);
+            this._DescriptionText.TabIndex = 124;
+            // 
             // DataQuestRewardQuests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1626,5 +1648,7 @@
         private System.Windows.Forms.RichTextBox richTextBoxAborted;
         private System.Windows.Forms.RichTextBox richTextBoxCompleted;
         private System.Windows.Forms.Label labelCompleted;
+        private System.Windows.Forms.TextBox _DescriptionText;
+        private System.Windows.Forms.Label label9;
     }
 }

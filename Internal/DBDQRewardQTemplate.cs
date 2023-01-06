@@ -223,6 +223,14 @@ namespace AmteCreator.Internal
             get; set;
         }
 
+        /// <summary>
+        /// Description of whole quest
+        /// </summary>
+        public string Description 
+        {
+            get; set;
+        }
+
         public DBDQRewardQTemplate()
         {
         }
@@ -265,6 +273,7 @@ namespace AmteCreator.Internal
                 RewardReputation = long.Parse(model.RewardReputation),
                 GoalsJson = model.GoalsJson,
                 NbChooseOptionalItems = int.Parse(model.NbChooseOptionalItems),
+                Description = model.Description,
             };
         }
     }
