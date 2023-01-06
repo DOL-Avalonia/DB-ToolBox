@@ -710,10 +710,7 @@ namespace AmteCreator.DataQuestRewardQuests
                     return i == "All" ? string.Empty : ((byte)(ERace)Enum.Parse(typeof(ERace), i)).ToString();
                 }));
 
-                if (opt_dictionary.Count == 0)
-                {
-                    optionalRewardItemTemplates = "";
-                }
+                optionalRewardItemTemplates = String.Join("|", Array.ConvertAll(opt_dictionary.Values.ToArray(), i => i.ToString()));
                 finalRewardItemTemplates = String.Join("|", Array.ConvertAll(fin_dictionary.Values.ToArray(), i => i.ToString()));
 
                 allowedRaces = allowedRaces?.Replace("All", string.Empty);
