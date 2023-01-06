@@ -363,7 +363,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
                     if (goalType == GoalType.Collect || goalType == GoalType.UseItem)
                     {
-                        if (item_dictionary.Count < GoalSteps.Count)
+                        if (item_dictionary.Count+1 < GoalSteps.Count)
                         {
                             for(int i = 1; i <= GoalSteps.Count; i++)
                             {
@@ -573,9 +573,6 @@ namespace AmteCreator.DataQuestRewardQuests
 		/// <returns>A serialisable object</returns>
 		public Dictionary<string, object> GetDatabaseJsonObject(int index)
 		{
-            var a = arearadius_dictionary;
-            var b = arearadius_dictionary[index];
-
             return new Dictionary<string, object>
 			{// "" if no index in dict
 				{ "Description", goaltext_dictionary.ContainsKey(index) ? goaltext_dictionary[index] : "" },
@@ -1044,6 +1041,8 @@ namespace AmteCreator.DataQuestRewardQuests
             listRaces.SelectedIndex = 0;
             listClasses.SelectedIndex = 0;
             Reputation.Text = string.Empty;//TODO: for massages as well
+            GoalSteps.Add((GoalType)0);
+            _GoalType.SelectedIndex = 0;
             this._quest = new DBDQRewardQTemplate();
         }
 
@@ -1289,7 +1288,7 @@ namespace AmteCreator.DataQuestRewardQuests
         private void _GoalType_SelectedIndexChanged(object sender, EventArgs e)
         {
             Enum.TryParse<GoalType>((string)_GoalType.SelectedItem, out GoalType selected);
-            if (selected != GoalType.Kill ) // kill goaltype
+            if (selected != GoalType.Kill ||  selected != GoalType.Collect) // kill goaltype
             {
                 _GoalRepeatNo.Text = "1"; // all other goaltypes have a repeat value of 1
             }  
