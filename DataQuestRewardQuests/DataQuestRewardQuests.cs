@@ -23,12 +23,14 @@ namespace AmteCreator.DataQuestRewardQuests
         
         public static Dictionary<string, string> GoalTypeNames = new Dictionary<string, string>()
         {
+            {"DOL.GS.Quests.AbortQuestGoal", "Abort"},
             {"DOL.GS.Quests.CollectGoal", "Collect"},
             {"DOL.GS.Quests.KillGoal", "Kill"},
             {"DOL.GS.Quests.EnterAreaGoal", "EnterArea"},
             //{"DeliverFinish", "DOL.GS.Quests.InteractGoal"},
             {"DOL.GS.Quests.InteractGoal", "Interact"},
             {"DOL.GS.Quests.KilledGoal", "Killed"},
+            {"DOL.GS.Quests.StopGoal", "Stop"},
             {"DOL.GS.Quests.TimerGoal", "Timer"},
             {"DOL.GS.Quests.UseItemGoal", "UseItem"},
             {"DOL.GS.Quests.WhisperGoal", "Whisper"},
@@ -48,6 +50,7 @@ namespace AmteCreator.DataQuestRewardQuests
         {
             GoalType.EnterArea,
             GoalType.Kill,
+            GoalType.UseItem,
         };
         public bool IsUsingRepeatNo(GoalType goalType)
         {
@@ -111,6 +114,7 @@ namespace AmteCreator.DataQuestRewardQuests
         //timer
         public Dictionary<int, string> seconds_dictionary;
         public Dictionary<int, Dictionary<int, string>> questDependance_dictionary;
+        public Dictionary<int, Dictionary<int, string>> questStop_dictionary;
 
         /// <summary>
         /// Index - Byte Enum Value
@@ -149,6 +153,7 @@ namespace AmteCreator.DataQuestRewardQuests
             messageDone_dictionary = new Dictionary<int, string>();
             messageCompleted_dictionary = new Dictionary<int, string>();
             questDependance_dictionary = new Dictionary<int, Dictionary<int, string>>();
+            questStop_dictionary = new Dictionary<int, Dictionary<int, string>>();
 
             PopulateClassDictionary();
             PopulateAllowRacesListBox();
@@ -289,6 +294,11 @@ namespace AmteCreator.DataQuestRewardQuests
                     if(data.StartGoalsDone != null)
                         foreach (var goal in data.StartGoalsDone)
                             questDependance_dictionary[id].Add((int)goal, "");
+
+                    questStop_dictionary.Add(id,  new Dictionary<int, string>());
+                    if(data.StopGoals != null)
+                        foreach (var goal in data.StopGoals)
+                            questStop_dictionary[id].Add((int)goal, "");
                 }
                 _GoalRepeatNo.Text = goalrepeatno_dictionary[1];
                 _GoalTargetName.Text = goaltargetname_dictionary[1];
@@ -306,6 +316,7 @@ namespace AmteCreator.DataQuestRewardQuests
                 _QuestGoals.Text = goaltext_dictionary[1];
                 GoalStepNo.Text = "1";
                 _ZoneID.Text = zoneid_dictionary[1];
+                _Radius.Text = arearadius_dictionary[1];
 
                 if (GoalSteps.Count > 0)
                 {                   
@@ -342,6 +353,7 @@ namespace AmteCreator.DataQuestRewardQuests
                 }
 
                 PopulateGoalDependanceListBox(1);
+                PopulateGoalStopListBox(1);
                 UpdateOptionalFields();
                 SelectAllowedClasses();
                 SelectAllowedRaces();
@@ -355,42 +367,67 @@ namespace AmteCreator.DataQuestRewardQuests
 
         private void UpdateGoalDependanceList(int goalId)
         {
-            listGoalDependance.ClearSelected();
+            UpdateGoalList(listGoalDependance, questDependance_dictionary, goalId);
+        }
+        private void UpdateGoalStopList(int goalId)
+        {
+            UpdateGoalList(listGoalStop, questStop_dictionary, goalId);
+        }
+        private void UpdateGoalList(ListBox list, Dictionary<int, Dictionary<int, string>> quest_dictionary, int goalId, bool defaultNew = true)
+        {
             
-            foreach (var Id in questDependance_dictionary[goalId].Keys)
+            list.ClearSelected();
+            
+            foreach (var Id in quest_dictionary[goalId].Keys)
             {
                 if(Id < goalId)
-                    listGoalDependance.SetSelected(Id - 1, true);
+                    list.SetSelected(Id - 1, true);
                 else
-                    listGoalDependance.SetSelected(Id - 2, true);
+                    list.SetSelected(Id - 2, true);
             }
-            if(goalId == questDependance_dictionary.Count && listGoalDependance.SelectedItems.Count == 0)
-                listGoalDependance.SetSelected(goalId - 2, true);
+            if(defaultNew && goalId == quest_dictionary.Count && list.SelectedItems.Count == 0)
+                list.SetSelected(goalId - 2, true);
         }
 
         private void PopulateGoalDependanceListBox(int goalId)
         {
-            listGoalDependance.Items.Clear();
+            PopulateGoalList(listGoalDependance, questDependance_dictionary, goalId);
+        }
+        private void PopulateGoalStopListBox(int goalId)
+        {
+            PopulateGoalList(listGoalStop, questStop_dictionary, goalId, false);
+        }
+        private void PopulateGoalList(ListBox list, Dictionary<int, Dictionary<int, string>> quest_dictionary, int goalId, bool defaultNew = true)
+        {
+            list.Items.Clear();
             int index = 1;
 
             foreach (var val in GoalSteps)
             {
                 if(index != goalId)
                 {
-                    listGoalDependance.Items.Add(index.ToString() + ": " + val.ToString());
+                    list.Items.Add(index.ToString() + ": " + val.ToString());
                 }
                 index++;
             }
-            UpdateGoalDependanceList(goalId);
+            UpdateGoalList(list, quest_dictionary, goalId, defaultNew);
         }
         private void SetGoalDependanceList(int goalId)
         {
-            questDependance_dictionary[goalId].Clear();
+            SetGoalList(listGoalDependance, questDependance_dictionary, goalId);    
+        }
+        private void SetGoalStopList(int goalId)
+        {
+            SetGoalList(listGoalStop, questStop_dictionary, goalId);    
+        }
+        private void SetGoalList(ListBox list, Dictionary<int, Dictionary<int, string>> quest_dictionary, int goalId)
+        {
+            quest_dictionary[goalId].Clear();
 
-            foreach (var val in listGoalDependance.SelectedItems.Cast<string>())
+            foreach (var val in list.SelectedItems.Cast<string>())
             {
                 int Id = int.Parse(val.Split(':')[0]);
-                questDependance_dictionary[goalId].Add(Id, "");
+                quest_dictionary[goalId].Add(Id, "");
             }
         }
 
@@ -460,26 +497,6 @@ namespace AmteCreator.DataQuestRewardQuests
                         _GoalOptional.Text = string.Empty;
                     }
 
-                }
-                if(IsUsingArea(goalType))
-                {
-                    if (arearadius_dictionary.Count < GoalSteps.Count)
-                    {
-                        for(int i = arearadius_dictionary.Count+1; i <= GoalSteps.Count; i++)
-                        {
-                            arearadius_dictionary.Add(i, string.Empty);
-                        }
-                    }
-
-                    if (arearadius_dictionary.ContainsKey(step))
-                    {
-                        _GoalOptional.Text = arearadius_dictionary[step];
-                    }
-                    else
-                    {
-                        _GoalOptional.Text = string.Empty;
-                    }
-                    _goalOptionalLabel.Text = "Area Radius";
                 }
                 else if (goalType == GoalType.Whisper || goalType == GoalType.Timer)
                 {
@@ -640,6 +657,7 @@ namespace AmteCreator.DataQuestRewardQuests
 				{ "MessageDone", messageDone_dictionary.ContainsKey(index) ? messageDone_dictionary[index]  : "" },
 				{ "MessageCompleted", messageCompleted_dictionary.ContainsKey(index) ?  messageCompleted_dictionary[index]  : "" },
                 {"StartGoalsDone", questDependance_dictionary.ContainsKey(index) ?  questDependance_dictionary[index].Keys.ToList() : new List<int>()},
+                {"StopGoals", questStop_dictionary.ContainsKey(index) ?  questStop_dictionary[index].Keys.ToList() : new List<int>()},
 				{ "EndWhenGoalsDone", null },
 				{ "TargetName", goaltargetname_dictionary.ContainsKey(index) ? goaltargetname_dictionary[index]  : "" },
 				{ "TargetRegion", targetRegions_dictionary.ContainsKey(index) ? targetRegions_dictionary[index] : ""  },
@@ -675,6 +693,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
        
             SetGoalDependanceList(goalNum);
+            SetGoalStopList(goalNum);
         
             goalstepno_dictionary.Remove(goalNum);
             goalstepno_dictionary.Add(goalNum, GoalStepNo.Text);
@@ -718,7 +737,7 @@ namespace AmteCreator.DataQuestRewardQuests
             if (IsUsingArea(GoalSteps[goalNum - 1]))
             {
                 arearadius_dictionary.Remove(goalNum);
-                arearadius_dictionary.Add(goalNum, _GoalOptional.Text);
+                arearadius_dictionary.Add(goalNum, _Radius.Text);
             }
 
             goaltext_dictionary.Remove(goalNum);
@@ -1017,6 +1036,7 @@ namespace AmteCreator.DataQuestRewardQuests
             stepStartItemTemplate_dictionnary.Clear();
             GoalSteps.Clear();
             questDependance_dictionary.Clear();
+            questStop_dictionary.Clear();
         }        
 
 
@@ -1411,9 +1431,15 @@ namespace AmteCreator.DataQuestRewardQuests
             {
                 questDependance_dictionary.Add(goalNumber + 1,  new Dictionary<int, string>());
             }
+            if (!questStop_dictionary.ContainsKey(goalNumber + 1))
+            {
+                questStop_dictionary.Add(goalNumber + 1,  new Dictionary<int, string>());
+            }
             _suppressGoal.Enabled = true; 
             SetGoalDependanceList(goalNumber);
+            SetGoalStopList(goalNumber);
             PopulateGoalDependanceListBox(goalNumber + 1);
+            PopulateGoalStopListBox(goalNumber + 1);
 
             //GoalTarget.Text
             if (!goaltargetname_dictionary.ContainsKey(goalNumber))
@@ -1441,7 +1467,7 @@ namespace AmteCreator.DataQuestRewardQuests
                     item_dictionary.Add(goalNumber, _GoalOptional.Text);
                 }       
             }
-            else if (GoalSteps[goalNumber - 1] == GoalType.Whisper)
+            if (GoalSteps[goalNumber - 1] == GoalType.Whisper)
             {
                 if (!goalAdvanceText_dictionnary.ContainsKey(goalNumber))
                 {
@@ -1453,18 +1479,19 @@ namespace AmteCreator.DataQuestRewardQuests
                     goalAdvanceText_dictionnary.Add(goalNumber, _GoalOptional.Text);
                 }              
             }
-            else if (IsUsingArea(GoalSteps[goalNumber - 1]))
+             if (IsUsingArea(GoalSteps[goalNumber - 1]))
             {
                 if (!arearadius_dictionary.ContainsKey(goalNumber))
                 {
-                    arearadius_dictionary.Add(goalNumber, _GoalOptional.Text);
+                    arearadius_dictionary.Add(goalNumber, _Radius.Text);
                 }
                 else
                 {
                     arearadius_dictionary.Remove(goalNumber);
-                    arearadius_dictionary.Add(goalNumber, _GoalOptional.Text);
+                    arearadius_dictionary.Add(goalNumber, _Radius.Text);
                 }
-            }else if (GoalSteps[goalNumber - 1] == GoalType.Timer){
+            }
+             if (GoalSteps[goalNumber - 1] == GoalType.Timer){
                 if (!seconds_dictionary.ContainsKey(goalNumber))
                 {
                     seconds_dictionary.Add(goalNumber, _GoalOptional.Text);
@@ -1683,7 +1710,7 @@ namespace AmteCreator.DataQuestRewardQuests
             if (arearadius_dictionary.ContainsKey(goalNext) && IsUsingArea(GoalSteps[goalNext - 1]))
             {
                 arearadius_dictionary.TryGetValue(goalNext, out goalvalue);
-                _GoalOptional.Text = goalvalue;
+                _Radius.Text = goalvalue;
             }
 
             if (goalAdvanceText_dictionnary.ContainsKey(goalNext) && GoalSteps[goalNext - 1] == GoalType.Whisper)
@@ -1824,7 +1851,9 @@ namespace AmteCreator.DataQuestRewardQuests
                 if (shouldSave)
                 {
                     SetGoalDependanceList(goalNum);
+                    SetGoalStopList(goalNum);
                     PopulateGoalDependanceListBox(goalNum - 1);
+                    PopulateGoalStopListBox(goalNum - 1);
                     goaltext_dictionary.Remove(goalNum);
                     goaltext_dictionary.Add(goalNum, _QuestGoals.Text);
                     goaltargetname_dictionary.Remove(goalNum);
@@ -1870,7 +1899,7 @@ namespace AmteCreator.DataQuestRewardQuests
                     if (IsUsingArea(GoalSteps[goalNum - 1]))
                     {
                         arearadius_dictionary.Remove(goalNum);
-                        arearadius_dictionary.Add(goalNum, _GoalOptional.Text);
+                        arearadius_dictionary.Add(goalNum, _Radius.Text);
                     }
 
                     goalstepno_dictionary.Remove(goalNum);
@@ -1939,7 +1968,7 @@ namespace AmteCreator.DataQuestRewardQuests
             if (arearadius_dictionary.ContainsKey(goalNum) && IsUsingArea(GoalSteps[goalNum - 1]))
             {
                 arearadius_dictionary.TryGetValue(goalNum, out goalvalue);
-                _GoalOptional.Text = goalvalue;
+                _Radius.Text = goalvalue;
             }
 
             if (seconds_dictionary.ContainsKey(goalNum) && GoalSteps[goalNum - 1] == GoalType.Timer)
@@ -2494,6 +2523,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
               GoalSteps.RemoveAt(step - 1);
               PopulateGoalDependanceListBox(step - 1);
+              PopulateGoalStopListBox(step - 1);
               previousGoal_Click(this, new GoalEventArgs(){ ShouldSavePreviousStep = false });
             }
         }

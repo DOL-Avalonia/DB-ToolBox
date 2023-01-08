@@ -149,6 +149,10 @@
             this.listGoalDependance = new System.Windows.Forms.ListBox();
             this._StepStartItemTemplate = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.listGoalStop = new System.Windows.Forms.ListBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this._Radius = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.individualStepBox.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -726,8 +730,10 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this._Radius);
             this.groupBox5.Controls.Add(this._StepItemTemplate);
+            this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this._StepItemLabel);
             this.groupBox5.Controls.Add(this._targetRegionLabel);
             this.groupBox5.Controls.Add(this._GoalTargetName);
@@ -750,14 +756,14 @@
             this.groupBox5.Controls.Add(this.labelGoalType);
             this.groupBox5.Location = new System.Drawing.Point(16, 52);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(300, 195);
+            this.groupBox5.Size = new System.Drawing.Size(300, 298);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(157, 178);
+            this.label10.Location = new System.Drawing.Point(404, 272);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 13);
             this.label10.TabIndex = 125;
@@ -1204,9 +1210,9 @@
             this.groupBox7.Controls.Add(this.label33);
             this.groupBox7.Controls.Add(this.label34);
             this.groupBox7.ForeColor = System.Drawing.Color.Black;
-            this.groupBox7.Location = new System.Drawing.Point(383, 321);
+            this.groupBox7.Location = new System.Drawing.Point(383, 362);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(316, 109);
+            this.groupBox7.Size = new System.Drawing.Size(316, 117);
             this.groupBox7.TabIndex = 80;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Reward Items";
@@ -1365,9 +1371,9 @@
             this.groupBox8.Controls.Add(this.finSelect);
             this.groupBox8.Enabled = false;
             this.groupBox8.ForeColor = System.Drawing.Color.Black;
-            this.groupBox8.Location = new System.Drawing.Point(417, 429);
+            this.groupBox8.Location = new System.Drawing.Point(417, 454);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(263, 148);
+            this.groupBox8.Size = new System.Drawing.Size(263, 149);
             this.groupBox8.TabIndex = 81;
             this.groupBox8.TabStop = false;
             // 
@@ -1499,7 +1505,7 @@
             // listGoalDependance
             // 
             this.listGoalDependance.FormattingEnabled = true;
-            this.listGoalDependance.Location = new System.Drawing.Point(546, 249);
+            this.listGoalDependance.Location = new System.Drawing.Point(405, 285);
             this.listGoalDependance.Name = "listGoalDependance";
             this.listGoalDependance.ScrollAlwaysVisible = true;
             this.listGoalDependance.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -1510,7 +1516,7 @@
             // 
             this._StepStartItemTemplate.BackColor = System.Drawing.Color.White;
             this._StepStartItemTemplate.ForeColor = System.Drawing.Color.Black;
-            this._StepStartItemTemplate.Location = new System.Drawing.Point(405, 288);
+            this._StepStartItemTemplate.Location = new System.Drawing.Point(546, 249);
             this._StepStartItemTemplate.Name = "_StepStartItemTemplate";
             this._StepStartItemTemplate.Size = new System.Drawing.Size(138, 20);
             this._StepStartItemTemplate.TabIndex = 126;
@@ -1518,18 +1524,58 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(405, 272);
+            this.label11.Location = new System.Drawing.Point(157, 178);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
             this.label11.TabIndex = 126;
             this.label11.Text = "Start Item";
+            // 
+            // listGoalStop
+            // 
+            this.listGoalStop.FormattingEnabled = true;
+            this.listGoalStop.Location = new System.Drawing.Point(548, 285);
+            this.listGoalStop.Name = "listGoalStop";
+            this.listGoalStop.ScrollAlwaysVisible = true;
+            this.listGoalStop.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listGoalStop.Size = new System.Drawing.Size(126, 69);
+            this.listGoalStop.TabIndex = 127;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(556, 272);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 13);
+            this.label14.TabIndex = 128;
+            this.label14.Text = "Stop Goals";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // _Radius
+            // 
+            this._Radius.BackColor = System.Drawing.Color.White;
+            this._Radius.ForeColor = System.Drawing.Color.Black;
+            this._Radius.Location = new System.Drawing.Point(163, 112);
+            this._Radius.Name = "_Radius";
+            this._Radius.Size = new System.Drawing.Size(46, 20);
+            this._Radius.TabIndex = 127;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(157, 96);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(68, 13);
+            this.label15.TabIndex = 128;
+            this.label15.Text = "Zone Radius";
             // 
             // DataQuestRewardQuests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.listGoalStop);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.listGoalDependance);
             this.Controls.Add(this._StepStartItemTemplate);
             this.Controls.Add(this.labelCompleted);
@@ -1699,5 +1745,9 @@
         private System.Windows.Forms.ListBox listGoalDependance;
         private System.Windows.Forms.TextBox _StepStartItemTemplate;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ListBox listGoalStop;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox _Radius;
     }
 }
