@@ -34,6 +34,8 @@
             this.questSearch = new System.Windows.Forms.Button();
             this.questSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this._DescriptionText = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.Reputation = new System.Windows.Forms.TextBox();
             this.Reputation_Label = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -74,6 +76,7 @@
             this._GoalTargetText = new System.Windows.Forms.RichTextBox();
             this.richTextBoxStarted = new System.Windows.Forms.RichTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this._StepItemTemplate = new System.Windows.Forms.TextBox();
             this._targetRegionLabel = new System.Windows.Forms.Label();
             this._GoalTargetName = new System.Windows.Forms.TextBox();
@@ -143,8 +146,9 @@
             this.NewQuestButton = new System.Windows.Forms.Button();
             this.richTextBoxCompleted = new System.Windows.Forms.RichTextBox();
             this.labelCompleted = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this._DescriptionText = new System.Windows.Forms.TextBox();
+            this.listGoalDependance = new System.Windows.Forms.ListBox();
+            this._StepStartItemTemplate = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.individualStepBox.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -232,6 +236,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Constant Quest Attributes";
             // 
+            // _DescriptionText
+            // 
+            this._DescriptionText.BackColor = System.Drawing.Color.White;
+            this._DescriptionText.ForeColor = System.Drawing.Color.Black;
+            this._DescriptionText.Location = new System.Drawing.Point(113, 185);
+            this._DescriptionText.Name = "_DescriptionText";
+            this._DescriptionText.Size = new System.Drawing.Size(252, 20);
+            this._DescriptionText.TabIndex = 124;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 188);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.TabIndex = 123;
+            this.label9.Text = "Description";
+            // 
             // Reputation
             // 
             this.Reputation.BackColor = System.Drawing.Color.White;
@@ -292,7 +314,7 @@
             // listRaces
             // 
             this.listRaces.FormattingEnabled = true;
-            this.listRaces.Location = new System.Drawing.Point(242, 103);
+            this.listRaces.Location = new System.Drawing.Point(239, 103);
             this.listRaces.Name = "listRaces";
             this.listRaces.ScrollAlwaysVisible = true;
             this.listRaces.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -388,7 +410,7 @@
             "Vampiir",
             "Warden",
             "MaulerHib"});
-            this.listClasses.Location = new System.Drawing.Point(242, 15);
+            this.listClasses.Location = new System.Drawing.Point(239, 15);
             this.listClasses.Name = "listClasses";
             this.listClasses.ScrollAlwaysVisible = true;
             this.listClasses.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -704,6 +726,7 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this._StepItemTemplate);
             this.groupBox5.Controls.Add(this._StepItemLabel);
             this.groupBox5.Controls.Add(this._targetRegionLabel);
@@ -730,6 +753,16 @@
             this.groupBox5.Size = new System.Drawing.Size(300, 195);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(157, 178);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 13);
+            this.label10.TabIndex = 125;
+            this.label10.Text = "Goal Dependance";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // _StepItemTemplate
             // 
@@ -902,7 +935,6 @@
             this._GoalRepeatNo.Size = new System.Drawing.Size(46, 20);
             this._GoalRepeatNo.TabIndex = 18;
             this._GoalRepeatNo.Text = "1";
-            this._GoalRepeatNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GoalRepeatNo_KeyPress);
             // 
             // _GoalOptional
             // 
@@ -1464,29 +1496,42 @@
             this.labelCompleted.TabIndex = 116;
             this.labelCompleted.Text = "Message Completed:";
             // 
-            // label9
+            // listGoalDependance
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 188);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 13);
-            this.label9.TabIndex = 123;
-            this.label9.Text = "Description";
+            this.listGoalDependance.FormattingEnabled = true;
+            this.listGoalDependance.Location = new System.Drawing.Point(546, 249);
+            this.listGoalDependance.Name = "listGoalDependance";
+            this.listGoalDependance.ScrollAlwaysVisible = true;
+            this.listGoalDependance.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listGoalDependance.Size = new System.Drawing.Size(126, 69);
+            this.listGoalDependance.TabIndex = 125;
             // 
-            // _DescriptionText
+            // _StepStartItemTemplate
             // 
-            this._DescriptionText.BackColor = System.Drawing.Color.White;
-            this._DescriptionText.ForeColor = System.Drawing.Color.Black;
-            this._DescriptionText.Location = new System.Drawing.Point(113, 185);
-            this._DescriptionText.Name = "_DescriptionText";
-            this._DescriptionText.Size = new System.Drawing.Size(252, 20);
-            this._DescriptionText.TabIndex = 124;
+            this._StepStartItemTemplate.BackColor = System.Drawing.Color.White;
+            this._StepStartItemTemplate.ForeColor = System.Drawing.Color.Black;
+            this._StepStartItemTemplate.Location = new System.Drawing.Point(405, 288);
+            this._StepStartItemTemplate.Name = "_StepStartItemTemplate";
+            this._StepStartItemTemplate.Size = new System.Drawing.Size(138, 20);
+            this._StepStartItemTemplate.TabIndex = 126;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(405, 272);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 126;
+            this.label11.Text = "Start Item";
             // 
             // DataQuestRewardQuests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.listGoalDependance);
+            this.Controls.Add(this._StepStartItemTemplate);
             this.Controls.Add(this.labelCompleted);
             this.Controls.Add(this.richTextBoxCompleted);
             this.Controls.Add(this.NewQuestButton);
@@ -1650,5 +1695,9 @@
         private System.Windows.Forms.Label labelCompleted;
         private System.Windows.Forms.TextBox _DescriptionText;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ListBox listGoalDependance;
+        private System.Windows.Forms.TextBox _StepStartItemTemplate;
+        private System.Windows.Forms.Label label11;
     }
 }
