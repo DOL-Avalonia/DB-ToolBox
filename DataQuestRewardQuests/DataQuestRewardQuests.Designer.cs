@@ -76,8 +76,10 @@
             this._GoalTargetText = new System.Windows.Forms.RichTextBox();
             this.richTextBoxStarted = new System.Windows.Forms.RichTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this._Radius = new System.Windows.Forms.TextBox();
             this._StepItemTemplate = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this._targetRegionLabel = new System.Windows.Forms.Label();
             this._GoalTargetName = new System.Windows.Forms.TextBox();
             this.labelGoalTargetName = new System.Windows.Forms.Label();
@@ -102,6 +104,7 @@
             this.previousGoal = new System.Windows.Forms.Button();
             this.nextGoal = new System.Windows.Forms.Button();
             this.GoalNumber = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.ReputationReward = new System.Windows.Forms.TextBox();
@@ -148,11 +151,10 @@
             this.labelCompleted = new System.Windows.Forms.Label();
             this.listGoalDependance = new System.Windows.Forms.ListBox();
             this._StepStartItemTemplate = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.listGoalStop = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
-            this._Radius = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.labelDestroyItem = new System.Windows.Forms.Label();
+            this.checkBoxDestroyItem = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.individualStepBox.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -730,6 +732,8 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox5.Controls.Add(this.checkBoxDestroyItem);
+            this.groupBox5.Controls.Add(this.labelDestroyItem);
             this.groupBox5.Controls.Add(this.label15);
             this.groupBox5.Controls.Add(this._Radius);
             this.groupBox5.Controls.Add(this._StepItemTemplate);
@@ -760,15 +764,23 @@
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
             // 
-            // label10
+            // label15
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(404, 272);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 13);
-            this.label10.TabIndex = 125;
-            this.label10.Text = "Goal Dependance";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(157, 96);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(68, 13);
+            this.label15.TabIndex = 128;
+            this.label15.Text = "Zone Radius";
+            // 
+            // _Radius
+            // 
+            this._Radius.BackColor = System.Drawing.Color.White;
+            this._Radius.ForeColor = System.Drawing.Color.Black;
+            this._Radius.Location = new System.Drawing.Point(163, 112);
+            this._Radius.Name = "_Radius";
+            this._Radius.Size = new System.Drawing.Size(46, 20);
+            this._Radius.TabIndex = 127;
             // 
             // _StepItemTemplate
             // 
@@ -779,10 +791,19 @@
             this._StepItemTemplate.Size = new System.Drawing.Size(138, 20);
             this._StepItemTemplate.TabIndex = 117;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(160, 188);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 126;
+            this.label11.Text = "Start Item";
+            // 
             // _targetRegionLabel
             // 
             this._targetRegionLabel.AutoSize = true;
-            this._targetRegionLabel.Location = new System.Drawing.Point(6, 178);
+            this._targetRegionLabel.Location = new System.Drawing.Point(6, 184);
             this._targetRegionLabel.Name = "_targetRegionLabel";
             this._targetRegionLabel.Size = new System.Drawing.Size(100, 13);
             this._targetRegionLabel.TabIndex = 111;
@@ -1027,6 +1048,16 @@
             this.GoalNumber.Size = new System.Drawing.Size(13, 13);
             this.GoalNumber.TabIndex = 5;
             this.GoalNumber.Text = "1";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(408, 275);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 13);
+            this.label10.TabIndex = 125;
+            this.label10.Text = "Goal Dependance";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox2
             // 
@@ -1458,7 +1489,7 @@
             // 
             this._targetRegion.BackColor = System.Drawing.Color.White;
             this._targetRegion.ForeColor = System.Drawing.Color.Black;
-            this._targetRegion.Location = new System.Drawing.Point(405, 249);
+            this._targetRegion.Location = new System.Drawing.Point(406, 255);
             this._targetRegion.Name = "_targetRegion";
             this._targetRegion.Size = new System.Drawing.Size(138, 20);
             this._targetRegion.TabIndex = 111;
@@ -1505,7 +1536,7 @@
             // listGoalDependance
             // 
             this.listGoalDependance.FormattingEnabled = true;
-            this.listGoalDependance.Location = new System.Drawing.Point(405, 285);
+            this.listGoalDependance.Location = new System.Drawing.Point(405, 291);
             this.listGoalDependance.Name = "listGoalDependance";
             this.listGoalDependance.ScrollAlwaysVisible = true;
             this.listGoalDependance.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -1516,24 +1547,15 @@
             // 
             this._StepStartItemTemplate.BackColor = System.Drawing.Color.White;
             this._StepStartItemTemplate.ForeColor = System.Drawing.Color.Black;
-            this._StepStartItemTemplate.Location = new System.Drawing.Point(546, 249);
+            this._StepStartItemTemplate.Location = new System.Drawing.Point(546, 255);
             this._StepStartItemTemplate.Name = "_StepStartItemTemplate";
             this._StepStartItemTemplate.Size = new System.Drawing.Size(138, 20);
             this._StepStartItemTemplate.TabIndex = 126;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(157, 178);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 126;
-            this.label11.Text = "Start Item";
-            // 
             // listGoalStop
             // 
             this.listGoalStop.FormattingEnabled = true;
-            this.listGoalStop.Location = new System.Drawing.Point(548, 285);
+            this.listGoalStop.Location = new System.Drawing.Point(548, 291);
             this.listGoalStop.Name = "listGoalStop";
             this.listGoalStop.ScrollAlwaysVisible = true;
             this.listGoalStop.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -1543,30 +1565,30 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(556, 272);
+            this.label14.Location = new System.Drawing.Point(549, 278);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 13);
             this.label14.TabIndex = 128;
             this.label14.Text = "Stop Goals";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // _Radius
+            // labelDestroyItem
             // 
-            this._Radius.BackColor = System.Drawing.Color.White;
-            this._Radius.ForeColor = System.Drawing.Color.Black;
-            this._Radius.Location = new System.Drawing.Point(163, 112);
-            this._Radius.Name = "_Radius";
-            this._Radius.Size = new System.Drawing.Size(46, 20);
-            this._Radius.TabIndex = 127;
+            this.labelDestroyItem.AutoSize = true;
+            this.labelDestroyItem.Location = new System.Drawing.Point(166, 175);
+            this.labelDestroyItem.Name = "labelDestroyItem";
+            this.labelDestroyItem.Size = new System.Drawing.Size(100, 13);
+            this.labelDestroyItem.TabIndex = 125;
+            this.labelDestroyItem.Text = "Destroy item on use";
             // 
-            // label15
+            // checkBoxDestroyItem
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(157, 96);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 13);
-            this.label15.TabIndex = 128;
-            this.label15.Text = "Zone Radius";
+            this.checkBoxDestroyItem.AutoSize = true;
+            this.checkBoxDestroyItem.Location = new System.Drawing.Point(266, 174);
+            this.checkBoxDestroyItem.Name = "checkBoxDestroyItem";
+            this.checkBoxDestroyItem.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDestroyItem.TabIndex = 125;
+            this.checkBoxDestroyItem.UseVisualStyleBackColor = true;
             // 
             // DataQuestRewardQuests
             // 
@@ -1749,5 +1771,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox _Radius;
+        private System.Windows.Forms.CheckBox checkBoxDestroyItem;
+        private System.Windows.Forms.Label labelDestroyItem;
     }
 }

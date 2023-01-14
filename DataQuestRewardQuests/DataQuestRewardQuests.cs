@@ -27,7 +27,6 @@ namespace AmteCreator.DataQuestRewardQuests
             {"DOL.GS.Quests.CollectGoal", "Collect"},
             {"DOL.GS.Quests.KillGoal", "Kill"},
             {"DOL.GS.Quests.EnterAreaGoal", "EnterArea"},
-            //{"DeliverFinish", "DOL.GS.Quests.InteractGoal"},
             {"DOL.GS.Quests.InteractGoal", "Interact"},
             {"DOL.GS.Quests.KilledGoal", "Killed"},
             {"DOL.GS.Quests.StopGoal", "Stop"},
@@ -52,6 +51,10 @@ namespace AmteCreator.DataQuestRewardQuests
             GoalType.Kill,
             GoalType.UseItem,
         };
+        public static List<GoalType>  UsingDestroyItem = new List<GoalType>()
+        {
+            GoalType.UseItem,
+        };
         public bool IsUsingRepeatNo(GoalType goalType)
         {
             return UsingRepeatNo.Contains(goalType);
@@ -63,6 +66,10 @@ namespace AmteCreator.DataQuestRewardQuests
         public bool IsUsingArea(GoalType goalType)
         {
             return UsingArea.Contains(goalType);
+        }
+        public bool IsUsingDestroyItem(GoalType goalType)
+        {
+            return UsingDestroyItem.Contains(goalType);
         }
         public readonly string idField = nameof(DBDQRewardQTemplate.ID);
         public readonly string idName = nameof(DBDQRewardQTemplate.Name);
@@ -115,7 +122,8 @@ namespace AmteCreator.DataQuestRewardQuests
         public Dictionary<int, string> seconds_dictionary;
         public Dictionary<int, Dictionary<int, string>> questDependance_dictionary;
         public Dictionary<int, Dictionary<int, string>> questStop_dictionary;
-
+        
+        public Dictionary<int, string> destroyItem_dictionary;
         /// <summary>
         /// Index - Byte Enum Value
         /// </summary>
@@ -154,6 +162,7 @@ namespace AmteCreator.DataQuestRewardQuests
             messageCompleted_dictionary = new Dictionary<int, string>();
             questDependance_dictionary = new Dictionary<int, Dictionary<int, string>>();
             questStop_dictionary = new Dictionary<int, Dictionary<int, string>>();
+            destroyItem_dictionary = new Dictionary<int, string>();
 
             PopulateClassDictionary();
             PopulateAllowRacesListBox();
@@ -299,6 +308,8 @@ namespace AmteCreator.DataQuestRewardQuests
                     if(data.StopGoals != null)
                         foreach (var goal in data.StopGoals)
                             questStop_dictionary[id].Add((int)goal, "");
+                    destroyItem_dictionary.Add(id, (string)data.DestroyItem ?? "");
+                            
                 }
                 _GoalRepeatNo.Text = goalrepeatno_dictionary[1];
                 _GoalTargetName.Text = goaltargetname_dictionary[1];
@@ -317,6 +328,7 @@ namespace AmteCreator.DataQuestRewardQuests
                 GoalStepNo.Text = "1";
                 _ZoneID.Text = zoneid_dictionary[1];
                 _Radius.Text = arearadius_dictionary[1];
+                checkBoxDestroyItem.Checked = destroyItem_dictionary[1] == "True";
 
                 if (GoalSteps.Count > 0)
                 {                   
@@ -464,6 +476,8 @@ namespace AmteCreator.DataQuestRewardQuests
             _GoalOptional.Hide();
             label24.Hide();
             _GoalRepeatNo.Hide();
+            labelDestroyItem.Hide();
+            checkBoxDestroyItem.Hide();
             if (GoalSteps.Count >= step)
             {
                 var goalType = GoalSteps[step - 1];
@@ -543,6 +557,11 @@ namespace AmteCreator.DataQuestRewardQuests
                         _goalOptionalLabel.Text = "Seconds";
 
                     }
+                }
+                if (IsUsingDestroyItem(goalType))
+                {
+                    labelDestroyItem.Show();
+                    checkBoxDestroyItem.Show();
                 }
             }          
         }
@@ -672,7 +691,8 @@ namespace AmteCreator.DataQuestRewardQuests
 				{ "KillCount", goalrepeatno_dictionary.ContainsKey(index) ? goalrepeatno_dictionary[index]  : "" },
 				{ "Seconds", seconds_dictionary.ContainsKey(index) ? seconds_dictionary[index]  : "" },
 				{ "WhisperText", goalAdvanceText_dictionnary.ContainsKey(index) ? goalAdvanceText_dictionnary[index]  : "" },
-			};
+                { "DestroyItem", destroyItem_dictionary.ContainsKey(index) ? destroyItem_dictionary[index]  : "" },
+            };
 		}
 		/// <summary>
 		/// Returns the list of objects to be saved as JSON along with id and type
@@ -768,6 +788,8 @@ namespace AmteCreator.DataQuestRewardQuests
             messageCompleted_dictionary.Add(goalNum, richTextBoxCompleted.Text);
             targetRegions_dictionary.Remove(goalNum);
             targetRegions_dictionary.Add(goalNum, _targetRegion.Text);
+            destroyItem_dictionary.Remove(goalNum);
+            destroyItem_dictionary.Add(goalNum, checkBoxDestroyItem.Checked.ToString());
             opt_dictionary.Remove(optNum); // do this incase it was edited without pressing forward/back
             if (!string.IsNullOrWhiteSpace(_OptionalReward.Text)) //!opt_dictionary.ContainsKey(optNum) && 
             {
@@ -1037,6 +1059,7 @@ namespace AmteCreator.DataQuestRewardQuests
             GoalSteps.Clear();
             questDependance_dictionary.Clear();
             questStop_dictionary.Clear();
+            destroyItem_dictionary.Clear();
         }        
 
 
@@ -1111,11 +1134,12 @@ namespace AmteCreator.DataQuestRewardQuests
             _Conclusion.Text = null;
             listRaces.SelectedIndex = 0;
             listClasses.SelectedIndex = 0;
-            Reputation.Text = string.Empty;//TODO: for massages as well
+            Reputation.Text = string.Empty;
             GoalSteps.Add((GoalType)0);
             _GoalType.SelectedIndex = 0;
             this._quest = new DBDQRewardQTemplate();
             listGoalDependance.Items.Clear();
+            checkBoxDestroyItem.Checked = false;
         }
 
         // Keypress event args
@@ -1420,10 +1444,10 @@ namespace AmteCreator.DataQuestRewardQuests
         {
             int goalNumber = int.Parse(GoalNumber.Text);
 
-            if (_GoalType.Text == "" || _GoalTargetName.Text == "" || GoalStepNo.Text == "" || _QuestGoals.Text == "")
+            if (_GoalType.Text == "")
             {
                 MessageBox.Show("You cannot proceed until required fields are met!\n" +
-                    "GoalType, Target Name, Step Number, Journal Text are all manditory fields!");
+                    "GoalType is manditory field!");
                 return;
             }
 
@@ -1665,6 +1689,18 @@ namespace AmteCreator.DataQuestRewardQuests
             }
             richTextBoxCompleted.Text = "";
 
+            //checkBoxDestroyItem.Checked
+            if (!destroyItem_dictionary.ContainsKey(goalNumber))
+            {
+                destroyItem_dictionary.Add(goalNumber, checkBoxDestroyItem.Checked.ToString());
+            }
+            else
+            {
+                destroyItem_dictionary.Remove(goalNumber);
+                destroyItem_dictionary.Add(goalNumber, checkBoxDestroyItem.Checked.ToString());
+            }
+            checkBoxDestroyItem.Checked = false;
+
             GoalNumber.Text = (goalNumber + 1).ToString(); //increment label
 
             //Step forward check next step
@@ -1801,6 +1837,13 @@ namespace AmteCreator.DataQuestRewardQuests
             }
             else richTextBoxCompleted.Text = "";
 
+            if(destroyItem_dictionary.ContainsKey(goalNext))
+            {
+                destroyItem_dictionary.TryGetValue(goalNext, out goalvalue);
+                checkBoxDestroyItem.Checked = goalvalue =="" ? false : bool.Parse(goalvalue);
+            }
+            else checkBoxDestroyItem.Checked = false;
+
 
             if (GoalSteps.Count >= goalNext && goaltype_dictionary.Count >= goalNext)
             {
@@ -1925,6 +1968,8 @@ namespace AmteCreator.DataQuestRewardQuests
                     messageCompleted_dictionary.Add(goalNum, richTextBoxCompleted.Text);
                     targetRegions_dictionary.Remove(goalNum);
                     targetRegions_dictionary.Add(goalNum, _targetRegion.Text);
+                    destroyItem_dictionary.Remove(goalNum);
+                    destroyItem_dictionary.Add(goalNum, checkBoxDestroyItem.Checked.ToString());
                 } 
             }
 
@@ -2068,6 +2113,13 @@ namespace AmteCreator.DataQuestRewardQuests
                 richTextBoxCompleted.Text = goalvalue;
             }
             else richTextBoxCompleted.Text = "";
+
+            if(destroyItem_dictionary.ContainsKey(goalNum))
+            {
+                destroyItem_dictionary.TryGetValue(goalNum, out goalvalue);
+                checkBoxDestroyItem.Checked = goalvalue == "" ? false : bool.Parse(goalvalue);
+            }
+            else checkBoxDestroyItem.Checked = false;
 
         }
 
@@ -2276,8 +2328,7 @@ namespace AmteCreator.DataQuestRewardQuests
         private void label10_MouseHover(object sender, EventArgs e)
         {
             toolTip1.InitialDelay = 500;
-            toolTip1.Show("The step number when this quest goal is given. Multiple goals can have the same step number so they are given to the player at the same time.\n" +
-                "The 'InteractFinish' goaltype must be the last goal and the last step number of EVERY quest for it to work correctly.", labelStepNo, 15000);
+            toolTip1.Show("The ste", labelStepNo, 15000);
         }
 
         private void label10_MouseLeave(object sender, EventArgs e)
