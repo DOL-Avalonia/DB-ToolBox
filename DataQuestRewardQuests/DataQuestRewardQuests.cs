@@ -162,6 +162,8 @@ namespace AmteCreator.DataQuestRewardQuests
             messageCompleted_dictionary = new Dictionary<int, string>();
             questDependance_dictionary = new Dictionary<int, Dictionary<int, string>>();
             questStop_dictionary = new Dictionary<int, Dictionary<int, string>>();
+            questDependance_dictionary[1] = new Dictionary<int, string>();
+            questStop_dictionary[1] = new Dictionary<int, string>();
             destroyItem_dictionary = new Dictionary<int, string>();
 
             PopulateClassDictionary();
@@ -299,11 +301,13 @@ namespace AmteCreator.DataQuestRewardQuests
                     zoneid_dictionary.Add(id, (string)data.AreaRegion ?? "");
                     seconds_dictionary.Add(id, (string)data.Seconds ?? "");
 
+                    questDependance_dictionary.Remove(id);
                     questDependance_dictionary.Add(id,  new Dictionary<int, string>());
                     if(data.StartGoalsDone != null)
                         foreach (var goal in data.StartGoalsDone)
                             questDependance_dictionary[id].Add((int)goal, "");
 
+                    questStop_dictionary.Remove(id);
                     questStop_dictionary.Add(id,  new Dictionary<int, string>());
                     if(data.StopGoals != null)
                         foreach (var goal in data.StopGoals)
@@ -1058,7 +1062,9 @@ namespace AmteCreator.DataQuestRewardQuests
             stepStartItemTemplate_dictionnary.Clear();
             GoalSteps.Clear();
             questDependance_dictionary.Clear();
+            questDependance_dictionary[1]=new Dictionary<int, string>();
             questStop_dictionary.Clear();
+            questStop_dictionary[1]=new Dictionary<int, string>();
             destroyItem_dictionary.Clear();
         }        
 
