@@ -25,10 +25,12 @@ namespace AmteCreator.DataQuestRewardQuests
         {
             {"DOL.GS.Quests.AbortQuestGoal", "Abort"},
             {"DOL.GS.Quests.CollectGoal", "Collect"},
-            {"DOL.GS.Quests.KillGoal", "Kill"},
             {"DOL.GS.Quests.EnterAreaGoal", "EnterArea"},
             {"DOL.GS.Quests.InteractGoal", "Interact"},
             {"DOL.GS.Quests.KilledGoal", "Killed"},
+            {"DOL.GS.Quests.KillGoal", "Kill"},
+            {"DOL.GS.Quests.KillGroupMobGoal", "KillGroupMob"},
+            {"DOL.GS.Quests.KillPlayerGoal", "KillPlayer"},
             {"DOL.GS.Quests.StopGoal", "Stop"},
             {"DOL.GS.Quests.TimerGoal", "Timer"},
             {"DOL.GS.Quests.UseItemGoal", "UseItem"},
@@ -39,6 +41,8 @@ namespace AmteCreator.DataQuestRewardQuests
         {
             GoalType.Collect,
             GoalType.Kill,
+            GoalType.KillGroupMob,
+            GoalType.KillPlayer,
         };
         public static List<GoalType>  UsingItem = new List<GoalType>()
         {
@@ -49,6 +53,8 @@ namespace AmteCreator.DataQuestRewardQuests
         {
             GoalType.EnterArea,
             GoalType.Kill,
+            GoalType.KillGroupMob,
+            GoalType.KillPlayer,
             GoalType.UseItem,
         };
         public static List<GoalType>  UsingDestroyItem = new List<GoalType>()
