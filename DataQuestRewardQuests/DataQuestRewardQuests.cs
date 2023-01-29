@@ -20,7 +20,7 @@ namespace AmteCreator.DataQuestRewardQuests
         private DBDQRewardQTemplate _quest;
 
         public readonly string dataTableName = "dataquestjson";
-        
+
         public static Dictionary<string, string> GoalTypeNames = new Dictionary<string, string>()
         {
             {"DOL.GS.Quests.AbortQuestGoal", "Abort"},
@@ -37,19 +37,19 @@ namespace AmteCreator.DataQuestRewardQuests
             {"DOL.GS.Quests.WhisperGoal", "Whisper"},
             {"DOL.GS.Quests.EndGoal", "End"},
         };
-        public static List<GoalType>  UsingRepeatNo = new List<GoalType>()
+        public static List<GoalType> UsingRepeatNo = new List<GoalType>()
         {
             GoalType.Collect,
             GoalType.Kill,
             GoalType.KillGroupMob,
             GoalType.KillPlayer,
         };
-        public static List<GoalType>  UsingItem = new List<GoalType>()
+        public static List<GoalType> UsingItem = new List<GoalType>()
         {
             GoalType.Collect,
             GoalType.UseItem,
         };
-        public static List<GoalType>  UsingArea = new List<GoalType>()
+        public static List<GoalType> UsingArea = new List<GoalType>()
         {
             GoalType.EnterArea,
             GoalType.Kill,
@@ -57,7 +57,7 @@ namespace AmteCreator.DataQuestRewardQuests
             GoalType.KillPlayer,
             GoalType.UseItem,
         };
-        public static List<GoalType>  UsingDestroyItem = new List<GoalType>()
+        public static List<GoalType> UsingDestroyItem = new List<GoalType>()
         {
             GoalType.UseItem,
         };
@@ -103,7 +103,7 @@ namespace AmteCreator.DataQuestRewardQuests
         public Dictionary<int, string> messageAborted_dictionary;
         public Dictionary<int, string> messageDone_dictionary;
         public Dictionary<int, string> messageCompleted_dictionary;
-        
+
         public Dictionary<int, string> stepItemTemplate_dictionnary;
         public Dictionary<int, string> stepStartItemTemplate_dictionnary;
 
@@ -121,14 +121,14 @@ namespace AmteCreator.DataQuestRewardQuests
         public Dictionary<int, string> zoneid_dictionary;
         // item rewards
         public Dictionary<int, string> opt_dictionary;
-        public Dictionary<int, string> fin_dictionary;        
+        public Dictionary<int, string> fin_dictionary;
         // quest restrictions
         private Dictionary<int, string> allClasses;
         //timer
         public Dictionary<int, string> seconds_dictionary;
         public Dictionary<int, Dictionary<int, string>> questDependance_dictionary;
         public Dictionary<int, Dictionary<int, string>> questStop_dictionary;
-        
+
         public Dictionary<int, string> destroyItem_dictionary;
         /// <summary>
         /// Index - Byte Enum Value
@@ -137,8 +137,8 @@ namespace AmteCreator.DataQuestRewardQuests
 
         public DataQuestRewardQuests()
         {
-           InitializeComponent();
-         //   _questService = new RewardQuestService();
+            InitializeComponent();
+            //   _questService = new RewardQuestService();
 
             opt_dictionary = new Dictionary<int, string>();
             fin_dictionary = new Dictionary<int, string>();
@@ -190,7 +190,7 @@ namespace AmteCreator.DataQuestRewardQuests
                 this.DeserializeData(this._quest);
             }
         }
-        
+
         // load a quest from an ID
         private async void questLoad_Click(object sender, EventArgs e)
         {
@@ -199,16 +199,16 @@ namespace AmteCreator.DataQuestRewardQuests
 
             var dialog = new OpenNPCTemplateForm()
             {
-                ItemName = @"Please enter Quest ID" 
+                ItemName = @"Please enter Quest ID"
             };
 
             if (dialog.ShowDialog(this) == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.ItemName))
             {
-           //     await LoadQuest(dialog.Input.Text);
+                //     await LoadQuest(dialog.Input.Text);
             }
             dialog.Dispose();
         }
-        
+
         /// <summary>
         /// convert database format kill bandit;2|talk to NPC;3 to usable format
         /// </summary>        
@@ -222,164 +222,164 @@ namespace AmteCreator.DataQuestRewardQuests
 
             // try
             // {
-                questDependency = quest.QuestDependency;
-                _ID.Text = quest.ID?.ToString();
-                _MinLevel.Text = quest.MinLevel.ToString();
-                _MaxLevel.Text = quest.MaxLevel.ToString();
-                _Name.Text = quest.Name ?? string.Empty;
-                _NpcName.Text = quest.NpcName ?? string.Empty;
-                _NpcRegion.Text = quest.NpcRegion.ToString();
-                _StoryText.Text = quest.Story ?? string.Empty;
-                _Summary.Text = quest.Summary ?? string.Empty;
-                _AcceptText.Text = quest.AcceptText ?? string.Empty;
-                _MaxCount.Text = quest.MaxCount.ToString();
-                _IsRenaissance.Checked = quest.IsRenaissance;
-                _Conclusion.Text = quest.Conclusion ?? string.Empty;
-                _suppressGoal.Enabled = false;
-                _RewardMoney.Text = quest.RewardMoney.ToString();
-                ReputationReward.Text = quest.RewardReputation.ToString();
-                _RewardXP.Text = quest.RewardXP.ToString();
-                _RewardCLXP.Text = quest.RewardCLXP.ToString();
-                _RewardBP.Text = quest.RewardBP.ToString();
-                _RewardRP.Text = quest.RewardRP.ToString();
-                GoalNumber.Text = "1";
-                Reputation.Text = quest.Reputation;
-                _DescriptionText.Text = quest.Description;
-                //formatted like [{"Id":0,"Type":"DOL.GS.Quests.KillGoal","Data":{"Describtion":"None","TargetName":"Quest82mob","TargetRegion":"330","KillCount":1,}},{"Id":1,"Type":"DOL.GS.Quests.EndGoal","Data":{"Describtion":"None","TargetName":"Quest82","TargetRegion":"330"}}]
-                string GoalsJson = quest.GoalsJson;
+            questDependency = quest.QuestDependency;
+            _ID.Text = quest.ID?.ToString();
+            _MinLevel.Text = quest.MinLevel.ToString();
+            _MaxLevel.Text = quest.MaxLevel.ToString();
+            _Name.Text = quest.Name ?? string.Empty;
+            _NpcName.Text = quest.NpcName ?? string.Empty;
+            _NpcRegion.Text = quest.NpcRegion.ToString();
+            _StoryText.Text = quest.Story ?? string.Empty;
+            _Summary.Text = quest.Summary ?? string.Empty;
+            _AcceptText.Text = quest.AcceptText ?? string.Empty;
+            _MaxCount.Text = quest.MaxCount.ToString();
+            _IsRenaissance.Checked = quest.IsRenaissance;
+            _Conclusion.Text = quest.Conclusion ?? string.Empty;
+            _suppressGoal.Enabled = false;
+            _RewardMoney.Text = quest.RewardMoney.ToString();
+            ReputationReward.Text = quest.RewardReputation.ToString();
+            _RewardXP.Text = quest.RewardXP.ToString();
+            _RewardCLXP.Text = quest.RewardCLXP.ToString();
+            _RewardBP.Text = quest.RewardBP.ToString();
+            _RewardRP.Text = quest.RewardRP.ToString();
+            GoalNumber.Text = "1";
+            Reputation.Text = quest.Reputation;
+            _DescriptionText.Text = quest.Description;
+            //formatted like [{"Id":0,"Type":"DOL.GS.Quests.KillGoal","Data":{"Describtion":"None","TargetName":"Quest82mob","TargetRegion":"330","KillCount":1,}},{"Id":1,"Type":"DOL.GS.Quests.EndGoal","Data":{"Describtion":"None","TargetName":"Quest82","TargetRegion":"330"}}]
+            string GoalsJson = quest.GoalsJson;
 
-                string rawOptRewards = quest.OptionalRewardItemTemplates;
-                //string numOptChoices = string.IsNullOrWhiteSpace(rawOptRewards) ? "1" : rawOptRewards.Substring(0, 1), optionalRewardItemTemplates = rawOptRewards.Substring(1);
-                if (!string.IsNullOrWhiteSpace(rawOptRewards))
+            string rawOptRewards = quest.OptionalRewardItemTemplates;
+            //string numOptChoices = string.IsNullOrWhiteSpace(rawOptRewards) ? "1" : rawOptRewards.Substring(0, 1), optionalRewardItemTemplates = rawOptRewards.Substring(1);
+            if (!string.IsNullOrWhiteSpace(rawOptRewards))
+            {
+                OptRewardUpDown.Value = quest.NbChooseOptionalItems;
+                optionalRewardItemTemplates = rawOptRewards;
+            }
+            else
+            {
+                optionalRewardItemTemplates = string.Empty;
+            }
+
+
+            finalRewardItemTemplates = quest.FinalRewardItemTemplates;
+
+            //quest.GoalType.Split(new string[] { "|" }, StringSplitOptions.None).Select(e => Enum.TryParse<GoalType>(e, out GoalType goal) ? goal : GoalType.Unknown).ToList(); //rem
+            //get types from json format in GoalJson
+            var goals = JsonConvert.DeserializeObject<JArray>(GoalsJson);
+
+            foreach (var json in goals)
+            {
+                var (id, type, data) = (json.Value<ushort>("Id"), json.Value<string>("Type"), json.Value<dynamic>("Data"));
+                GoalSteps.Add((GoalType)Enum.Parse(typeof(GoalType), GoalTypeNames.FirstOrDefault(e => e.Key == type).Value));
+
+                goaltext_dictionary.Add(id, (string)data.Description ?? "");
+                messageStarted_dictionary.Add(id, (string)data.MessageStarted ?? "");
+                messageCompleted_dictionary.Add(id, (string)data.MessageCompleted ?? "");
+                messageDone_dictionary.Add(id, (string)data.MessageDone ?? "");
+                messageAborted_dictionary.Add(id, (string)data.MessageAborted ?? "");
+                stepItemTemplate_dictionnary.Add(id, (string)data.GiveItem ?? "");
+                stepStartItemTemplate_dictionnary.Add(id, (string)data.StartItem ?? "");
+
+                goaltargetname_dictionary.Add(id, (string)data.TargetName ?? "");
+                targetRegions_dictionary.Add(id, (string)data.TargetRegion ?? "");
+
+                if (type == "DOL.GS.Quests.KillGoal")
+                    goalrepeatno_dictionary.Add(id, (string)data.KillCount ?? "");
+                else if (type == "DOL.GS.Quests.CollectGoal")
+                    goalrepeatno_dictionary.Add(id, (string)data.ItemCount ?? "");
+                else
+                    goalrepeatno_dictionary.Add(id, "");
+
+                item_dictionary.Add(id, (string)data.Item ?? "");
+                goaltargettext_dictionary.Add(id, (string)data.Text ?? "");
+                goalAdvanceText_dictionnary.Add(id, (string)data.WhisperText ?? "");
+                if (data.AreaCenter != null)
                 {
-                    OptRewardUpDown.Value = quest.NbChooseOptionalItems;
-                    optionalRewardItemTemplates = rawOptRewards;
+                    xloc_dictionary.Add(id, (string)data.AreaCenter.X ?? "");
+                    yloc_dictionary.Add(id, (string)data.AreaCenter.Y ?? "");
                 }
                 else
                 {
-                    optionalRewardItemTemplates = string.Empty;
+                    xloc_dictionary.Add(id, "");
+                    yloc_dictionary.Add(id, "");
                 }
+                arearadius_dictionary.Add(id, (string)data.AreaRadius ?? "");
+                zoneid_dictionary.Add(id, (string)data.AreaRegion ?? "");
+                seconds_dictionary.Add(id, (string)data.Seconds ?? "");
 
+                questDependance_dictionary.Remove(id);
+                questDependance_dictionary.Add(id, new Dictionary<int, string>());
+                if (data.StartGoalsDone != null)
+                    foreach (var goal in data.StartGoalsDone)
+                        questDependance_dictionary[id].Add((int)goal, "");
 
-                finalRewardItemTemplates = quest.FinalRewardItemTemplates;
+                questStop_dictionary.Remove(id);
+                questStop_dictionary.Add(id, new Dictionary<int, string>());
+                if (data.StopGoals != null)
+                    foreach (var goal in data.StopGoals)
+                        questStop_dictionary[id].Add((int)goal, "");
+                destroyItem_dictionary.Add(id, (string)data.DestroyItem ?? "");
 
-                 //quest.GoalType.Split(new string[] { "|" }, StringSplitOptions.None).Select(e => Enum.TryParse<GoalType>(e, out GoalType goal) ? goal : GoalType.Unknown).ToList(); //rem
-                //get types from json format in GoalJson
-                var goals = JsonConvert.DeserializeObject<JArray>(GoalsJson);
-                
-                foreach (var json in goals)
+            }
+            _GoalRepeatNo.Text = goalrepeatno_dictionary[1];
+            _GoalTargetName.Text = goaltargetname_dictionary[1];
+            _targetRegion.Text = targetRegions_dictionary[1];
+            _GoalTargetText.Text = goaltargettext_dictionary[1];
+            richTextBoxStarted.Text = messageStarted_dictionary[1];
+            richTextBoxCompleted.Text = messageCompleted_dictionary[1];
+            richTextBoxDone.Text = messageDone_dictionary[1];
+            richTextBoxAborted.Text = messageAborted_dictionary[1];
+            _GoalOptional.Text = item_dictionary[1];
+            _StepItemTemplate.Text = stepItemTemplate_dictionnary[1];
+            _StepStartItemTemplate.Text = stepStartItemTemplate_dictionnary[1];
+            _XOffset.Text = xloc_dictionary[1];
+            _YOffset.Text = yloc_dictionary[1];
+            _QuestGoals.Text = goaltext_dictionary[1];
+            GoalStepNo.Text = "1";
+            _ZoneID.Text = zoneid_dictionary[1];
+            _Radius.Text = arearadius_dictionary[1];
+            checkBoxDestroyItem.Checked = destroyItem_dictionary[1] == "True";
+
+            if (GoalSteps.Count > 0)
+            {
+                if (goaltype_dictionary.ContainsKey((int)GoalSteps[0]))
                 {
-                    var (id, type, data) = (json.Value<ushort>("Id"), json.Value<string>("Type"), json.Value<dynamic>("Data"));
-                    GoalSteps.Add((GoalType)Enum.Parse(typeof(GoalType), GoalTypeNames.FirstOrDefault(e => e.Key == type).Value));
-
-                    goaltext_dictionary.Add(id, (string)data.Description ?? "");
-                    messageStarted_dictionary.Add(id, (string)data.MessageStarted ?? "");
-                    messageCompleted_dictionary.Add(id, (string)data.MessageCompleted ?? "");
-                    messageDone_dictionary .Add(id, (string)data.MessageDone ?? "");
-                    messageAborted_dictionary.Add(id, (string)data.MessageAborted ?? "");
-                    stepItemTemplate_dictionnary.Add(id, (string)data.GiveItem ?? "");
-                    stepStartItemTemplate_dictionnary.Add(id, (string)data.StartItem ?? "");
-
-                    goaltargetname_dictionary.Add(id, (string)data.TargetName ?? "");
-                    targetRegions_dictionary.Add(id, (string)data.TargetRegion ?? "");
-
-                    if (type == "DOL.GS.Quests.KillGoal")
-                        goalrepeatno_dictionary.Add(id, (string)data.KillCount ?? "");
-                    else if (type == "DOL.GS.Quests.CollectGoal")
-                        goalrepeatno_dictionary.Add(id, (string)data.ItemCount ?? "");
-                    else
-                        goalrepeatno_dictionary.Add(id, "");
-
-                    item_dictionary.Add(id, (string)data.Item ?? "");
-                    goaltargettext_dictionary.Add(id, (string)data.Text ?? "");
-                    goalAdvanceText_dictionnary.Add(id, (string)data.WhisperText ?? "");
-                    if( data.AreaCenter != null)
-                    {
-                        xloc_dictionary.Add(id, (string)data.AreaCenter.X ?? "");
-                        yloc_dictionary.Add(id, (string)data.AreaCenter.Y ?? "");
-                    }
-                    else
-                    {
-                        xloc_dictionary.Add(id, "");
-                        yloc_dictionary.Add(id, "");
-                    }
-                    arearadius_dictionary.Add(id, (string)data.AreaRadius ?? "");
-                    zoneid_dictionary.Add(id, (string)data.AreaRegion ?? "");
-                    seconds_dictionary.Add(id, (string)data.Seconds ?? "");
-
-                    questDependance_dictionary.Remove(id);
-                    questDependance_dictionary.Add(id,  new Dictionary<int, string>());
-                    if(data.StartGoalsDone != null)
-                        foreach (var goal in data.StartGoalsDone)
-                            questDependance_dictionary[id].Add((int)goal, "");
-
-                    questStop_dictionary.Remove(id);
-                    questStop_dictionary.Add(id,  new Dictionary<int, string>());
-                    if(data.StopGoals != null)
-                        foreach (var goal in data.StopGoals)
-                            questStop_dictionary[id].Add((int)goal, "");
-                    destroyItem_dictionary.Add(id, (string)data.DestroyItem ?? "");
-                            
+                    _GoalType.SelectedIndex = goaltype_dictionary[(int)GoalSteps[0]];
                 }
-                _GoalRepeatNo.Text = goalrepeatno_dictionary[1];
-                _GoalTargetName.Text = goaltargetname_dictionary[1];
-                _targetRegion.Text = targetRegions_dictionary[1];
-                _GoalTargetText.Text = goaltargettext_dictionary[1];
-                richTextBoxStarted.Text = messageStarted_dictionary[1];
-                richTextBoxCompleted.Text = messageCompleted_dictionary[1];
-                richTextBoxDone.Text = messageDone_dictionary[1];
-                richTextBoxAborted.Text = messageAborted_dictionary[1];
-                _GoalOptional.Text = item_dictionary[1];
-                _StepItemTemplate.Text = stepItemTemplate_dictionnary[1];
-                _StepStartItemTemplate.Text = stepStartItemTemplate_dictionnary[1];
-                _XOffset.Text = xloc_dictionary[1];
-                _YOffset.Text = yloc_dictionary[1];
-                _QuestGoals.Text = goaltext_dictionary[1];
-                GoalStepNo.Text = "1";
-                _ZoneID.Text = zoneid_dictionary[1];
-                _Radius.Text = arearadius_dictionary[1];
-                checkBoxDestroyItem.Checked = destroyItem_dictionary[1] == "True";
+            }
+            else
+            {
+                _GoalType.SelectedIndex = 0;
+                GoalSteps.Add(GoalType.Interact);
+            }
 
-                if (GoalSteps.Count > 0)
-                {                   
-                    if (goaltype_dictionary.ContainsKey((int)GoalSteps[0]))
-                    {
-                        _GoalType.SelectedIndex = goaltype_dictionary[(int)GoalSteps[0]];
-                    }
-                }
-                else
-                {
-                    _GoalType.SelectedIndex = 0;
-                    GoalSteps.Add(GoalType.Interact);
-                }
+            string[] splitOptionalRewards = optionalRewardItemTemplates.Split(new string[] { "|" }, StringSplitOptions.None);
+            StringToDictionary(splitOptionalRewards, opt_dictionary);
+            _OptionalReward.Text = opt_dictionary[1];
 
-                string[] splitOptionalRewards = optionalRewardItemTemplates.Split(new string[] { "|" }, StringSplitOptions.None);
-                StringToDictionary(splitOptionalRewards, opt_dictionary);
-                _OptionalReward.Text = opt_dictionary[1];
+            if (finalRewardItemTemplates != null)
+            {
+                string[] splitFinalRewards = finalRewardItemTemplates.Split(new string[] { "|" }, StringSplitOptions.None);
+                StringToDictionary(splitFinalRewards, fin_dictionary);
+                _FinalReward.Text = fin_dictionary[1];
+            }
+            else
+            {
+                _FinalReward.Text = null;
+            }
 
-                if (finalRewardItemTemplates != null)
-                {
-                    string[] splitFinalRewards = finalRewardItemTemplates.Split(new string[] { "|" }, StringSplitOptions.None);
-                    StringToDictionary(splitFinalRewards, fin_dictionary);
-                    _FinalReward.Text = fin_dictionary[1];
-                }
-                else
-                {
-                    _FinalReward.Text = null;
-                }
+            if (questDependency != null)
+            {
+                string[] questDependencies = questDependency.Split(new string[] { "|" }, StringSplitOptions.None);
+                _QuestDependency.Text = questDependencies[0];
+            }
 
-                if (questDependency != null)
-                {
-                    string[] questDependencies = questDependency.Split(new string[] { "|" }, StringSplitOptions.None);
-                    _QuestDependency.Text = questDependencies[0];
-                }
-
-                PopulateGoalDependanceListBox(1);
-                PopulateGoalStopListBox(1);
-                UpdateOptionalFields();
-                SelectAllowedClasses();
-                SelectAllowedRaces();
-                LoadedQuest = true;
+            PopulateGoalDependanceListBox(1);
+            PopulateGoalStopListBox(1);
+            UpdateOptionalFields();
+            SelectAllowedClasses();
+            SelectAllowedRaces();
+            LoadedQuest = true;
             //}
             // catch (Exception g)
             // {
@@ -397,17 +397,17 @@ namespace AmteCreator.DataQuestRewardQuests
         }
         private void UpdateGoalList(ListBox list, Dictionary<int, Dictionary<int, string>> quest_dictionary, int goalId, bool defaultNew = true)
         {
-            
+
             list.ClearSelected();
-            
+
             foreach (var Id in quest_dictionary[goalId].Keys)
             {
-                if(Id < goalId)
+                if (Id < goalId)
                     list.SetSelected(Id - 1, true);
                 else
                     list.SetSelected(Id - 2, true);
             }
-            if(defaultNew && goalId == quest_dictionary.Count && list.SelectedItems.Count == 0)
+            if (defaultNew && goalId == quest_dictionary.Count && list.SelectedItems.Count == 0)
                 list.SetSelected(goalId - 2, true);
         }
 
@@ -426,7 +426,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
             foreach (var val in GoalSteps)
             {
-                if(index != goalId)
+                if (index != goalId)
                 {
                     list.Items.Add(index.ToString() + ": " + val.ToString());
                 }
@@ -436,11 +436,11 @@ namespace AmteCreator.DataQuestRewardQuests
         }
         private void SetGoalDependanceList(int goalId)
         {
-            SetGoalList(listGoalDependance, questDependance_dictionary, goalId);    
+            SetGoalList(listGoalDependance, questDependance_dictionary, goalId);
         }
         private void SetGoalStopList(int goalId)
         {
-            SetGoalList(listGoalStop, questStop_dictionary, goalId);    
+            SetGoalList(listGoalStop, questStop_dictionary, goalId);
         }
         private void SetGoalList(ListBox list, Dictionary<int, Dictionary<int, string>> quest_dictionary, int goalId)
         {
@@ -462,14 +462,14 @@ namespace AmteCreator.DataQuestRewardQuests
                 splitAllowedRaces = _quest.AllowedRaces.Split(new string[] { "|" }, StringSplitOptions.None);
 
                 foreach (string stringIndex in splitAllowedRaces)
-                {               
+                {
                     if (int.TryParse(stringIndex, out int byteIndex))
                     {
                         if (allRaces.Count > byteIndex)
                         {
                             listRaces.SetSelected(allRaces[byteIndex], true);
-                        }                 
-                    }                    
+                        }
+                    }
                 }
             }
             else
@@ -504,9 +504,9 @@ namespace AmteCreator.DataQuestRewardQuests
 
                     _goalOptionalLabel.Text = "Item Id_nb";
 
-                    if (item_dictionary.Count+1 < GoalSteps.Count)
+                    if (item_dictionary.Count + 1 < GoalSteps.Count)
                     {
-                        for(int i = 1; i <= GoalSteps.Count; i++)
+                        for (int i = 1; i <= GoalSteps.Count; i++)
                         {
                             item_dictionary.Add(i, string.Empty);
                         }
@@ -546,8 +546,9 @@ namespace AmteCreator.DataQuestRewardQuests
 
                         _goalOptionalLabel.Text = "Whisper Text";
                     }
-                    else{
-                        
+                    else
+                    {
+
                         if (seconds_dictionary.Count == 0)
                         {
                             for (int i = 1; i <= GoalSteps.Count; i++)
@@ -573,7 +574,7 @@ namespace AmteCreator.DataQuestRewardQuests
                     labelDestroyItem.Show();
                     checkBoxDestroyItem.Show();
                 }
-            }          
+            }
         }
 
         private void SelectAllowedClasses()
@@ -651,7 +652,7 @@ namespace AmteCreator.DataQuestRewardQuests
                     {
                         listRaces.Items.Add(nameof(ERace.Graoch));
                     }
-                }             
+                }
             }
         }
 
@@ -670,48 +671,48 @@ namespace AmteCreator.DataQuestRewardQuests
             }
         }
 
-		/// <summary>
-		/// Returns the object to be saved as JSON given back as third argument in the constructor for loading
-		/// </summary>
-		/// <returns>A serialisable object</returns>
-		public Dictionary<string, object> GetDatabaseJsonObject(int index)
-		{
+        /// <summary>
+        /// Returns the object to be saved as JSON given back as third argument in the constructor for loading
+        /// </summary>
+        /// <returns>A serialisable object</returns>
+        public Dictionary<string, object> GetDatabaseJsonObject(int index)
+        {
             return new Dictionary<string, object>
-			{// "" if no index in dict
+            {// "" if no index in dict
 				{ "Description", goaltext_dictionary.ContainsKey(index) ? goaltext_dictionary[index] : "" },
-				{ "GiveItem", stepItemTemplate_dictionnary.ContainsKey(index) ? stepItemTemplate_dictionnary[index] : "" },
-				{ "StartItem", stepStartItemTemplate_dictionnary.ContainsKey(index) ? stepStartItemTemplate_dictionnary[index] : "" },
-				{ "MessageStarted", messageStarted_dictionary.ContainsKey(index) ? messageStarted_dictionary[index]  : "" },
-				{ "MessageAborted", messageAborted_dictionary.ContainsKey(index) ? messageAborted_dictionary[index]  : "" },
-				{ "MessageDone", messageDone_dictionary.ContainsKey(index) ? messageDone_dictionary[index]  : "" },
-				{ "MessageCompleted", messageCompleted_dictionary.ContainsKey(index) ?  messageCompleted_dictionary[index]  : "" },
+                { "GiveItem", stepItemTemplate_dictionnary.ContainsKey(index) ? stepItemTemplate_dictionnary[index] : "" },
+                { "StartItem", stepStartItemTemplate_dictionnary.ContainsKey(index) ? stepStartItemTemplate_dictionnary[index] : "" },
+                { "MessageStarted", messageStarted_dictionary.ContainsKey(index) ? messageStarted_dictionary[index]  : "" },
+                { "MessageAborted", messageAborted_dictionary.ContainsKey(index) ? messageAborted_dictionary[index]  : "" },
+                { "MessageDone", messageDone_dictionary.ContainsKey(index) ? messageDone_dictionary[index]  : "" },
+                { "MessageCompleted", messageCompleted_dictionary.ContainsKey(index) ?  messageCompleted_dictionary[index]  : "" },
                 {"StartGoalsDone", questDependance_dictionary.ContainsKey(index) ?  questDependance_dictionary[index].Keys.ToList() : new List<int>()},
                 {"StopGoals", questStop_dictionary.ContainsKey(index) ?  questStop_dictionary[index].Keys.ToList() : new List<int>()},
-				{ "EndWhenGoalsDone", null },
-				{ "TargetName", goaltargetname_dictionary.ContainsKey(index) ? goaltargetname_dictionary[index]  : "" },
-				{ "TargetRegion", targetRegions_dictionary.ContainsKey(index) ? targetRegions_dictionary[index] : ""  },
-				{ "Text", goaltargettext_dictionary.ContainsKey(index) ? goaltargettext_dictionary[index]  : "" },
-				{ "Item", item_dictionary.ContainsKey(index) ? item_dictionary[index]  : "" }, //use or collect
+                { "EndWhenGoalsDone", null },
+                { "TargetName", goaltargetname_dictionary.ContainsKey(index) ? goaltargetname_dictionary[index]  : "" },
+                { "TargetRegion", targetRegions_dictionary.ContainsKey(index) ? targetRegions_dictionary[index] : ""  },
+                { "Text", goaltargettext_dictionary.ContainsKey(index) ? goaltargettext_dictionary[index]  : "" },
+                { "Item", item_dictionary.ContainsKey(index) ? item_dictionary[index]  : "" }, //use or collect
 				{ "ItemCount", goalrepeatno_dictionary.ContainsKey(index) ? goalrepeatno_dictionary[index]  : "" },
-				{ "AreaCenter", new Vector3(
+                { "AreaCenter", new Vector3(
                     float.Parse(xloc_dictionary.ContainsKey(index) && xloc_dictionary[index]!="" ? xloc_dictionary[index] : "0" ),
                  float.Parse(yloc_dictionary.ContainsKey(index) && yloc_dictionary[index]!="" ? yloc_dictionary[index] : "0" ), 0) },
-				{ "AreaRadius", arearadius_dictionary.ContainsKey(index) ? arearadius_dictionary[index]  : "" },
-				{ "AreaRegion", zoneid_dictionary.ContainsKey(index) ? zoneid_dictionary[index]  : "" },
-				{ "KillCount", goalrepeatno_dictionary.ContainsKey(index) ? goalrepeatno_dictionary[index]  : "" },
-				{ "Seconds", seconds_dictionary.ContainsKey(index) ? seconds_dictionary[index]  : "" },
-				{ "WhisperText", goalAdvanceText_dictionnary.ContainsKey(index) ? goalAdvanceText_dictionnary[index]  : "" },
+                { "AreaRadius", arearadius_dictionary.ContainsKey(index) ? arearadius_dictionary[index]  : "" },
+                { "AreaRegion", zoneid_dictionary.ContainsKey(index) ? zoneid_dictionary[index]  : "" },
+                { "KillCount", goalrepeatno_dictionary.ContainsKey(index) ? goalrepeatno_dictionary[index]  : "" },
+                { "Seconds", seconds_dictionary.ContainsKey(index) ? seconds_dictionary[index]  : "" },
+                { "WhisperText", goalAdvanceText_dictionnary.ContainsKey(index) ? goalAdvanceText_dictionnary[index]  : "" },
                 { "DestroyItem", destroyItem_dictionary.ContainsKey(index) ? destroyItem_dictionary[index]  : "" },
             };
-		}
-		/// <summary>
-		/// Returns the list of objects to be saved as JSON along with id and type
-		/// </summary>
-		/// <returns>A serialisable object</returns>
-		public string GetDatabaseJsonObjectList()
-		{
-            return JsonConvert.SerializeObject(GoalSteps.Select((step, index) => new { Id = index+1, Type = GoalTypeNames.FirstOrDefault(e => e.Value == Enum.GetName(typeof(GoalType), step)).Key, Data = GetDatabaseJsonObject(index+1) }).ToArray());
-		}
+        }
+        /// <summary>
+        /// Returns the list of objects to be saved as JSON along with id and type
+        /// </summary>
+        /// <returns>A serialisable object</returns>
+        public string GetDatabaseJsonObjectList()
+        {
+            return JsonConvert.SerializeObject(GoalSteps.Select((step, index) => new { Id = index + 1, Type = GoalTypeNames.FirstOrDefault(e => e.Value == Enum.GetName(typeof(GoalType), step)).Key, Data = GetDatabaseJsonObject(index + 1) }).ToArray());
+        }
 
         // attempt to save the current quest
         private void questSave_Click(object sender, EventArgs e)
@@ -721,17 +722,17 @@ namespace AmteCreator.DataQuestRewardQuests
             int optChoices = (int)OptRewardUpDown.Value;
             int finNum = int.Parse(finNumber.Text);
 
-       
+
             SetGoalDependanceList(goalNum);
             SetGoalStopList(goalNum);
-        
+
             goalstepno_dictionary.Remove(goalNum);
             goalstepno_dictionary.Add(goalNum, GoalStepNo.Text);
-            
+
 
             if (item_dictionary.Count == 0 && GoalSteps.Any(s => IsUsingItem(s)))
             {
-                for(int i = 1; i <= GoalSteps.Count; i++)
+                for (int i = 1; i <= GoalSteps.Count; i++)
                 {
                     item_dictionary.Add(i, string.Empty);
                 }
@@ -771,13 +772,13 @@ namespace AmteCreator.DataQuestRewardQuests
             }
 
             goaltext_dictionary.Remove(goalNum);
-            goaltext_dictionary.Add(goalNum, _QuestGoals.Text);      
+            goaltext_dictionary.Add(goalNum, _QuestGoals.Text);
             goaltargetname_dictionary.Remove(goalNum);
-            goaltargetname_dictionary.Add(goalNum, _GoalTargetName.Text);     
+            goaltargetname_dictionary.Add(goalNum, _GoalTargetName.Text);
             stepItemTemplate_dictionnary.Remove(goalNum);
             stepItemTemplate_dictionnary.Add(goalNum, _StepItemTemplate.Text);
             stepStartItemTemplate_dictionnary.Remove(goalNum);
-            stepStartItemTemplate_dictionnary.Add(goalNum, _StepStartItemTemplate.Text);          
+            stepStartItemTemplate_dictionnary.Add(goalNum, _StepStartItemTemplate.Text);
             goalrepeatno_dictionary.Remove(goalNum);
             goalrepeatno_dictionary.Add(goalNum, _GoalRepeatNo.Text);
             xloc_dictionary.Remove(goalNum);
@@ -811,87 +812,87 @@ namespace AmteCreator.DataQuestRewardQuests
                 fin_dictionary.Add(finNum, _FinalReward.Text);
             }
 
-             DBDQRewardQTemplate q = new DBDQRewardQTemplate();
+            DBDQRewardQTemplate q = new DBDQRewardQTemplate();
 
             // try
             // {
-                q.GoalsJson = GetDatabaseJsonObjectList();
-                allowedClasses = String.Join("|", listClasses.SelectedItems.Cast<object>().Select(i => i.ToString()));
-                allowedRaces = String.Join("|", listRaces.SelectedItems.Cast<string>().Select(i =>
-                {
-                    return i == "All" ? string.Empty : ((byte)(ERace)Enum.Parse(typeof(ERace), i)).ToString();
-                }));
+            q.GoalsJson = GetDatabaseJsonObjectList();
+            allowedClasses = String.Join("|", listClasses.SelectedItems.Cast<object>().Select(i => i.ToString()));
+            allowedRaces = String.Join("|", listRaces.SelectedItems.Cast<string>().Select(i =>
+            {
+                return i == "All" ? string.Empty : ((byte)(ERace)Enum.Parse(typeof(ERace), i)).ToString();
+            }));
 
-                optionalRewardItemTemplates = String.Join("|", Array.ConvertAll(opt_dictionary.Values.ToArray(), i => i.ToString()));
-                finalRewardItemTemplates = String.Join("|", Array.ConvertAll(fin_dictionary.Values.ToArray(), i => i.ToString()));
+            optionalRewardItemTemplates = String.Join("|", Array.ConvertAll(opt_dictionary.Values.ToArray(), i => i.ToString()));
+            finalRewardItemTemplates = String.Join("|", Array.ConvertAll(fin_dictionary.Values.ToArray(), i => i.ToString()));
 
-                allowedRaces = allowedRaces?.Replace("All", string.Empty);
+            allowedRaces = allowedRaces?.Replace("All", string.Empty);
 
-                StringBuilder allcl = new StringBuilder(allowedClasses);
-                allcl.Replace("All", ""); // added all incase one is selected, you cannot deselect
-                allcl.Replace("Armsman", "2");
-                allcl.Replace("Cabalist", "13");
-                allcl.Replace("Cleric", "6");
-                allcl.Replace("Friar", "10");
-                allcl.Replace("Heretic", "33");
-                allcl.Replace("Infiltrator", "9");
-                allcl.Replace("Mercenary", "11");
-                allcl.Replace("Minstrel", "4");
-                allcl.Replace("Necromancer", "12");
-                allcl.Replace("Paladin", "1");
-                allcl.Replace("Reaver", "19");
-                allcl.Replace("Scout", "3");
-                allcl.Replace("Sorcerer", "8");
-                allcl.Replace("Theurgist", "5");
-                allcl.Replace("Wizard", "7");
-                allcl.Replace("MaulerAlb", "60");
-                allcl.Replace("Berserker", "31");
-                allcl.Replace("Bonedancer", "30");
-                allcl.Replace("Healer", "26");
-                allcl.Replace("Hunter", "25");
-                allcl.Replace("Runemaster", "29");
-                allcl.Replace("Savage", "32");
-                allcl.Replace("Shadowblade", "23");
-                allcl.Replace("Shaman", "28");
-                allcl.Replace("Skald", "24");
-                allcl.Replace("Spiritmaster", "27");
-                allcl.Replace("Thane", "21");
-                allcl.Replace("Valkyrie", "34");
-                allcl.Replace("Warlock", "59");
-                allcl.Replace("Warrior", "22");
-                allcl.Replace("MaulerMid", "61");
-                allcl.Replace("Animist", "55");
-                allcl.Replace("Bainshee", "39");
-                allcl.Replace("Bard", "48");
-                allcl.Replace("Blademaster", "43");
-                allcl.Replace("Champion", "45");
-                allcl.Replace("Druid", "47");
-                allcl.Replace("Eldritch", "40");
-                allcl.Replace("Enchanter", "41");
-                allcl.Replace("Hero", "44");
-                allcl.Replace("Mentalist", "42");
-                allcl.Replace("Nightshade", "49");
-                allcl.Replace("Ranger", "50");
-                allcl.Replace("Valewalker", "56");
-                allcl.Replace("Vampiir", "58");
-                allcl.Replace("Warden", "46");
-                allcl.Replace("MaulerHib", "62");
-                allcl.Replace("Acolyte", "16");
-                allcl.Replace("AlbionRogue", "17");
-                allcl.Replace("Disciple", "20");
-                allcl.Replace("Elementalist", "15");
-                allcl.Replace("Fighter", "14");
-                allcl.Replace("Forester", "57");
-                allcl.Replace("Guardian", "52");
-                allcl.Replace("Mage", "18");
-                allcl.Replace("Magician", "51");
-                allcl.Replace("MidgardRogue", "38");
-                allcl.Replace("Mystic", "36");
-                allcl.Replace("Naturalist", "53");
-                allcl.Replace("Seer", "37");
-                allcl.Replace("Stalker", "54");
-                allcl.Replace("Viking", "35");
-                allowedClasses = allcl.ToString();
+            StringBuilder allcl = new StringBuilder(allowedClasses);
+            allcl.Replace("All", ""); // added all incase one is selected, you cannot deselect
+            allcl.Replace("Armsman", "2");
+            allcl.Replace("Cabalist", "13");
+            allcl.Replace("Cleric", "6");
+            allcl.Replace("Friar", "10");
+            allcl.Replace("Heretic", "33");
+            allcl.Replace("Infiltrator", "9");
+            allcl.Replace("Mercenary", "11");
+            allcl.Replace("Minstrel", "4");
+            allcl.Replace("Necromancer", "12");
+            allcl.Replace("Paladin", "1");
+            allcl.Replace("Reaver", "19");
+            allcl.Replace("Scout", "3");
+            allcl.Replace("Sorcerer", "8");
+            allcl.Replace("Theurgist", "5");
+            allcl.Replace("Wizard", "7");
+            allcl.Replace("MaulerAlb", "60");
+            allcl.Replace("Berserker", "31");
+            allcl.Replace("Bonedancer", "30");
+            allcl.Replace("Healer", "26");
+            allcl.Replace("Hunter", "25");
+            allcl.Replace("Runemaster", "29");
+            allcl.Replace("Savage", "32");
+            allcl.Replace("Shadowblade", "23");
+            allcl.Replace("Shaman", "28");
+            allcl.Replace("Skald", "24");
+            allcl.Replace("Spiritmaster", "27");
+            allcl.Replace("Thane", "21");
+            allcl.Replace("Valkyrie", "34");
+            allcl.Replace("Warlock", "59");
+            allcl.Replace("Warrior", "22");
+            allcl.Replace("MaulerMid", "61");
+            allcl.Replace("Animist", "55");
+            allcl.Replace("Bainshee", "39");
+            allcl.Replace("Bard", "48");
+            allcl.Replace("Blademaster", "43");
+            allcl.Replace("Champion", "45");
+            allcl.Replace("Druid", "47");
+            allcl.Replace("Eldritch", "40");
+            allcl.Replace("Enchanter", "41");
+            allcl.Replace("Hero", "44");
+            allcl.Replace("Mentalist", "42");
+            allcl.Replace("Nightshade", "49");
+            allcl.Replace("Ranger", "50");
+            allcl.Replace("Valewalker", "56");
+            allcl.Replace("Vampiir", "58");
+            allcl.Replace("Warden", "46");
+            allcl.Replace("MaulerHib", "62");
+            allcl.Replace("Acolyte", "16");
+            allcl.Replace("AlbionRogue", "17");
+            allcl.Replace("Disciple", "20");
+            allcl.Replace("Elementalist", "15");
+            allcl.Replace("Fighter", "14");
+            allcl.Replace("Forester", "57");
+            allcl.Replace("Guardian", "52");
+            allcl.Replace("Mage", "18");
+            allcl.Replace("Magician", "51");
+            allcl.Replace("MidgardRogue", "38");
+            allcl.Replace("Mystic", "36");
+            allcl.Replace("Naturalist", "53");
+            allcl.Replace("Seer", "37");
+            allcl.Replace("Stalker", "54");
+            allcl.Replace("Viking", "35");
+            allowedClasses = allcl.ToString();
             // }
             // catch (Exception g)
             // {
@@ -954,7 +955,7 @@ namespace AmteCreator.DataQuestRewardQuests
             else
             {
                 //Insert quest
-               query = GenerateInsertQuery(quest);
+                query = GenerateInsertQuery(quest);
             }
             resp = Server.Query(query);
 
@@ -970,7 +971,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
         private string GenerateUpdateQuery(DBDQRewardQTemplate quest)
         {
-            var fields =  Assembly.GetCallingAssembly().GetType("AmteCreator.Internal.DBDQRewardQTemplate", true).GetProperties();
+            var fields = Assembly.GetCallingAssembly().GetType("AmteCreator.Internal.DBDQRewardQTemplate", true).GetProperties();
             object value;
             var formattedFields = fields.Select(f =>
             {
@@ -978,8 +979,8 @@ namespace AmteCreator.DataQuestRewardQuests
 
                 value = f.Name != nameof(DBDQRewardQTemplate.IsRenaissance) ? Server.EscapeSql(value?.ToString()) : ((bool)value ? "1" : "0");
 
-                return $"`{ f.Name }`={value}";
-            });           
+                return $"`{f.Name}`={value}";
+            });
 
 
             return "?action=UPDATE&table=dataquestjson&where=" +
@@ -1008,7 +1009,7 @@ namespace AmteCreator.DataQuestRewardQuests
         private dynamic GenerateDeleteQuery(string id)
         {
             return "?action=DELETE&table=dataquestjson&where=" +
-                                        HttpUtility.UrlEncode("ID = " + Server.EscapeSql(id), Encoding.UTF8);         
+                                        HttpUtility.UrlEncode("ID = " + Server.EscapeSql(id), Encoding.UTF8);
         }
 
 
@@ -1021,9 +1022,9 @@ namespace AmteCreator.DataQuestRewardQuests
 
             if (confirmResult == DialogResult.OK)
             {
-               string query = GenerateDeleteQuery(_ID.Text);
+                string query = GenerateDeleteQuery(_ID.Text);
 
-               var resp = Server.Query(query);
+                var resp = Server.Query(query);
 
                 if (resp is string)
                     MessageBox.Show("Erreur:\r\n" + resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1035,7 +1036,7 @@ namespace AmteCreator.DataQuestRewardQuests
                     SetFieldDefaults();
                     MessageBox.Show("The Quest was correctly deleted:\r\n", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }   
+            }
         }
 
         // clear the dictionaries 
@@ -1068,11 +1069,11 @@ namespace AmteCreator.DataQuestRewardQuests
             stepStartItemTemplate_dictionnary.Clear();
             GoalSteps.Clear();
             questDependance_dictionary.Clear();
-            questDependance_dictionary[1]=new Dictionary<int, string>();
+            questDependance_dictionary[1] = new Dictionary<int, string>();
             questStop_dictionary.Clear();
-            questStop_dictionary[1]=new Dictionary<int, string>();
+            questStop_dictionary[1] = new Dictionary<int, string>();
             destroyItem_dictionary.Clear();
-        }        
+        }
 
 
         private bool SetField(string field, Dictionary<int, string> dic, Control control)
@@ -1287,7 +1288,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
         private void button1_Click(object sender, EventArgs e)
         {
-  //          var search = new ItemSearchForm();
+            //          var search = new ItemSearchForm();
 
             //search.SelectClicked += (o, args) =>
             //{
@@ -1299,7 +1300,7 @@ namespace AmteCreator.DataQuestRewardQuests
             //};
 
 
-         //   search.ShowDialog(this);
+            //   search.ShowDialog(this);
         }
 
         private void LoadItem(string itemId)
@@ -1363,7 +1364,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
         private void button4_Click(object sender, EventArgs e)
         {
- //           var mobsearch = new MobSearch();
+            //           var mobsearch = new MobSearch();
 
             //mobsearch.SelectNpcClicked += (o, args) => { LoadNpcName(((Mob)o).Name, ((Mob)o).Region); };
 
@@ -1465,13 +1466,13 @@ namespace AmteCreator.DataQuestRewardQuests
 
             if (!questDependance_dictionary.ContainsKey(goalNumber + 1))
             {
-                questDependance_dictionary.Add(goalNumber + 1,  new Dictionary<int, string>());
+                questDependance_dictionary.Add(goalNumber + 1, new Dictionary<int, string>());
             }
             if (!questStop_dictionary.ContainsKey(goalNumber + 1))
             {
-                questStop_dictionary.Add(goalNumber + 1,  new Dictionary<int, string>());
+                questStop_dictionary.Add(goalNumber + 1, new Dictionary<int, string>());
             }
-            _suppressGoal.Enabled = true; 
+            _suppressGoal.Enabled = true;
             SetGoalDependanceList(goalNumber);
             SetGoalStopList(goalNumber);
             PopulateGoalDependanceListBox(goalNumber + 1);
@@ -1501,7 +1502,7 @@ namespace AmteCreator.DataQuestRewardQuests
                 {
                     item_dictionary.Remove(goalNumber);
                     item_dictionary.Add(goalNumber, _GoalOptional.Text);
-                }       
+                }
             }
             if (GoalSteps[goalNumber - 1] == GoalType.Whisper)
             {
@@ -1513,9 +1514,9 @@ namespace AmteCreator.DataQuestRewardQuests
                 {
                     goalAdvanceText_dictionnary.Remove(goalNumber);
                     goalAdvanceText_dictionnary.Add(goalNumber, _GoalOptional.Text);
-                }              
+                }
             }
-             if (IsUsingArea(GoalSteps[goalNumber - 1]))
+            if (IsUsingArea(GoalSteps[goalNumber - 1]))
             {
                 if (!arearadius_dictionary.ContainsKey(goalNumber))
                 {
@@ -1527,7 +1528,8 @@ namespace AmteCreator.DataQuestRewardQuests
                     arearadius_dictionary.Add(goalNumber, _Radius.Text);
                 }
             }
-             if (GoalSteps[goalNumber - 1] == GoalType.Timer){
+            if (GoalSteps[goalNumber - 1] == GoalType.Timer)
+            {
                 if (!seconds_dictionary.ContainsKey(goalNumber))
                 {
                     seconds_dictionary.Add(goalNumber, _GoalOptional.Text);
@@ -1570,7 +1572,7 @@ namespace AmteCreator.DataQuestRewardQuests
                 goaltext_dictionary.Add(goalNumber, _QuestGoals.Text);
             }
             _QuestGoals.Text = "";
-            
+
 
             if (!targetRegions_dictionary.ContainsKey(goalNumber))
             {
@@ -1617,7 +1619,7 @@ namespace AmteCreator.DataQuestRewardQuests
             {
                 xloc_dictionary.Remove(goalNumber);
                 xloc_dictionary.Add(goalNumber, string.IsNullOrWhiteSpace(_XOffset.Text) ? string.Empty : _XOffset.Text);
-            }          
+            }
 
             //GoalYloc.Text
             if (!yloc_dictionary.ContainsKey(goalNumber))
@@ -1628,7 +1630,7 @@ namespace AmteCreator.DataQuestRewardQuests
             {
                 yloc_dictionary.Remove(goalNumber);
                 yloc_dictionary.Add(goalNumber, string.IsNullOrWhiteSpace(_YOffset.Text) ? string.Empty : _YOffset.Text);
-            }         
+            }
 
             //GoalZoneId.Text
             if (!zoneid_dictionary.ContainsKey(goalNumber))
@@ -1639,7 +1641,7 @@ namespace AmteCreator.DataQuestRewardQuests
             {
                 zoneid_dictionary.Remove(goalNumber);
                 zoneid_dictionary.Add(goalNumber, string.IsNullOrWhiteSpace(_ZoneID.Text) ? string.Empty : _ZoneID.Text);
-            }         
+            }
 
             //GoalTargetText.Text
             if (!goaltargettext_dictionary.ContainsKey(goalNumber))
@@ -1719,7 +1721,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
             int goalNext = int.Parse(GoalNumber.Text);
             string goalvalue;
-        
+
 
             if (goaltext_dictionary.ContainsKey(goalNext))
             {
@@ -1849,10 +1851,10 @@ namespace AmteCreator.DataQuestRewardQuests
             }
             else richTextBoxCompleted.Text = "";
 
-            if(destroyItem_dictionary.ContainsKey(goalNext))
+            if (destroyItem_dictionary.ContainsKey(goalNext))
             {
                 destroyItem_dictionary.TryGetValue(goalNext, out goalvalue);
-                checkBoxDestroyItem.Checked = goalvalue =="" ? false : bool.Parse(goalvalue);
+                checkBoxDestroyItem.Checked = goalvalue == "" ? false : bool.Parse(goalvalue);
             }
             else checkBoxDestroyItem.Checked = false;
 
@@ -1880,12 +1882,13 @@ namespace AmteCreator.DataQuestRewardQuests
 
             //remove step altogether if mandatory fields are not entered
             if (_GoalType.Text == "")
-            {            
+            {
                 goaltext_dictionary.Remove(goalNum);
                 goaltargetname_dictionary.Remove(goalNum);
                 stepItemTemplate_dictionnary.Remove(goalNum);
                 stepStartItemTemplate_dictionnary.Remove(goalNum);
                 item_dictionary.Remove(goalNum);
+                seconds_dictionary.Remove(goalNum);
                 goalstepno_dictionary.Remove(goalNum);
                 goalrepeatno_dictionary.Remove(goalNum);
                 xloc_dictionary.Remove(goalNum);
@@ -1918,12 +1921,12 @@ namespace AmteCreator.DataQuestRewardQuests
                     {
                         if (goalAdvanceText_dictionnary.Count == 0)
                         {
-                            for(int i = 1; i < goalNum; i++)
+                            for (int i = 1; i < goalNum; i++)
                             {
                                 goalAdvanceText_dictionnary.Add(i, string.Empty);
                             }
                         }
-                      
+
                         goalAdvanceText_dictionnary.Remove(goalNum);
                         goalAdvanceText_dictionnary.Add(goalNum, _GoalOptional.Text);
                     }
@@ -1982,7 +1985,7 @@ namespace AmteCreator.DataQuestRewardQuests
                     targetRegions_dictionary.Add(goalNum, _targetRegion.Text);
                     destroyItem_dictionary.Remove(goalNum);
                     destroyItem_dictionary.Add(goalNum, checkBoxDestroyItem.Checked.ToString());
-                } 
+                }
             }
 
             GoalNumber.Text = (goalNum - 1).ToString();
@@ -2054,9 +2057,9 @@ namespace AmteCreator.DataQuestRewardQuests
 
             if (goalAdvanceText_dictionnary.ContainsKey(goalNum) && GoalSteps[goalNum - 1] == GoalType.Whisper)
             {
-                 goalAdvanceText_dictionnary.TryGetValue(goalNum, out goalvalue);
+                goalAdvanceText_dictionnary.TryGetValue(goalNum, out goalvalue);
                 _GoalOptional.Text = goalvalue;
-            }   
+            }
 
             if (goalstepno_dictionary.ContainsKey(goalNum))
             {
@@ -2126,7 +2129,7 @@ namespace AmteCreator.DataQuestRewardQuests
             }
             else richTextBoxCompleted.Text = "";
 
-            if(destroyItem_dictionary.ContainsKey(goalNum))
+            if (destroyItem_dictionary.ContainsKey(goalNum))
             {
                 destroyItem_dictionary.TryGetValue(goalNum, out goalvalue);
                 checkBoxDestroyItem.Checked = goalvalue == "" ? false : bool.Parse(goalvalue);
@@ -2542,7 +2545,7 @@ namespace AmteCreator.DataQuestRewardQuests
             int stepNumber = int.Parse(GoalNumber.Text);
             if (stepNumber > 1 && stepNumber == GoalSteps.Count)
             {
-               var result = MessageBox.Show(string.Format("You are about to erase the goal step n° {0}\nDo you Confirm ?", stepNumber), "Erase this Step ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                var result = MessageBox.Show(string.Format("You are about to erase the goal step n° {0}\nDo you Confirm ?", stepNumber), "Erase this Step ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 if (result == DialogResult.OK)
                 {
@@ -2558,7 +2561,7 @@ namespace AmteCreator.DataQuestRewardQuests
         private void SuppressStep(int step)
         {
             if (GoalSteps.Count >= step)
-            {               
+            {
                 if (IsUsingItem(GoalSteps[step - 1]))
                 {
                     item_dictionary.Remove(step);
@@ -2568,6 +2571,7 @@ namespace AmteCreator.DataQuestRewardQuests
                     goalAdvanceText_dictionnary.Remove(step);
                 }
 
+                seconds_dictionary.Remove(step);
                 goaltargetname_dictionary.Remove(step);
                 targetRegions_dictionary.Remove(step);
                 goaltext_dictionary.Remove(step);
@@ -2582,12 +2586,12 @@ namespace AmteCreator.DataQuestRewardQuests
                 messageCompleted_dictionary.Remove(step);
                 stepItemTemplate_dictionnary.Remove(step);
                 stepStartItemTemplate_dictionnary.Remove(step);
-                
 
-              GoalSteps.RemoveAt(step - 1);
-              PopulateGoalDependanceListBox(step - 1);
-              PopulateGoalStopListBox(step - 1);
-              previousGoal_Click(this, new GoalEventArgs(){ ShouldSavePreviousStep = false });
+
+                GoalSteps.RemoveAt(step - 1);
+                PopulateGoalDependanceListBox(step - 1);
+                PopulateGoalStopListBox(step - 1);
+                previousGoal_Click(this, new GoalEventArgs() { ShouldSavePreviousStep = false });
             }
         }
 
@@ -2607,7 +2611,7 @@ namespace AmteCreator.DataQuestRewardQuests
         private void ReputationReward_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Verify that the pressed key isn't CTRL or any non-numeric digit
-            if ( !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '-'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }
@@ -2671,7 +2675,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
         // Add classes and associated ID to a dictionary for later use
         private void PopulateClassDictionary()
-        {            
+        {
             allClasses.Add(2, "Armsman");
             allClasses.Add(13, "Cabalist");
             allClasses.Add(6, "Cleric");
@@ -2743,7 +2747,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
         private void SetupDropdowns()
         {
-        //    ComboboxService.BindQuestStep(_GoalType);
+            //    ComboboxService.BindQuestStep(_GoalType);
         }
 
         private void ConvertAllowClassToByte()
@@ -2814,5 +2818,5 @@ namespace AmteCreator.DataQuestRewardQuests
             allcl.Replace("35", "Viking");
             allowedClasses = allcl.ToString();
         }
-    }  
+    }
 }
