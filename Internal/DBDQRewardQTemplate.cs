@@ -3,7 +3,7 @@
 namespace AmteCreator.Internal
 {
     [Serializable]
-    public class DBDQRewardQTemplate        
+    public class DBDQRewardQTemplate
     {
         public int? ID
         {
@@ -21,7 +21,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// The name of the object that starts this quest
         /// </summary>
-        
+
         public string NpcName
         {
             get; set;
@@ -30,7 +30,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// The region id where this quest starts
         /// </summary>
-        
+
         public ushort NpcRegion
         {
             get; set;
@@ -39,7 +39,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// The quest story shown to player upon being offered the quest
         /// </summary>
-        
+
         public string Story
         {
             get; set;
@@ -48,7 +48,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Summary of the quest shown in journal
         /// </summary>
-        
+
         public string Summary
         {
             get; set;
@@ -57,7 +57,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Additional text displayed to the player upon accepting the quest
         /// </summary>
-        
+
         public string AcceptText
         {
             get; set;
@@ -66,7 +66,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Max number of times a player can do this quest
         /// </summary>
-        
+
         public ushort MaxCount
         {
             get; set;
@@ -75,7 +75,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Minimum level a player has to be to start this quest
         /// </summary>
-        
+
         public byte MinLevel
         {
             get; set;
@@ -84,7 +84,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Max level a player can be and still do this quest
         /// </summary>
-        
+
         public byte MaxLevel
         {
             get; set;
@@ -93,7 +93,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Reward Money to give at quest completion, 0 for none		
         /// </summary>
-        
+
         public long RewardMoney
         {
             get; set;
@@ -107,7 +107,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Reward XP to give at quest completion, 0 for none        
         /// </summary>
-        
+
         public long RewardXP
         {
             get; set;
@@ -116,7 +116,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Reward CLXP to give at quest completion, 0 for none        
         /// </summary>
-        
+
         public long RewardCLXP
         {
             get; set;
@@ -125,7 +125,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Reward RP to give at quest completion, 0 for none        
         /// </summary>
-        
+
         public long RewardRP
         {
             get; set;
@@ -134,7 +134,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Reward BP to give at quest completion, 0 for none        
         /// </summary>
-        
+
         public long RewardBP
         {
             get; set;
@@ -144,7 +144,7 @@ namespace AmteCreator.Internal
         /// The ItemTemplate id_nb(s) to give as a optional rewards
         /// Format:  #id_nb1|id_nb2 with first character being the number of choices
         /// </summary>
-        
+
         public string OptionalRewardItemTemplates
         {
             get; set;
@@ -154,7 +154,7 @@ namespace AmteCreator.Internal
         /// The ItemTemplate id_nb(s) to give as a final reward
         /// Format:  id_nb1|id_nb2
         /// </summary>
-        
+
         public string FinalRewardItemTemplates
         {
             get; set;
@@ -163,7 +163,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Text to show the user once the quest is finished.
         /// </summary>
-        
+
         public string Conclusion
         {
             get; set;
@@ -173,7 +173,7 @@ namespace AmteCreator.Internal
         /// The name or names of other quests that need to be done before this quest can be offered.
         /// Name Quest One|Name Quest Two... Can be null if no dependency
         /// </summary>
-        
+
         public string QuestDependency
         {
             get; set;
@@ -188,7 +188,7 @@ namespace AmteCreator.Internal
         }
 
 
-        
+
         public bool IsRenaissance
         {
             get; set;
@@ -218,7 +218,7 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Number of optional items to choose from
         /// </summary>
-        public int NbChooseOptionalItems 
+        public int NbChooseOptionalItems
         {
             get; set;
         }
@@ -226,7 +226,55 @@ namespace AmteCreator.Internal
         /// <summary>
         /// Description of whole quest
         /// </summary>
-        public string Description 
+        public string Description
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Should this quest Start an event
+        /// </summary>
+        public bool StartEvent
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Should this quest Reset an event
+        /// </summary>
+        public bool ResetEvent
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Should this quest Start an event on end
+        /// </summary>
+        public bool EndStartEvent
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Should this quest Reset an event on end
+        /// </summary>
+        public bool EndResetEvent
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Quest id to start/reset at the beginning of this quest
+        /// </summary>
+        public string StartEventId
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Quest id to start/reset at the end of this quest
+        /// </summary>
+        public string EndEventId
         {
             get; set;
         }
@@ -274,6 +322,12 @@ namespace AmteCreator.Internal
                 GoalsJson = model.GoalsJson,
                 NbChooseOptionalItems = int.Parse(model.NbChooseOptionalItems),
                 Description = model.Description,
+                StartEvent = bool.Parse(model.StartEvent ?? "false"),
+                ResetEvent = bool.Parse(model.ResetEvent ?? "false"),
+                EndStartEvent = bool.Parse(model.EndStartEvent ?? "false"),
+                EndResetEvent = bool.Parse(model.EndResetEvent ?? "false"),
+                StartEventId = int.Parse(model.StartEventId ?? ""),
+                EndEventId = int.Parse(model.EndEventId ?? "0)
             };
         }
     }

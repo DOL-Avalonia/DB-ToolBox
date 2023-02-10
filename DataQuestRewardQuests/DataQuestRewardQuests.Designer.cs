@@ -76,6 +76,8 @@
             this._GoalTargetText = new System.Windows.Forms.RichTextBox();
             this.richTextBoxStarted = new System.Windows.Forms.RichTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkBoxDestroyItem = new System.Windows.Forms.CheckBox();
+            this.labelDestroyItem = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this._Radius = new System.Windows.Forms.TextBox();
             this._StepItemTemplate = new System.Windows.Forms.TextBox();
@@ -153,8 +155,20 @@
             this._StepStartItemTemplate = new System.Windows.Forms.TextBox();
             this.listGoalStop = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.labelDestroyItem = new System.Windows.Forms.Label();
-            this.checkBoxDestroyItem = new System.Windows.Forms.CheckBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this._StartQuestEvent = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this._StepQuestEvent = new System.Windows.Forms.TextBox();
+            this._EndQuestEvent = new System.Windows.Forms.TextBox();
+            this.checkStartSQuestEvent = new System.Windows.Forms.CheckBox();
+            this.checkStepStartEvent = new System.Windows.Forms.CheckBox();
+            this.checkStartEQuestEvent = new System.Windows.Forms.CheckBox();
+            this.checkResetSQuestEvent = new System.Windows.Forms.CheckBox();
+            this.checkStepResetEvent = new System.Windows.Forms.CheckBox();
+            this.checkResetEQuestEvent = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.individualStepBox.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -763,6 +777,24 @@
             this.groupBox5.Size = new System.Drawing.Size(300, 298);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
+            // 
+            // checkBoxDestroyItem
+            // 
+            this.checkBoxDestroyItem.AutoSize = true;
+            this.checkBoxDestroyItem.Location = new System.Drawing.Point(266, 174);
+            this.checkBoxDestroyItem.Name = "checkBoxDestroyItem";
+            this.checkBoxDestroyItem.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDestroyItem.TabIndex = 125;
+            this.checkBoxDestroyItem.UseVisualStyleBackColor = true;
+            // 
+            // labelDestroyItem
+            // 
+            this.labelDestroyItem.AutoSize = true;
+            this.labelDestroyItem.Location = new System.Drawing.Point(166, 175);
+            this.labelDestroyItem.Name = "labelDestroyItem";
+            this.labelDestroyItem.Size = new System.Drawing.Size(100, 13);
+            this.labelDestroyItem.TabIndex = 125;
+            this.labelDestroyItem.Text = "Destroy item on use";
             // 
             // label15
             // 
@@ -1572,29 +1604,151 @@
             this.label14.Text = "Stop Goals";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // labelDestroyItem
+            // label16
             // 
-            this.labelDestroyItem.AutoSize = true;
-            this.labelDestroyItem.Location = new System.Drawing.Point(166, 175);
-            this.labelDestroyItem.Name = "labelDestroyItem";
-            this.labelDestroyItem.Size = new System.Drawing.Size(100, 13);
-            this.labelDestroyItem.TabIndex = 125;
-            this.labelDestroyItem.Text = "Destroy item on use";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(688, 343);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(85, 13);
+            this.label16.TabIndex = 129;
+            this.label16.Text = "StartQuestEvent";
             // 
-            // checkBoxDestroyItem
+            // label19
             // 
-            this.checkBoxDestroyItem.AutoSize = true;
-            this.checkBoxDestroyItem.Location = new System.Drawing.Point(266, 174);
-            this.checkBoxDestroyItem.Name = "checkBoxDestroyItem";
-            this.checkBoxDestroyItem.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDestroyItem.TabIndex = 125;
-            this.checkBoxDestroyItem.UseVisualStyleBackColor = true;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(688, 366);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 13);
+            this.label19.TabIndex = 130;
+            this.label19.Text = "StepQuestEvent";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(690, 389);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(82, 13);
+            this.label20.TabIndex = 131;
+            this.label20.Text = "EndQuestEvent";
+            // 
+            // _StartQuestEvent
+            // 
+            this._StartQuestEvent.BackColor = System.Drawing.Color.White;
+            this._StartQuestEvent.ForeColor = System.Drawing.Color.Black;
+            this._StartQuestEvent.Location = new System.Drawing.Point(773, 340);
+            this._StartQuestEvent.Name = "_StartQuestEvent";
+            this._StartQuestEvent.Size = new System.Drawing.Size(40, 20);
+            this._StartQuestEvent.TabIndex = 129;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(805, 327);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(35, 13);
+            this.label21.TabIndex = 129;
+            this.label21.Text = "  Start";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(839, 327);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(35, 13);
+            this.label23.TabIndex = 132;
+            this.label23.Text = "Reset";
+            // 
+            // _StepQuestEvent
+            // 
+            this._StepQuestEvent.BackColor = System.Drawing.Color.White;
+            this._StepQuestEvent.ForeColor = System.Drawing.Color.Black;
+            this._StepQuestEvent.Location = new System.Drawing.Point(772, 363);
+            this._StepQuestEvent.Name = "_StepQuestEvent";
+            this._StepQuestEvent.Size = new System.Drawing.Size(40, 20);
+            this._StepQuestEvent.TabIndex = 133;
+            // 
+            // _EndQuestEvent
+            // 
+            this._EndQuestEvent.BackColor = System.Drawing.Color.White;
+            this._EndQuestEvent.ForeColor = System.Drawing.Color.Black;
+            this._EndQuestEvent.Location = new System.Drawing.Point(772, 386);
+            this._EndQuestEvent.Name = "_EndQuestEvent";
+            this._EndQuestEvent.Size = new System.Drawing.Size(40, 20);
+            this._EndQuestEvent.TabIndex = 134;
+            // 
+            // checkStartSQuestEvent
+            // 
+            this.checkStartSQuestEvent.AutoSize = true;
+            this.checkStartSQuestEvent.Location = new System.Drawing.Point(819, 343);
+            this.checkStartSQuestEvent.Name = "checkStartSQuestEvent";
+            this.checkStartSQuestEvent.Size = new System.Drawing.Size(15, 14);
+            this.checkStartSQuestEvent.TabIndex = 129;
+            this.checkStartSQuestEvent.UseVisualStyleBackColor = true;
+            // 
+            // checkStepStartEvent
+            // 
+            this.checkStepStartEvent.AutoSize = true;
+            this.checkStepStartEvent.Location = new System.Drawing.Point(819, 366);
+            this.checkStepStartEvent.Name = "checkStepStartEvent";
+            this.checkStepStartEvent.Size = new System.Drawing.Size(15, 14);
+            this.checkStepStartEvent.TabIndex = 135;
+            this.checkStepStartEvent.UseVisualStyleBackColor = true;
+            // 
+            // checkStartEQuestEvent
+            // 
+            this.checkStartEQuestEvent.AutoSize = true;
+            this.checkStartEQuestEvent.Location = new System.Drawing.Point(819, 389);
+            this.checkStartEQuestEvent.Name = "checkStartEQuestEvent";
+            this.checkStartEQuestEvent.Size = new System.Drawing.Size(15, 14);
+            this.checkStartEQuestEvent.TabIndex = 136;
+            this.checkStartEQuestEvent.UseVisualStyleBackColor = true;
+            // 
+            // checkResetSQuestEvent
+            // 
+            this.checkResetSQuestEvent.AutoSize = true;
+            this.checkResetSQuestEvent.Location = new System.Drawing.Point(847, 343);
+            this.checkResetSQuestEvent.Name = "checkResetSQuestEvent";
+            this.checkResetSQuestEvent.Size = new System.Drawing.Size(15, 14);
+            this.checkResetSQuestEvent.TabIndex = 137;
+            this.checkResetSQuestEvent.UseVisualStyleBackColor = true;
+            // 
+            // checkStepResetEvent
+            // 
+            this.checkStepResetEvent.AutoSize = true;
+            this.checkStepResetEvent.Location = new System.Drawing.Point(847, 366);
+            this.checkStepResetEvent.Name = "checkStepResetEvent";
+            this.checkStepResetEvent.Size = new System.Drawing.Size(15, 14);
+            this.checkStepResetEvent.TabIndex = 138;
+            this.checkStepResetEvent.UseVisualStyleBackColor = true;
+            // 
+            // checkResetEQuestEvent
+            // 
+            this.checkResetEQuestEvent.AutoSize = true;
+            this.checkResetEQuestEvent.Location = new System.Drawing.Point(847, 389);
+            this.checkResetEQuestEvent.Name = "checkResetEQuestEvent";
+            this.checkResetEQuestEvent.Size = new System.Drawing.Size(15, 14);
+            this.checkResetEQuestEvent.TabIndex = 139;
+            this.checkResetEQuestEvent.UseVisualStyleBackColor = true;
             // 
             // DataQuestRewardQuests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Controls.Add(this.checkResetEQuestEvent);
+            this.Controls.Add(this.checkStepResetEvent);
+            this.Controls.Add(this.checkResetSQuestEvent);
+            this.Controls.Add(this.checkStartEQuestEvent);
+            this.Controls.Add(this.checkStepStartEvent);
+            this.Controls.Add(this.checkStartSQuestEvent);
+            this.Controls.Add(this._EndQuestEvent);
+            this.Controls.Add(this._StepQuestEvent);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this._StartQuestEvent);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.listGoalStop);
             this.Controls.Add(this.label10);
@@ -1773,5 +1927,19 @@
         private System.Windows.Forms.TextBox _Radius;
         private System.Windows.Forms.CheckBox checkBoxDestroyItem;
         private System.Windows.Forms.Label labelDestroyItem;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox _StartQuestEvent;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox _StepQuestEvent;
+        private System.Windows.Forms.TextBox _EndQuestEvent;
+        private System.Windows.Forms.CheckBox checkStartSQuestEvent;
+        private System.Windows.Forms.CheckBox checkStepStartEvent;
+        private System.Windows.Forms.CheckBox checkStartEQuestEvent;
+        private System.Windows.Forms.CheckBox checkResetSQuestEvent;
+        private System.Windows.Forms.CheckBox checkStepResetEvent;
+        private System.Windows.Forms.CheckBox checkResetEQuestEvent;
     }
 }
