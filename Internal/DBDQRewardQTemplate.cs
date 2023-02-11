@@ -322,12 +322,12 @@ namespace AmteCreator.Internal
                 GoalsJson = model.GoalsJson,
                 NbChooseOptionalItems = int.Parse(model.NbChooseOptionalItems),
                 Description = model.Description,
-                StartEvent = bool.Parse(model.StartEvent ?? "false"),
-                ResetEvent = bool.Parse(model.ResetEvent ?? "false"),
-                EndStartEvent = bool.Parse(model.EndStartEvent ?? "false"),
-                EndResetEvent = bool.Parse(model.EndResetEvent ?? "false"),
-                StartEventId = int.Parse(model.StartEventId ?? ""),
-                EndEventId = int.Parse(model.EndEventId ?? "0)
+                StartEvent = bool.Parse(model.StartEvent == "1" ? "true" : "false"),
+                ResetEvent = bool.Parse(model.ResetEvent == "1" ? "true" : "false"),
+                EndStartEvent = bool.Parse(model.EndStartEvent == "1" ? "true" : "false"),
+                EndResetEvent = bool.Parse(model.EndResetEvent == "1" ? "true" : "false"),
+                StartEventId = model.StartEventId ?? string.Empty,
+                EndEventId = model.EndEventId ?? string.Empty
             };
         }
     }
