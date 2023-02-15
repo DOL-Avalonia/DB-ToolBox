@@ -23,6 +23,7 @@ namespace AmteCreator.DataQuestRewardQuests
 
         public static Dictionary<string, string> GoalTypeNames = new Dictionary<string, string>()
         {
+            {"DOL.GS.Quests.BringAFriendGoal", "BringAFriend"},
             {"DOL.GS.Quests.AbortQuestGoal", "Abort"},
             {"DOL.GS.Quests.CollectGoal", "Collect"},
             {"DOL.GS.Quests.EnterAreaGoal", "EnterArea"},
@@ -43,6 +44,7 @@ namespace AmteCreator.DataQuestRewardQuests
             GoalType.Kill,
             GoalType.KillGroupMob,
             GoalType.KillPlayer,
+            GoalType.BringAFriend,
         };
         public static List<GoalType> UsingItem = new List<GoalType>()
         {
@@ -56,6 +58,7 @@ namespace AmteCreator.DataQuestRewardQuests
             GoalType.KillGroupMob,
             GoalType.KillPlayer,
             GoalType.UseItem,
+            GoalType.BringAFriend,
         };
         public static List<GoalType> UsingDestroyItem = new List<GoalType>()
         {
@@ -302,7 +305,7 @@ namespace AmteCreator.DataQuestRewardQuests
                 else if (type == "DOL.GS.Quests.CollectGoal")
                     goalrepeatno_dictionary.Add(id, (string)data.ItemCount ?? "");
                 else
-                    goalrepeatno_dictionary.Add(id, "");
+                    goalrepeatno_dictionary.Add(id, (string)data.Count);
 
                 item_dictionary.Add(id, (string)data.Item ?? "");
                 goaltargettext_dictionary.Add(id, (string)data.Text ?? "");
@@ -720,6 +723,7 @@ namespace AmteCreator.DataQuestRewardQuests
                 { "AreaRadius", arearadius_dictionary.ContainsKey(index) ? arearadius_dictionary[index]  : "" },
                 { "AreaRegion", zoneid_dictionary.ContainsKey(index) ? zoneid_dictionary[index]  : "" },
                 { "KillCount", goalrepeatno_dictionary.ContainsKey(index) ? goalrepeatno_dictionary[index]  : "" },
+                { "Count", goalrepeatno_dictionary.ContainsKey(index) ? goalrepeatno_dictionary[index]  : "" },
                 { "Seconds", seconds_dictionary.ContainsKey(index) ? seconds_dictionary[index]  : "" },
                 { "WhisperText", goalAdvanceText_dictionnary.ContainsKey(index) ? goalAdvanceText_dictionnary[index]  : "" },
                 { "DestroyItem", destroyItem_dictionary.ContainsKey(index) ? destroyItem_dictionary[index]  : "" },

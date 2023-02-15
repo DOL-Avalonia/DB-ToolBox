@@ -3,10 +3,11 @@
 namespace AmteCreator.DataQuestRewardQuests
 {
     // based on 
-    
+
     public enum GoalType
     {
         Abort,
+        BringAFriend,
         Collect,
         EnterArea,
         //DeliverFinish,
