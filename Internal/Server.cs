@@ -66,7 +66,7 @@ namespace AmteCreator.Internal
 			}
 			catch
 			{
-				return "FAIL\r\n" + data;
+				throw new InvalidDataException("Données invalides envoyées par le serveur:\n" + data);
 			}
 		}
 
