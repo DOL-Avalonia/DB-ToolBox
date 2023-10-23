@@ -105,7 +105,7 @@ namespace AmteCreator
 			}
 			if (Options == null || Options.Count < 2)
 				_DisplayOptions(null, null);
-			dynamic resp = Server.Query("", from a in Options where a.Key == "login" || a.Key == "password" || a.Key == "database" select a);
+			dynamic resp = Server.Query("", Options);
 			try
 			{
 				if (!resp.login)

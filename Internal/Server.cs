@@ -5,6 +5,7 @@ using DynamicRest;
 using System.Net;
 using System.IO;
 using System.Web;
+using System.Text.Json;
 
 namespace AmteCreator.Internal
 {
@@ -13,7 +14,7 @@ namespace AmteCreator.Internal
 		private static CookieContainer _cookies = new CookieContainer();
 		public static string DEBUG_LastQuery = "";
 
-		private static string _DownloadPage(string url, IEnumerable<KeyValuePair<string, string>> postData)
+		private static string _DownloadPage(string url, Dictionary<string, string> postData)
 		{
 			DEBUG_LastQuery = url;
 			var hwr = (HttpWebRequest)WebRequest.Create(MainForm.URL + url);
@@ -22,22 +23,29 @@ namespace AmteCreator.Internal
 			if (postData != null)
 			{
 				hwr.Method = "POST";
-				hwr.ContentType = "application/x-www-form-urlencoded; charset=UTF-8";
+				hwr.ContentType = "application/json; charset=UTF-8";
 				DEBUG_LastQuery += "\r\nDATA=";
-				using (var sw = new StreamWriter(hwr.GetRequestStream()))
-					foreach (var entry in postData)
+				var json = JsonSerializer.Serialize(postData);
+				DEBUG_LastQuery += json;
+				using (var sw = new StreamWriter(hwr.GetRequestStream())) {
+					sw.Write(json);
+					/*foreach (var entry in postData)
 					{
 						sw.Write(HttpUtility.UrlEncode(entry.Key, Encoding.UTF8) + "=" + HttpUtility.UrlEncode(entry.Value, Encoding.UTF8) + "&");
 						DEBUG_LastQuery += HttpUtility.UrlEncode(entry.Key, Encoding.UTF8) + "=" +
 							HttpUtility.UrlEncode(entry.Value, Encoding.UTF8) + "&";
-					}
-			}
+					}*/
+                }
+            }
 
 			HttpWebResponse resp;
 			try { resp = (HttpWebResponse)hwr.GetResponse(); }
-			catch (WebException e) { resp = (HttpWebResponse)e.Response; }
-			if (resp == null)
-				return "no response";
+			catch (WebException e)
+			{
+				if (e.Response == null)
+					throw;
+				resp = (HttpWebResponse)e.Response;
+			}
 			var buffer = new byte[8192];
 			var ms = new MemoryStream();
 			int count = 0;
@@ -51,7 +59,7 @@ namespace AmteCreator.Internal
 			return res;
 		}
 
-		public static dynamic Query(string url, IEnumerable<KeyValuePair<string, string>> postData = null, bool login = false)
+		public static dynamic Query(string url, Dictionary<string, string> postData = null, bool login = false)
 		{
 			var data = _DownloadPage(url, postData);
 			try
@@ -66,7 +74,7 @@ namespace AmteCreator.Internal
 			}
 			catch
 			{
-				throw new InvalidDataException("Données invalides envoyées par le serveur:\n" + data);
+				throw new InvalidDataException("Données invalides envoyées par le serveur:\r\n" + data);
 			}
 		}
 

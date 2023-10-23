@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AmteCreator.Internal
 {
@@ -409,106 +411,109 @@ namespace AmteCreator.Internal
                 .ToString();
         }
 
-        private string _GetItemUpdateString()
+        private Dictionary<string, string> _GetItemUpdatePOST()
         {
-            var fields = new List<KeyValuePair<string, object>>
+            var fields = new Dictionary<string, object>()
             {
-                new KeyValuePair<string, object>("name", name),
-                new KeyValuePair<string, object>("level", level.ToString()),
-                new KeyValuePair<string, object>("levelRequirement", levelRequirement.ToString()),
-                new KeyValuePair<string, object>("price", price.ToString()),
-                new KeyValuePair<string, object>("quality", quality.ToString()),
-                new KeyValuePair<string, object>("object_type", object_type.ToString()),
-                new KeyValuePair<string, object>("item_type", item_type.ToString()),
-                new KeyValuePair<string, object>("description", description),
+                { "name", name },
+                { "level", level.ToString() },
+                { "levelRequirement", levelRequirement.ToString() },
+                { "price", price.ToString() },
+                { "quality", quality.ToString() },
+                { "object_type", object_type.ToString() },
+                { "item_type", item_type.ToString() },
+                { "description", description },
 
                 // dur_con
-                new KeyValuePair<string, object>("durability", durability.ToString()),
-                new KeyValuePair<string, object>("condition", condition.ToString()),
-                new KeyValuePair<string, object>("maxdurability", maxdurability.ToString()),
-                new KeyValuePair<string, object>("maxcondition", maxcondition.ToString()),
-                new KeyValuePair<string, object>("weight", weight.ToString()),
-                new KeyValuePair<string, object>("isIndestructible", isIndestructible),
-                new KeyValuePair<string, object>("isNotLosingDur", isNotLosingDur),
+                { "durability", durability.ToString() },
+                { "condition", condition.ToString() },
+                { "maxdurability", maxdurability.ToString() },
+                { "maxcondition", maxcondition.ToString() },
+                { "weight", weight.ToString() },
+                { "isIndestructible", isIndestructible },
+                { "isNotLosingDur", isNotLosingDur },
 
                 // weapon/armor
-                new KeyValuePair<string, object>("dps_af", dps_af.ToString()),
-                new KeyValuePair<string, object>("spd_abs", spd_abs.ToString()),
-                new KeyValuePair<string, object>("hand", hand.ToString()),
-                new KeyValuePair<string, object>("type_damage", type_damage.ToString()),
+                { "dps_af", dps_af.ToString() },
+                { "spd_abs", spd_abs.ToString() },
+                { "hand", hand.ToString() },
+                { "type_damage", type_damage.ToString() },
 
                 // apparence
-                new KeyValuePair<string, object>("color", color.ToString()),
-                new KeyValuePair<string, object>("emblem", emblem.ToString()),
-                new KeyValuePair<string, object>("effect", effect.ToString()),
-                new KeyValuePair<string, object>("model", model.ToString()),
-                new KeyValuePair<string, object>("extension", extension.ToString()),
+                { "color", color.ToString() },
+                { "emblem", emblem.ToString() },
+                { "effect", effect.ToString() },
+                { "model", model.ToString() },
+                { "extension", extension.ToString() },
 
                 // bonuses
-                new KeyValuePair<string, object>("bonus", bonus.ToString()),
-                new KeyValuePair<string, object>("bonus1", bonus1.ToString()),
-                new KeyValuePair<string, object>("bonus2", bonus2.ToString()),
-                new KeyValuePair<string, object>("bonus3", bonus3.ToString()),
-                new KeyValuePair<string, object>("bonus4", bonus4.ToString()),
-                new KeyValuePair<string, object>("bonus5", bonus5.ToString()),
-                new KeyValuePair<string, object>("bonus6", bonus6.ToString()),
-                new KeyValuePair<string, object>("bonus7", bonus7.ToString()),
-                new KeyValuePair<string, object>("bonus8", bonus8.ToString()),
-                new KeyValuePair<string, object>("bonus9", bonus9.ToString()),
-                new KeyValuePair<string, object>("bonus10", bonus10.ToString()),
-                new KeyValuePair<string, object>("extrabonus", extrabonus.ToString()),
-                new KeyValuePair<string, object>("bonus1Type", bonus1Type.ToString()),
-                new KeyValuePair<string, object>("bonus2Type", bonus2Type.ToString()),
-                new KeyValuePair<string, object>("bonus3Type", bonus3Type.ToString()),
-                new KeyValuePair<string, object>("bonus4Type", bonus4Type.ToString()),
-                new KeyValuePair<string, object>("bonus5Type", bonus5Type.ToString()),
-                new KeyValuePair<string, object>("bonus6Type", bonus6Type.ToString()),
-                new KeyValuePair<string, object>("bonus7Type", bonus7Type.ToString()),
-                new KeyValuePair<string, object>("bonus8Type", bonus8Type.ToString()),
-                new KeyValuePair<string, object>("bonus9Type", bonus9Type.ToString()),
-                new KeyValuePair<string, object>("bonus10Type", bonus10Type.ToString()),
-                new KeyValuePair<string, object>("extrabonusType", extrabonusType.ToString()),
+                { "bonus", bonus.ToString() },
+                { "bonus1", bonus1.ToString() },
+                { "bonus2", bonus2.ToString() },
+                { "bonus3", bonus3.ToString() },
+                { "bonus4", bonus4.ToString() },
+                { "bonus5", bonus5.ToString() },
+                { "bonus6", bonus6.ToString() },
+                { "bonus7", bonus7.ToString() },
+                { "bonus8", bonus8.ToString() },
+                { "bonus9", bonus9.ToString() },
+                { "bonus10", bonus10.ToString() },
+                { "extrabonus", extrabonus.ToString() },
+                { "bonus1Type", bonus1Type.ToString() },
+                { "bonus2Type", bonus2Type.ToString() },
+                { "bonus3Type", bonus3Type.ToString() },
+                { "bonus4Type", bonus4Type.ToString() },
+                { "bonus5Type", bonus5Type.ToString() },
+                { "bonus6Type", bonus6Type.ToString() },
+                { "bonus7Type", bonus7Type.ToString() },
+                { "bonus8Type", bonus8Type.ToString() },
+                { "bonus9Type", bonus9Type.ToString() },
+                { "bonus10Type", bonus10Type.ToString() },
+                { "extrabonusType", extrabonusType.ToString() },
 
                 // properties
-                new KeyValuePair<string, object>("isDropable", isDropable),
-                new KeyValuePair<string, object>("isPickable", isPickable),
-                new KeyValuePair<string, object>("isTradable", isTradable),
-                new KeyValuePair<string, object>("canDropAsLoot", canDropAsLoot),
-                new KeyValuePair<string, object>("canUseInRvR", canUseInRvR),
+                { "isDropable", isDropable },
+                { "isPickable", isPickable },
+                { "isTradable", isTradable },
+                { "canDropAsLoot", canDropAsLoot },
+                { "canUseInRvR", canUseInRvR },
 
                 // stack
-                new KeyValuePair<string, object>("maxCount", maxCount.ToString()),
-                new KeyValuePair<string, object>("packSize", packSize.ToString()),
+                { "maxCount", maxCount.ToString() },
+                { "packSize", packSize.ToString() },
 
                 // proc & charges
-                new KeyValuePair<string, object>("spellID", spellID.ToString()),
-                new KeyValuePair<string, object>("procSpellID", procSpellID.ToString()),
-                new KeyValuePair<string, object>("maxCharges", maxCharges.ToString()),
-                new KeyValuePair<string, object>("charges", charges.ToString()),
-                new KeyValuePair<string, object>("spellID1", spellID1.ToString()),
-                new KeyValuePair<string, object>("procSpellID1", procSpellID1.ToString()),
-                new KeyValuePair<string, object>("charges1", charges1.ToString()),
-                new KeyValuePair<string, object>("maxCharges1", maxCharges1.ToString()),
-                new KeyValuePair<string, object>("procChance", procChance.ToString()),
-                new KeyValuePair<string, object>("poisonSpellID", poisonSpellID.ToString()),
-                new KeyValuePair<string, object>("poisonMaxCharges", poisonMaxCharges.ToString()),
-                new KeyValuePair<string, object>("poisonCharges", poisonCharges.ToString()),
+                { "spellID", spellID.ToString() },
+                { "procSpellID", procSpellID.ToString() },
+                { "maxCharges", maxCharges.ToString() },
+                { "charges", charges.ToString() },
+                { "spellID1", spellID1.ToString() },
+                { "procSpellID1", procSpellID1.ToString() },
+                { "charges1", charges1.ToString() },
+                { "maxCharges1", maxCharges1.ToString() },
+                { "procChance", procChance.ToString() },
+                { "poisonSpellID", poisonSpellID.ToString() },
+                { "poisonMaxCharges", poisonMaxCharges.ToString() },
+                { "poisonCharges", poisonCharges.ToString() },
 
-                new KeyValuePair<string, object>("realm", realm.ToString()),
-                new KeyValuePair<string, object>("allowedClasses", allowedClasses),
-                new KeyValuePair<string, object>("canUseEvery", canUseEvery.ToString()),
-                new KeyValuePair<string, object>("flags", flags.ToString()),
-                new KeyValuePair<string, object>("bonusLevel", bonusLevel.ToString()),
-                new KeyValuePair<string, object>("bonusConditions", bonusConditions ?? string.Empty)
+                { "realm", realm.ToString() },
+                { "allowedClasses", allowedClasses },
+                { "canUseEvery", canUseEvery.ToString() },
+                { "flags", flags.ToString() },
+                { "bonusLevel", bonusLevel.ToString() },
+                { "bonusConditions", bonusConditions ?? string.Empty }
             };
 
-            return "?action=UPDATE&table=itemtemplate&where=" +
-                   HttpUtility.UrlEncode("Id_nb = " + Server.EscapeSql(id_nb), Encoding.UTF8) +
-                   "&upfields=" +
-                   HttpUtility.UrlEncode(string.Join(",", fields.Select(t => $"`{t.Key}` = {Server.EscapeSql(t.Value)}")), Encoding.UTF8);
+            return new Dictionary<string, string>()
+            {
+                { "action", "UPDATE" },
+                { "table", "itemtemplate" },
+                { "where", "Id_nb = " + Server.EscapeSql(id_nb) },
+                { "upfields", string.Join(",", fields.Select(t => $"`{t.Key}` = {Server.EscapeSql(t.Value)}")) }
+            };
         }
 
-        private string _GetItemInsertString()
+        private Dictionary<string, string> _GetItemInsertPOST()
         {
             var values = Server.EscapeSql(Guid.NewGuid().ToString()) + "," +
                          Server.EscapeSql(id_nb) + "," +
@@ -601,18 +606,23 @@ namespace AmteCreator.Internal
                          "'AmteCreator'," +
                         Server.EscapeSql(classType) + "," +
                      (bonusConditions != null ? Server.EscapeSql(bonusConditions) : "''");
-            return "?action=INSERT&table=itemtemplate&fields=" +
-                   HttpUtility.UrlEncode(
-                       "`ItemTemplate_ID`,`id_nb`,`name`,`level`,`levelRequirement`,`price`,`quality`,`object_type`,`item_type`," +
-                       "`description`,`bonus`,`durability`,`condition`,`maxdurability`,`maxcondition`,`weight`," +
-                       "`isIndestructible`,`isNotLosingDur`,`dps_af`,`spd_abs`,`hand`,`type_damage`,`color`,`emblem`," +
-                       "`effect`,`model`,`extension`,`bonus1`,`bonus2`,`bonus3`,`bonus4`,`bonus5`,`bonus6`,`bonus7`," +
-                       "`bonus8`,`bonus9`,`bonus10`,`extrabonus`,`bonus1Type`,`bonus2Type`,`bonus3Type`,`bonus4Type`," +
-                       "`bonus5Type`,`bonus6Type`,`bonus7Type`,`bonus8Type`,`bonus9Type`,`bonus10Type`,`extrabonusType`," +
-                       "`isDropable`,`isPickable`,`isTradable`,`canDropAsLoot`,`canUseInRvR`, `maxCount`,`packSize`,`spellID`," +
-                       "`procSpellID`,`maxCharges`,`charges`,`spellID1`,`procSpellID1`,`charges1`,`maxCharges1`,`procChance`,`poisonSpellID`," +
-                       "`poisonMaxCharges`,`poisonCharges`,`realm`,`allowedClasses`,`canUseEvery`,`flags`,`classType`,`bonusLevel`,`packageID`,`bonusConditions`", Encoding.UTF8) +
-                   "&values=" + HttpUtility.UrlEncode(values, Encoding.UTF8);
+            return new Dictionary<string, string>()
+            {
+                { "action", "INSERT" },
+                { "table", "itemtemplate" },
+                { "fields",
+                    "`ItemTemplate_ID`,`id_nb`,`name`,`level`,`levelRequirement`,`price`,`quality`,`object_type`,`item_type`," +
+                    "`description`,`bonus`,`durability`,`condition`,`maxdurability`,`maxcondition`,`weight`," +
+                    "`isIndestructible`,`isNotLosingDur`,`dps_af`,`spd_abs`,`hand`,`type_damage`,`color`,`emblem`," +
+                    "`effect`,`model`,`extension`,`bonus1`,`bonus2`,`bonus3`,`bonus4`,`bonus5`,`bonus6`,`bonus7`," +
+                    "`bonus8`,`bonus9`,`bonus10`,`extrabonus`,`bonus1Type`,`bonus2Type`,`bonus3Type`,`bonus4Type`," +
+                    "`bonus5Type`,`bonus6Type`,`bonus7Type`,`bonus8Type`,`bonus9Type`,`bonus10Type`,`extrabonusType`," +
+                    "`isDropable`,`isPickable`,`isTradable`,`canDropAsLoot`,`canUseInRvR`, `maxCount`,`packSize`,`spellID`," +
+                    "`procSpellID`,`maxCharges`,`charges`,`spellID1`,`procSpellID1`,`charges1`,`maxCharges1`,`procChance`,`poisonSpellID`," +
+                    "`poisonMaxCharges`,`poisonCharges`,`realm`,`allowedClasses`,`canUseEvery`,`flags`,`classType`,`bonusLevel`,`packageID`,`bonusConditions`"
+                },
+                { "values", HttpUtility.UrlEncode(values, Encoding.UTF8) }
+            };
         }
 
         public dynamic Save()
@@ -621,10 +631,10 @@ namespace AmteCreator.Internal
             if (!AlreadyInDB)
             {
                 AlreadyInDB = true;
-                resp = Server.Query(_GetItemInsertString());
+                resp = Server.Query("", _GetItemInsertPOST());
             }
             else
-                resp = Server.Query(_GetItemUpdateString());
+                resp = Server.Query("", _GetItemUpdatePOST());
             //_dirty = resp.error != null;
             return resp;
         }
