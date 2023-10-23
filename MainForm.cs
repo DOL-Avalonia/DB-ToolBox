@@ -105,10 +105,10 @@ namespace AmteCreator
 			}
 			if (Options == null || Options.Count < 2)
 				_DisplayOptions(null, null);
-			dynamic resp = Server.Query("", Options);
 			try
-			{
-				if (!resp.login)
+            {
+                dynamic resp = Server.Query("", Options);
+                if (!resp.login)
 				{
 					MessageBox.Show(this, "Erreur lors de la connexion au serveur.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					_DisplayOptions(null, null);
@@ -119,9 +119,9 @@ namespace AmteCreator
 				else if (resp.version > Constants.Version)
 					MessageBox.Show(this, "Une nouvelle version est disponible !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
-			catch (Exception)
+			catch (Exception exception)
 			{
-				MessageBox.Show(this, "Erreur lors de la connexion au serveur.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(this, "Erreur lors de la connexion au serveur: " + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Close();
 			}
 		}

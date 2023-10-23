@@ -749,6 +749,11 @@ namespace AmteCreator.DataQuestRewardQuests
             int optChoices = (int)OptRewardUpDown.Value;
             int finNum = int.Parse(finNumber.Text);
 
+            if (goalNum > GoalSteps.Count || goalNum <= 0)
+            {
+                MessageBox.Show(this.ParentForm, "Erreur: goal " + goalNum + " invalide", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             SetGoalDependanceList(goalNum);
             SetGoalStopList(goalNum);
@@ -1082,7 +1087,7 @@ namespace AmteCreator.DataQuestRewardQuests
                 }
                 catch (Exception exception)
                 {
-                    MessageBox.Show(this.ParentForm, "Erreur:\n" + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(this.ParentForm, "Erreur: " + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

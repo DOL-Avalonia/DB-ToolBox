@@ -128,7 +128,7 @@ namespace AmteCreator
             }
             catch (Exception exception)
             {
-                MessageBox.Show(this.ParentForm, "Erreur:\n" + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this.ParentForm, "Erreur: " + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

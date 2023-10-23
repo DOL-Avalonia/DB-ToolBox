@@ -34,41 +34,59 @@ namespace AmteCreator
                 return;
             _inLoading = true;
             
-            // Loading loottemplate
-			dynamic data = Server.QuerySelect("droptemplatexitemtemplate", _GetWhereClause(), "20000");
-            if (data.error != null)
-                throw new Exception("Erreur du serveur:\r\n" + data.error);
-            _lootTemplates.Clear();
-            foreach (var loot in data.content)
-                _lootTemplates.Add(new LootTemplate(loot));
-
-            // Loading mobxloottemplate
-            data = Server.QuerySelect(table: "mobxloottemplate", where: _GetWhereMobClause(), limit: "20000");
-            if (data is string && data == "FAIL\r\n")
-                throw new Exception("Erreur inconnue du serveur. (Mauvaise requête ?!)");
-            if (data.error != null)
-                throw new Exception("Erreur du serveur:\r\n" + data.error);
-
-            Dictionary<string, MobXLootTemplate> mobs = new Dictionary<string, MobXLootTemplate>();
-            foreach(dynamic loot in data.content)
-                mobs.Add(loot.MobName, new MobXLootTemplate(loot));
-            foreach (LootTemplate loot in _lootTemplates)
-                if (!mobs.ContainsKey(loot.TemplateName))
-                    mobs.Add(loot.TemplateName, new MobXLootTemplate {MobName = loot.TemplateName, lootTemplateName = loot.TemplateName, DropCount = 1});
-
-            int oldCount = _mobxlootTemplates.Count;
-            _mobxlootTemplates.Clear();
-            foreach (var loot in mobs)
-                _mobxlootTemplates.Add(loot.Value);
-            if (oldCount != _mobxlootTemplates.Count)
+            try
             {
-                mobView.DataSource = null;
-                mobView.DataSource = _mobxlootTemplates;
+                // Loading loottemplate
+                dynamic data = Server.QuerySelect("droptemplatexitemtemplate", _GetWhereClause(), "20000");
+                if (data.error != null)
+                    throw new Exception("Erreur du serveur:\r\n" + data.error);
+                _lootTemplates.Clear();
+                foreach (var loot in data.content)
+                    _lootTemplates.Add(new LootTemplate(loot));
+
+                Dictionary<string, MobXLootTemplate> mobs = new Dictionary<string, MobXLootTemplate>();
+                if (_lootTemplates.Count > 0)
+                {
+                    // Loading mobxloottemplate
+                    data = Server.QuerySelect(table: "mobxloottemplate", where: _GetWhereMobClause(), limit: "20000");
+                    if (data is string && data == "FAIL\r\n")
+                        throw new Exception("Erreur inconnue du serveur. (Mauvaise requête ?!)");
+                    if (data.error != null)
+                        throw new Exception("Erreur du serveur:\r\n" + data.error);
+
+                    foreach (dynamic loot in data.content)
+                    {
+                        if (!mobs.ContainsKey(loot.MobName))
+                            mobs.Add(loot.MobName, new MobXLootTemplate(loot));
+                    }
+                }
+                foreach (LootTemplate loot in _lootTemplates)
+                {
+                    if (!mobs.ContainsKey(loot.TemplateName))
+                        mobs.Add(loot.TemplateName, new MobXLootTemplate { MobName = loot.TemplateName, lootTemplateName = loot.TemplateName, DropCount = 1 });
+                }
+                int oldCount = _mobxlootTemplates.Count;
+                _mobxlootTemplates.Clear();
+                foreach (var loot in mobs)
+                {
+                    _mobxlootTemplates.Add(loot.Value);
+                }
+                if (oldCount != _mobxlootTemplates.Count)
+                {
+                    mobView.DataSource = null;
+                    mobView.DataSource = _mobxlootTemplates;
+                }
+                else
+                    mobView.Refresh();
             }
-            else
-                mobView.Refresh();
-            
-            _inLoading = false;
+            catch (Exception exception)
+            {
+                MessageBox.Show(this.ParentForm, "Erreur: " + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                _inLoading = false;
+            }
         }
 
         private void LoadLoots(object sender, DataGridViewCellEventArgs e)
@@ -79,24 +97,32 @@ namespace AmteCreator
             if (loot != null)
             {
                 _inLoading = true;
-
-				dynamic data = Server.QuerySelect("droptemplatexitemtemplate", _GetWhereClause(loot.MobName), "20000");
-                if (data.error != null)
-                    throw new Exception("Erreur du serveur:\r\n" + data.error);
-                int oldCount = _lootTemplates.Count;
-                _lootTemplates.Clear();
-                foreach (var lt in data.content)
-                    _lootTemplates.Add(new LootTemplate(lt));
-
-                if (oldCount != _lootTemplates.Count)
+                try
                 {
-                    templateView.DataSource = null;
-                    templateView.DataSource = _lootTemplates;
-                }
-                else
-                    templateView.Refresh();
+                    dynamic data = Server.QuerySelect("droptemplatexitemtemplate", _GetWhereClause(loot.MobName), "20000");
+                    if (data.error != null)
+                        throw new Exception("Erreur du serveur:\r\n" + data.error);
+                    int oldCount = _lootTemplates.Count;
+                    _lootTemplates.Clear();
+                    foreach (var lt in data.content)
+                        _lootTemplates.Add(new LootTemplate(lt));
 
-                _inLoading = false;
+                    if (oldCount != _lootTemplates.Count)
+                    {
+                        templateView.DataSource = null;
+                        templateView.DataSource = _lootTemplates;
+                    }
+                    else
+                        templateView.Refresh();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(this.ParentForm, "Erreur: " + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    _inLoading = false;
+                }
             }
         }
 

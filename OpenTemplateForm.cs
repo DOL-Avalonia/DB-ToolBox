@@ -49,26 +49,36 @@ namespace AmteCreator
 			if (_inLoading)
 				return;
 			_inLoading = true;
-			dynamic data = Server.QuerySelect("itemtemplate", _GetWhereClause(), _GetLimitClause(), orderBy);
-			if (data is string)
-				throw new Exception("Erreur\r\n" + data);
-			if (data.error != null)
-				throw new Exception("Erreur du serveur:\r\n" + data.error);
-			int oldCount = _templates.Count;
-			_templates.Clear();
-			foreach (var item in data.content)
-				_templates.Add(new ItemTemplate(item));
-			if (oldCount != _templates.Count)
-			{
-				dataGridView1.DataSource = null;
-				dataGridView1.DataSource = _templates;
-			}
-			else
-				dataGridView1.Refresh();
-			resultCount.Text = "Résultat: " + data.contentCount + " items";
-			currentPage.Maximum = (Convert.ToInt32(data.contentCount) / Convert.ToInt32(itemPerPages.SelectedItem)) + 1;
-			pageCount.Text = "sur " + currentPage.Maximum;
-			_inLoading = false;
+			try
+            {
+                dynamic data = Server.QuerySelect("itemtemplate", _GetWhereClause(), _GetLimitClause(), orderBy);
+                if (data is string)
+                    throw new Exception("Erreur\r\n" + data);
+                if (data.error != null)
+                    throw new Exception("Erreur du serveur:\r\n" + data.error);
+                int oldCount = _templates.Count;
+                _templates.Clear();
+                foreach (var item in data.content)
+                    _templates.Add(new ItemTemplate(item));
+                if (oldCount != _templates.Count)
+                {
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = _templates;
+                }
+                else
+                    dataGridView1.Refresh();
+                resultCount.Text = "Résultat: " + data.contentCount + " items";
+                currentPage.Maximum = (Convert.ToInt32(data.contentCount) / Convert.ToInt32(itemPerPages.SelectedItem)) + 1;
+                pageCount.Text = "sur " + currentPage.Maximum;
+            }
+			catch (Exception exception)
+            {
+                MessageBox.Show(this.ParentForm, "Erreur: " + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+			finally
+            {
+                _inLoading = false;
+            }
 		}
 
 		private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

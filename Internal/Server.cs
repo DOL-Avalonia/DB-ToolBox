@@ -30,12 +30,6 @@ namespace AmteCreator.Internal
 				DEBUG_LastQuery += json;
 				using (var sw = new StreamWriter(hwr.GetRequestStream())) {
 					sw.Write(json);
-					/*foreach (var entry in postData)
-					{
-						sw.Write(HttpUtility.UrlEncode(entry.Key, Encoding.UTF8) + "=" + HttpUtility.UrlEncode(entry.Value, Encoding.UTF8) + "&");
-						DEBUG_LastQuery += HttpUtility.UrlEncode(entry.Key, Encoding.UTF8) + "=" +
-							HttpUtility.UrlEncode(entry.Value, Encoding.UTF8) + "&";
-					}*/
                 }
             }
 
@@ -52,7 +46,7 @@ namespace AmteCreator.Internal
             }
             if (resp.StatusCode != HttpStatusCode.OK)
             {
-                throw new InvalidOperationException("Erreur lors de la requete : " + resp.StatusDescription);
+                throw new InvalidOperationException("Erreur lors de la requête (" + resp.StatusDescription + ")");
             }
             var buffer = new byte[8192];
 			var ms = new MemoryStream();
@@ -94,13 +88,22 @@ namespace AmteCreator.Internal
 			string fields = "*",
 			string action = "SELECT")
 		{
-			action = HttpUtility.UrlEncode(action, Encoding.UTF8);
-			table = HttpUtility.UrlEncode(table, Encoding.UTF8);
-			fields = HttpUtility.UrlEncode(fields, Encoding.UTF8);
-			where = HttpUtility.UrlEncode(where, Encoding.UTF8);
-			orderBy = (orderBy != null ? "&orderby=" + HttpUtility.UrlEncode(orderBy, Encoding.UTF8) : "");
-			limit = (limit != null ? "&limit=" + HttpUtility.UrlEncode(limit, Encoding.UTF8) : "");
-			return Query("?action=" + action + "&table=" + table + "&fields=" + fields + "&where=" + where + orderBy + limit);
+			var postData = new Dictionary<string, string>()
+			{
+				{ "action", action },
+				{ "table", table },
+				{ "fields", fields },
+				{ "where", where },
+			};
+            if (orderBy != null)
+            {
+				postData["orderby"] = orderBy;
+            }
+            if (limit != null)
+            {
+				postData["limit"] = limit;
+            }
+            return Query("", postData);
 		}
 
 		public static string EscapeSql(object data)
