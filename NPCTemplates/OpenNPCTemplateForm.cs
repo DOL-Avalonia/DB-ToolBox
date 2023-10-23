@@ -80,49 +80,60 @@ namespace AmteCreator
         {
             if (_inLoading)
                 return;
-            _inLoading = true;
-            dynamic data = Server.QuerySelect(this.DataTableName, _GetWhereClause(), _GetLimitClause(), OrderBy);
-            if (data is string)
+            try
             {
-                _templates.Clear();
-                _inLoading = false;
-                return;
-            }
-              
-            if (data.error != null)
-                throw new Exception("Erreur du serveur:\r\n" + data.error);
 
-            int oldCount = _templates.Count;
-            _templates.Clear();
-            foreach (var item in data.content)
-            {
-                if (this.DataTableName == "npctemplate")
+                _inLoading = true;
+                dynamic data = Server.QuerySelect(this.DataTableName, _GetWhereClause(), _GetLimitClause(), OrderBy);
+                if (data is string)
                 {
-                    _templates.Add(new NPCTemplate(item));
-                } 
-                else if (this.DataTableName == "dataquestjson")
-                {
-                    DBDQRewardQTemplate quest = DBDQRewardQTemplate.GetQuestFromJson(item);
-                    _templates.Add(quest); 
+                    _templates.Clear();
+                    _inLoading = false;
+                    return;
                 }
-            }
 
-            if (this.DataTableName == "dataquestjson")
-            {     
-                this.Text = "Chercher une QuestReward...";
-            }
+                if (data.error != null)
+                    throw new Exception("Erreur du serveur:\r\n" + data.error);
 
-            if (oldCount != _templates.Count)
+                int oldCount = _templates.Count;
+                _templates.Clear();
+                foreach (var item in data.content)
+                {
+                    if (this.DataTableName == "npctemplate")
+                    {
+                        _templates.Add(new NPCTemplate(item));
+                    }
+                    else if (this.DataTableName == "dataquestjson")
+                    {
+                        DBDQRewardQTemplate quest = DBDQRewardQTemplate.GetQuestFromJson(item);
+                        _templates.Add(quest);
+                    }
+                }
+
+                if (this.DataTableName == "dataquestjson")
+                {
+                    this.Text = "Chercher une QuestReward...";
+                }
+
+                if (oldCount != _templates.Count)
+                {
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = _templates;
+                }
+                else
+                    dataGridView1.Refresh();
+                resultCount.Text = "Résultat: " + data.contentCount + " templates";
+                currentPage.Maximum = (Convert.ToInt32(data.contentCount) / Convert.ToInt32(itemPerPages.SelectedItem)) + 1;
+                pageCount.Text = "sur " + currentPage.Maximum;
+            }
+            catch (Exception exception)
             {
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = _templates;
+                MessageBox.Show(this.ParentForm, "Erreur:\n" + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                dataGridView1.Refresh();
-            resultCount.Text = "Résultat: " + data.contentCount + " templates";
-            currentPage.Maximum = (Convert.ToInt32(data.contentCount) / Convert.ToInt32(itemPerPages.SelectedItem)) + 1;
-            pageCount.Text = "sur " + currentPage.Maximum;
-            _inLoading = false;
+            finally
+            {
+                _inLoading = false;
+            }
         } 
 
 

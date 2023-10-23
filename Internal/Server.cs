@@ -6,6 +6,7 @@ using System.Net;
 using System.IO;
 using System.Web;
 using System.Text.Json;
+using System;
 
 namespace AmteCreator.Internal
 {
@@ -39,14 +40,21 @@ namespace AmteCreator.Internal
             }
 
 			HttpWebResponse resp;
-			try { resp = (HttpWebResponse)hwr.GetResponse(); }
+			try
+			{
+				resp = (HttpWebResponse)hwr.GetResponse();
+			}
 			catch (WebException e)
 			{
 				if (e.Response == null)
 					throw;
 				resp = (HttpWebResponse)e.Response;
-			}
-			var buffer = new byte[8192];
+            }
+            if (resp.StatusCode != HttpStatusCode.OK)
+            {
+                throw new InvalidOperationException("Erreur lors de la requete : " + resp.StatusDescription);
+            }
+            var buffer = new byte[8192];
 			var ms = new MemoryStream();
 			int count = 0;
 			do

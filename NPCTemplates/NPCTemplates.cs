@@ -158,39 +158,53 @@ namespace AmteCreator.Controls
 
 		private void _SaveButton_Click(object sender, EventArgs e)
 		{
-			dynamic resp = Server.QuerySelect("npctemplate", "TemplateId = " + Server.EscapeSql(_currentTemplate.TemplateId));
-			if (resp.error != null)
-				MessageBox.Show(this, "Erreur:\r\n" + resp.error, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			else if (int.Parse(resp.contentCount) <= 0)
-				_SaveCurrentTemplate();
-			else if (!_currentTemplate.AlreadyInDB)
-				MessageBox.Show(this.ParentForm, "Cet ID est déjà utilisé, veuillez recharger le npc template ou changer l'ID.", "Erreur");
-			else if (MessageBox.Show(this.ParentForm,
-									 "Cet ID est déjà utilisé !\r\nVoulez-vous écraser l'ancien item ?!", "Information",
-									 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-				_SaveCurrentTemplate();
+			try
+            {
+                dynamic resp = Server.QuerySelect("npctemplate", "TemplateId = " + Server.EscapeSql(_currentTemplate.TemplateId));
+                if (resp.error != null)
+                    MessageBox.Show(this, "Erreur:\r\n" + resp.error, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (int.Parse(resp.contentCount) <= 0)
+                    _SaveCurrentTemplate();
+                else if (!_currentTemplate.AlreadyInDB)
+                    MessageBox.Show(this.ParentForm, "Cet ID est déjà utilisé, veuillez recharger le npc template ou changer l'ID.", "Erreur");
+                else if (MessageBox.Show(this.ParentForm,
+                                         "Cet ID est déjà utilisé !\r\nVoulez-vous écraser l'ancien item ?!", "Information",
+                                         MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    _SaveCurrentTemplate();
+            }
+			catch (Exception exception)
+			{
+				MessageBox.Show(this.ParentForm, "Erreur:\n" + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 
 		private void _SaveCurrentTemplate()
 		{
-			dynamic resp = _currentTemplate.Save();
-			if (resp == null || resp.error != null)
-				MessageBox.Show(this, "Erreur:\r\n" + (resp?.error ?? "resp is null"), "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			else
-			{
-				try
-				{
-					Server.UpdateNpcTemplate(_currentTemplate.NpcTemplate_ID);
-					MessageBox.Show(this, "Enregistré !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				}
-				catch (Exception e)
-				{
-					MessageBox.Show(this, "Le NPCTemplate a été enregistré mais il n'a pas pu être mis à jour sur le serveur.\r\n" +
-						"Un reboot du serveur est peut-être nécessaire.\r\n\r\nErreur: " + e.Message,
-						"Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				}
-			}
-		}
+			try
+            {
+                dynamic resp = _currentTemplate.Save();
+                if (resp == null || resp.error != null)
+                    MessageBox.Show(this, "Erreur:\r\n" + (resp?.error ?? "resp is null"), "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    try
+                    {
+                        Server.UpdateNpcTemplate(_currentTemplate.NpcTemplate_ID);
+                        MessageBox.Show(this, "Enregistré !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(this, "Le NPCTemplate a été enregistré mais il n'a pas pu être mis à jour sur le serveur.\r\n" +
+                            "Un reboot du serveur est peut-être nécessaire.\r\n\r\nErreur: " + e.Message,
+                            "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(this.ParentForm, "Erreur:\n" + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 		private void _NewButton_Click(object sender, EventArgs e)
 		{

@@ -216,7 +216,7 @@ namespace AmteCreator.Internal
 				return new { error = "Le template est identique. Il n'est pas sauvegardé" };
 			dynamic resp;
 			if (TemplateId <= -1)
-				throw new Exception("Impossible de modifier ce template, le TemplateId est invalide (-1).");
+				throw new InvalidOperationException("Impossible de modifier ce template, le TemplateId est invalide (-1).");
 			else if (AlreadyInDB)
 				resp = Server.Query(_GetUpdateString());
 			else

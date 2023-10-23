@@ -1065,17 +1065,24 @@ namespace AmteCreator.DataQuestRewardQuests
             {
                 string query = GenerateDeleteQuery(_ID.Text);
 
-                var resp = Server.Query(query);
-
-                if (resp is string)
-                    MessageBox.Show("Erreur:\r\n" + resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else if (resp.error != null)
-                    MessageBox.Show("Erreur:\r\n" + resp.error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
+                try
                 {
-                    Clear();
-                    SetFieldDefaults();
-                    MessageBox.Show("The Quest was correctly deleted:\r\n", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var resp = Server.Query(query);
+
+                    if (resp is string)
+                        MessageBox.Show("Erreur:\r\n" + resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else if (resp.error != null)
+                        MessageBox.Show("Erreur:\r\n" + resp.error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        Clear();
+                        SetFieldDefaults();
+                        MessageBox.Show("The Quest was correctly deleted:\r\n", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(this.ParentForm, "Erreur:\n" + exception.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
