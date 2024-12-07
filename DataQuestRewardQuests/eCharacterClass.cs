@@ -31,6 +31,7 @@
         Mercenary = 11,
         Minstrel = 4,
         Necromancer = 12,
+        WraithSummonerAlb = 75,
         Paladin = 1,
         Reaver = 19,
         Scout = 3,

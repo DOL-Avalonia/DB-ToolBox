@@ -365,6 +365,9 @@
 	<class id="61">
 		<name>Mauler (Mid)</name>
 	</class>
+	<class id="75">
+		<name>WraithSummoner</name>
+	</class>
 	<!-- Section hands -->
   <hand id="-1">
     <name>None</name>
@@ -429,17 +432,23 @@
 		<name>resists caps</name>
 	</bonus_category>
 	<bonus_category>
+		<name>mythical caps</name>
+	</bonus_category>
+	<bonus_category>
 		<name>skills</name>
 	</bonus_category>
 	<bonus_category>
 		<name>focus</name>
 	</bonus_category>
 	<bonus_category>
-		<name>other</name>
+		<name>toa bonuses</name>
 	</bonus_category>
-  <bonus_category>
-    <name>mythical</name>
-  </bonus_category>
+	<bonus_category>
+		<name>catacombs</name>
+	</bonus_category>
+	<bonus_category>
+		<name>special bonuses</name>
+	</bonus_category>
 	<!-- section boni -->
 	<bonus category="unused" id="0">
 		<name></name>
@@ -469,10 +478,73 @@
 		<name>Charisma</name>
 	</bonus>
 	<bonus category="stats" id="9">
-		<name>Power</name>
+		<name>Power (MaxMana)</name>
 	</bonus>
 	<bonus category="stats" id="10">
 		<name>Hits</name>
+	</bonus>
+	<bonus category="stats" id="156">
+		<name>Acuity</name>
+	</bonus>
+	<bonus category="caps" id="201">
+		<name>Bonus to Strength attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="202">
+		<name>Bonus to Dexterity attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="203">
+		<name>Bonus to Constitution attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="204">
+		<name>Bonus to Quickness attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="205">
+		<name>Bonus to Intelligence attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="206">
+		<name>Bonus to Piety attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="207">
+		<name>Bonus to Empathy attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="208">
+		<name>Bonus to Charisma attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="209">
+		<name>Bonus to Acuity attribute bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="210">
+		<name>Bonus to hit points bonus cap</name>
+	</bonus>
+	<bonus category="caps" id="211">
+		<name>Bonus to power bonus cap</name>
+	</bonus>
+	<bonus category="mythical caps" id="236">
+		<name>MythicalStrCapBonus</name>
+	</bonus>
+	<bonus category="mythical caps" id="237">
+		<name>MythicalDexCapBonus</name>
+	</bonus>
+	<bonus category="mythical caps" id="238">
+		<name>MythicalConCapBonus</name>
+	</bonus>
+	<bonus category="mythical caps" id="239">
+		<name>MythicalQuiCapBonus</name>
+	</bonus>
+	<bonus category="mythical caps" id="240">
+		<name>MythicalIntCapBonus</name>
+	</bonus>
+	<bonus category="mythical caps" id="241">
+		<name>MythicalPieCapBonus</name>
+	</bonus>
+	<bonus category="mythical caps" id="242">
+		<name>MythicalEmpCapBonus</name>
+	</bonus>
+	<bonus category="mythical caps" id="243">
+		<name>MythicalChaCapBonus</name>
+	</bonus>
+	<bonus category="mythical caps" id="244">
+		<name>MythicalAcuCapBonus</name>
 	</bonus>
 	<bonus category="resists" id="11">
 		<name>Body</name>
@@ -500,6 +572,33 @@
 	</bonus>
 	<bonus category="resists" id="19">
 		<name>Thrust</name>
+	</bonus>
+	<bonus category="resists caps" id="221">
+		<name>Bonus to Body resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="222">
+		<name>Bonus to Cold Resist Cap</name>
+	</bonus>
+	<bonus category="resists caps" id="224">
+		<name>Bonus to Energy resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="225">
+		<name>Bonus to Heat resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="226">
+		<name>Bonus to Matter resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="228">
+		<name>Bonus to Spirit resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="227">
+		<name>Bonus to Slash resists cap</name>
+	</bonus>
+	<bonus category="resists caps" id="223">
+		<name>Bonus to Crush Resist Cap </name>
+	</bonus>
+	<bonus category="resists caps" id="229">
+		<name>Bonus to Thrust resists cap</name>
 	</bonus>
 	<bonus category="skills" id="20">
 		<name>Two Handed</name>
@@ -777,7 +876,35 @@
 	<bonus category="skills" id="113">
 		<name>Aura Manipulation</name>
 	</bonus>
-	<bonus category="skills" id="115"><name>Archery</name></bonus>
+	<bonus category="skills" id="114">
+		<name>Spectral Guard</name>
+	</bonus>
+	<bonus category="skills" id="115">
+		<name>Archery</name></bonus>
+	<bonus category="skills" id="277">
+		<name>Tormentshaper</name>
+	</bonus>
+	<bonus category="skills" id="278">
+		<name>Wraithsight</name>
+	</bonus>
+	<bonus category="skills" id="279">
+		<name>Void Acolyte</name>
+	</bonus>
+	<bonus category="skills" id="163">
+		<name>ALL magic skills</name>
+	</bonus>
+	<bonus category="skills" id="164">
+		<name>ALL melee weapon skills</name>
+	</bonus>
+	<bonus category="skills" id="167">
+		<name>ALL Dual Wielding Skills</name>
+	</bonus>
+	<bonus category="skills" id="168">
+		<name>ALL Archery Skills</name>
+	</bonus>
+	<bonus category="skills" id="213">
+		<name>All Skills</name>
+	</bonus>
 	<bonus category="focus" id="120">
 		<name>Darkness Focus</name>
 	</bonus>
@@ -794,7 +921,7 @@
 		<name>Fire Magic Focus</name>
 	</bonus>
 	<bonus category="focus" id="125">
-		<name>Wind Magic Focus</name>
+		<name>Air Magic Focus</name>
 	</bonus>
 	<bonus category="focus" id="126">
 		<name>Cold Magic Focus</name>
@@ -850,39 +977,6 @@
 	<bonus category="focus" id="144">
 		<name>Arboreal Focus</name>
 	</bonus>
-	<bonus category="focus" id="145">
-		<name>Maximum Speed</name>
-	</bonus>
-	<bonus category="focus" id="147">
-		<name>Concentration</name>
-	</bonus>
-	<bonus category="focus" id="148">
-		<name>Armorfactor</name>
-	</bonus>
-	<bonus category="focus" id="149">
-		<name>Armor Absorbsion</name>
-	</bonus>
-	<bonus category="focus" id="150">
-		<name>Health Regeneration</name>
-	</bonus>
-	<bonus category="focus" id="151">
-		<name>Power Regeneration</name>
-	</bonus>
-	<bonus category="focus" id="152">
-		<name>Endurance Regeneration</name>
-	</bonus>
-	<bonus category="focus" id="153">
-		<name>Spell Range</name>
-	</bonus>
-	<bonus category="focus" id="154">
-		<name>Archery Range</name>
-	</bonus>
-	<bonus category="other" id="155">
-		<name>Melee Combat Speed</name>
-	</bonus>
-	<bonus category="stats" id="156">
-		<name>Acuity</name>
-	</bonus>
 	<bonus category="focus" id="157">
 		<name>Ethereal Shriek Focus</name>
 	</bonus>
@@ -901,318 +995,285 @@
 	<bonus category="focus" id="162">
 		<name>Witchcraft Focus</name>
 	</bonus>
-	<bonus category="skills" id="163">
-		<name>ALL magic skills</name>
+	<bonus category="focus" id="310">
+		<name>Tormentshaper Focus</name>
 	</bonus>
-	<bonus category="skills" id="164">
-		<name>ALL melee weapon skills</name>
+	<bonus category="focus" id="311">
+		<name>Wraithsight Focus</name>
+	</bonus>
+	<bonus category="focus" id="312">
+		<name>Void Acolyte Focus</name>
 	</bonus>
 	<bonus category="focus" id="165">
 		<name>ALL spell lines</name>
 	</bonus>
-	<bonus category="other" id="166">
-		<name>Effective level</name>
+	<bonus category="toa bonuses" id="145">
+		<name>Maximum Speed</name>
 	</bonus>
-	<bonus category="skills" id="167">
-		<name>ALL Dual Wielding Skills</name>
+	<bonus category="toa bonuses" id="147">
+		<name>Concentration</name>
 	</bonus>
-	<bonus category="skills" id="168">
-		<name>ALL Archery Skills</name>
+	<bonus category="toa bonuses" id="148">
+		<name>Armorfactor</name>
 	</bonus>
-	<bonus category="other" id="169">
-		<name>Evade Chance</name>
+	<bonus category="toa bonuses" id="149">
+		<name>Armor Absorbsion</name>
 	</bonus>
-	<bonus category="other" id="170">
-		<name>Block Chance</name>
-	</bonus>
-	<bonus category="other" id="171">
-		<name>Parry Chance</name>
-	</bonus>
-	<bonus category="other" id="173">
-		<name>all Melee Damage</name>
-	</bonus>
-	<bonus category="other" id="174">
-		<name>all Ranged Damage</name>
-	</bonus>
-	<bonus category="other" id="175">
-		<name>Fumble Chance</name>
-	</bonus>
-	<bonus category="other" id="176">
-		<name>Mesmerize Duration</name>
-	</bonus>
-	<bonus category="other" id="177">
-		<name>Stun Duration</name>
-	</bonus>
-	<bonus category="other" id="178">
-		<name>Speed Decrease Duration</name>
-	</bonus>
-	<bonus category="other" id="179">
-		<name>Bladeturn Reinforcement</name>
-	</bonus>
-	<bonus category="other" id="180">
-		<name>Defensive Bonus</name>
-	</bonus>
-	<bonus category="other" id="182">
-		<name>Negative Reduction</name>
-	</bonus>
-	<bonus category="other" id="183">
-		<name>Piece Ablative</name>
-	</bonus>
-	<bonus category="other" id="184">
-		<name>Reactionary Style Damage</name>
-	</bonus>
-	<bonus category="other" id="185">
-		<name>Spell Power Cost Reduction</name>
-	</bonus>
-	<bonus category="other" id="186">
-		<name>Style Cost Reduction</name>
-	</bonus>
-	<bonus category="other" id="187">
-		<name>To Hit Bonus</name>
-	</bonus>
-	<bonus category="other" id="188">
-		<name>Archery Speed</name>
-	</bonus>
-	<bonus category="other" id="189">
-		<name>Arrow Recovery</name>
-	</bonus>
-	<bonus category="other" id="190">
-		<name>all Stat Buff Spells</name>
-	</bonus>
-	<bonus category="other" id="191">
-		<name>Casting Speed</name>
-	</bonus>
-	<bonus category="other" id="192">
-		<name>Death Experience Loss Reduction</name>
-	</bonus>
-	<bonus category="other" id="193">
-		<name>Debuff Effectivness</name>
-	</bonus>
-	<bonus category="other" id="194">
-		<name>Fatigue</name>
-	</bonus>
-	<bonus category="other" id="195">
-		<name>all Heal Spells</name>
-	</bonus>
-	<bonus category="other" id="196">
-		<name>Power Pool</name>
-	</bonus>
-	<bonus category="other" id="197">
-		<name>Resist Pierce</name>
-	</bonus>
-	<bonus category="other" id="198">
-		<name>all Magic Damage</name>
-	</bonus>
-	<bonus category="other" id="199">
-		<name>Spell Duration</name>
-	</bonus>
-	<bonus category="other" id="200">
-		<name>Style Damage</name>
-	</bonus>
-
-	<bonus category="caps" id="201">
-		<name>Bonus to Strength attribute bonus cap</name>
-	</bonus>
-	<bonus category="caps" id="202">
-		<name>Bonus to Dexterity attribute bonus cap</name>
-	</bonus>
-	<bonus category="caps" id="203">
-		<name>Bonus to Constitution attribute bonus cap</name>
-	</bonus>
-	<bonus category="caps" id="204">
-		<name>Bonus to Quickness attribute bonus cap</name>
-	</bonus>
-	<bonus category="caps" id="205">
-		<name>Bonus to Intelligence attribute bonus cap</name>
-	</bonus>
-	<bonus category="caps" id="206">
-		<name>Bonus to Piety attribute bonus cap</name>
-	</bonus>
-	<bonus category="caps" id="207">
-		<name>Bonus to Empathy attribute bonus cap</name>
-	</bonus>
-	<bonus category="caps" id="208">
-		<name>Bonus to Charisma attribute bonus cap</name>
-	</bonus>
-	<bonus category="caps" id="209">
-		<name>Bonus to Acuity attribute bonus cap</name>
-	</bonus>
-	<bonus category="caps" id="210">
-		<name>Bonus to hit points bonus cap</name>
-	</bonus>
-	<bonus category="caps" id="211">
-		<name>Bonus to power bonus cap</name>
-	</bonus>
-
-	<bonus category="other" id="212">
-		<name>Bonus to Weaponskill</name>
-	</bonus>
-	<bonus category="skills" id="213">
-		<name>All Skills</name>
-	</bonus>
-	<bonus category="other" id="214">
-		<name>Bonus to critical melee hit chance</name>
-	</bonus>
-	<bonus category="other" id="215">
-		<name>Bonus to critical archery hit chance</name>
-	</bonus>
-
-	<bonus category="other" id="230">
-		<name>DPS increase</name>
-	</bonus>
-	<bonus category="other" id="231">
+	<bonus category="toa bonuses" id="231">
 		<name>Magic Absorbtion</name>
 	</bonus>
-	<bonus category="other" id="172">
-		<name>Fatigue Consumption</name>
+	<bonus category="toa bonuses" id="230">
+		<name>DPS increase</name>
 	</bonus>
-	<bonus category="resists caps" id="223">
-		<name>Bonus to Crush Resist Cap </name>
+	<bonus category="toa bonuses" id="150">
+		<name>Health Regeneration</name>
 	</bonus>
-	<bonus category="other" id="181">
+	<bonus category="toa bonuses" id="151">
+		<name>Power Regeneration</name>
+	</bonus>
+	<bonus category="toa bonuses" id="152">
+		<name>Endurance Regeneration</name>
+	</bonus>
+	<bonus category="toa bonuses" id="153">
+		<name>Spell Range</name>
+	</bonus>
+	<bonus category="toa bonuses" id="154">
+		<name>Archery Range</name>
+	</bonus>
+	<bonus category="toa bonuses" id="155">
+		<name>Melee Combat Speed</name>
+	</bonus>
+	<bonus category="toa bonuses" id="166">
+		<name>Effective level</name>
+	</bonus>
+	<bonus category="toa bonuses" id="173">
+		<name>Melee Damage</name>
+	</bonus>
+	<bonus category="toa bonuses" id="174">
+		<name>Ranged Damage</name>
+	</bonus>
+	<bonus category="toa bonuses" id="198">
+		<name>Spell Damage</name>
+	</bonus>
+	<bonus category="toa bonuses" id="199">
+		<name>Spell Duration</name>
+	</bonus>
+	<bonus category="toa bonuses" id="200">
+		<name>Style Damage</name>
+	</bonus>
+	<bonus category="toa bonuses" id="191">
+		<name>Casting Speed</name>
+	</bonus>
+	<bonus category="toa bonuses" id="188">
+		<name>Archery Speed</name>
+	</bonus>
+	<bonus category="toa bonuses" id="189">
+		<name>Arrow Recovery</name>
+	</bonus>
+	<bonus category="toa bonuses" id="190">
+		<name>Buff Effectiveness</name>
+	</bonus>
+	<bonus category="toa bonuses" id="193">
+		<name>Debuff Effectivness</name>
+	</bonus>
+	<bonus category="toa bonuses" id="195">
+		<name>Heal Spells Effectiveness</name>
+	</bonus>
+	<bonus category="toa bonuses" id="192">
+		<name>Death Experience Loss Reduction</name>
+	</bonus>
+	<bonus category="toa bonuses" id="194">
+		<name>Fatigue</name>
+	</bonus>
+	<bonus category="toa bonuses" id="196">
+		<name>Power Pool</name>
+	</bonus>
+	<bonus category="toa bonuses" id="197">
+		<name>Resist Pierce</name>
+	</bonus>
+	<bonus category="toa bonuses" id="249">
+		<name>Resist_Natural</name>
+	</bonus>
+	<bonus category="catacombs" id="169">
+		<name>Evade Chance</name>
+	</bonus>
+	<bonus category="catacombs" id="170">
+		<name>Block Chance</name>
+	</bonus>
+	<bonus category="catacombs" id="171">
+		<name>Parry Chance</name>
+	</bonus>
+	<bonus category="catacombs" id="175">
+		<name>Fumble Chance</name>
+	</bonus>
+	<bonus category="catacombs" id="181">
 		<name>Spell Fumble Chance</name>
 	</bonus>
-	<bonus category="other" id="216">
+	<bonus category="catacombs" id="176">
+		<name>Mesmerize Duration</name>
+	</bonus>
+	<bonus category="catacombs" id="177">
+		<name>Stun Duration</name>
+	</bonus>
+	<bonus category="catacombs" id="178">
+		<name>Speed Decrease Duration</name>
+	</bonus>
+	<bonus category="catacombs" id="179">
+		<name>Bladeturn Reinforcement</name>
+	</bonus>
+	<bonus category="catacombs" id="180">
+		<name>Defensive Bonus</name>
+	</bonus>
+	<bonus category="catacombs" id="182">
+		<name>Negative Reduction</name>
+	</bonus>
+	<bonus category="catacombs" id="183">
+		<name>Piece Ablative</name>
+	</bonus>
+	<bonus category="catacombs" id="184">
+		<name>Reactionary Style Damage</name>
+	</bonus>
+	<bonus category="catacombs" id="185">
+		<name>Spell Power Cost Reduction</name>
+	</bonus>
+	<bonus category="catacombs" id="186">
+		<name>Style Cost Reduction</name>
+	</bonus>
+	<bonus category="catacombs" id="172">
+		<name>Fatigue Consumption</name>
+	</bonus>
+	<bonus category="catacombs" id="187">
+		<name>To Hit Bonus</name>
+	</bonus>
+	<bonus category="catacombs" id="212">
+		<name>Bonus to Weaponskill</name>
+	</bonus>
+	<bonus category="catacombs" id="214">
+		<name>Bonus to critical melee hit chance</name>
+	</bonus>
+	<bonus category="catacombs" id="215">
+		<name>Bonus to critical archery hit chance</name>
+	</bonus>
+	<bonus category="catacombs" id="216">
 		<name>Bonus to critical spell hit chance</name>
 	</bonus>
-	<bonus category="resists caps" id="222">
-		<name>Bonus to Resist Cold Cap</name>
-	</bonus>
-	<bonus category="other" id="232">
+	<bonus category="catacombs" id="232">
 		<name>Bonus to critical heal chance</name>
 	</bonus>
-	<bonus category="other" id="217">
+	<bonus category="catacombs" id="217">
 		<name>Swim speed</name>
 	</bonus>
-	<bonus category="other" id="218">
+	<bonus category="catacombs" id="218">
 		<name>Spell level</name>
 	</bonus>
-	<bonus category="other" id="219">
+	<bonus category="catacombs" id="219">
 		<name>Miss Hit</name>
 	</bonus>
-	<bonus category="other" id="220">
+	<bonus category="catacombs" id="220">
 		<name>Keep Damage</name>
 	</bonus>
-	
-	<bonus category="other" id="59">
-		<name>Crafting skill gain (%)</name>
+	<bonus category="catacombs" id="233">
+		<name>MythicalSafeFall</name>
 	</bonus>
-	<bonus category="other" id="116">
-		<name>Crafting/combineitem speed (%)</name>
+	<bonus category="catacombs" id="234">
+		<name>MythicalDiscumbering</name>
 	</bonus>
-	<bonus category="other" id="117">
-		<name>Increased secondary spell chance</name>
+	<bonus category="catacombs" id="250">
+		<name>ExtraHP</name>
 	</bonus>
-	<bonus category="other" id="71">
-		<name>Robbery resist Chance</name>
-	</bonus>
-
-	<bonus category="resists caps" id="221">
-		<name>Bonus to Body resists cap</name>
-	</bonus>
-	<!--
-	<bonus category="resists caps" id="900">
-		<name>Bonus to Cold resists cap</name>
-	</bonus>
-	<bonus category="resists caps" id="901">
-		<name>Bonus to Crush resists cap</name>
-	</bonus>
-	-->
-	<bonus category="resists caps" id="224">
-		<name>Bonus to Energy resists cap</name>
-	</bonus>
-	<bonus category="resists caps" id="225">
-		<name>Bonus to Heat resists cap</name>
-	</bonus>
-	<bonus category="resists caps" id="226">
-		<name>Bonus to Matter resists cap</name>
-	</bonus>
-	<bonus category="resists caps" id="227">
-		<name>Bonus to Slash resists cap</name>
-	</bonus>
-	<bonus category="resists caps" id="228">
-		<name>Bonus to Spirit resists cap</name>
-	</bonus>
-	<bonus category="resists caps" id="229">
-		<name>Bonus to Thrust resists cap</name>
-	</bonus>
-			<bonus category="other" id="247">
-		<name>Bounty Points</name>
-	</bonus>
-			<bonus category="other" id="248">
-		<name>Xp Points</name>
-	</bonus>
-  <bonus category="other" id="249">
-    <name>Resist_Natural</name>
-  </bonus>
-  <bonus category="other" id="250">
-    <name>ExtraHP</name>
-  </bonus>
-  <bonus category="other" id="251">
+	<bonus category="catacombs" id="251">
 		<name>Conversion</name>
 	</bonus>
-	 <bonus category="other" id="252">
+	<bonus category="catacombs" id="252">
 		<name>Style Absorb</name>
 	</bonus>
-	<bonus category="other" id="253">
-		<name>Realm Points</name>
-	</bonus>
-		<bonus category="other" id="254">
+	<bonus category="catacombs" id="254">
 		<name>Arcane Syphon</name>
 	</bonus>
-
-  <bonus category="mythical" id="245">
-    <name>Mythical Crowd control duration decrease</name>
-  </bonus>
-  <bonus category="mythical" id="118">
-    <name>Mythical regeneration</name>
-  </bonus>
-  <bonus category="mythical" id="119">
-    <name>Mythical Tension gain (%)</name>
-  </bonus>
-  <bonus category="mythical" id="131">
-    <name>Mythical Max speed (%)</name>
-  </bonus>
-  <bonus category="mythical" id="146">
-    <name>Mythical Spell reflection chance</name>
-  </bonus>
-  
-  <bonus category="mythical" id="233">
-    <name>MythicalSafeFall</name>
-  </bonus>
-  <bonus category="mythical" id="234">
-    <name>MythicalDiscumbering</name>
-  </bonus>
-  <bonus category="mythical" id="235">
-    <name>MythicalCoin</name>
-  </bonus>
-  <bonus category="mythical" id="236">
-    <name>MythicalStrCapBonus</name>
-  </bonus>
-  <bonus category="mythical" id="237">
-    <name>MythicalDexCapBonus</name>
-  </bonus>
-  <bonus category="mythical" id="238">
-    <name>MythicalConCapBonus</name>
-  </bonus>
-  <bonus category="mythical" id="239">
-    <name>MythicalQuiCapBonus</name>
-  </bonus>
-  <bonus category="mythical" id="240">
-    <name>MythicalIntCapBonus</name>
-  </bonus>
-  <bonus category="mythical" id="241">
-    <name>MythicalPieCapBonus</name>
-  </bonus>
-  <bonus category="mythical" id="242">
-    <name>MythicalEmpCapBonus</name>
-  </bonus>  
-  <bonus category="mythical" id="243">
-    <name>MythicalChaCapBonus</name>
-  </bonus>
-  <bonus category="mythical" id="244">
-    <name>MythicalAcuCapBonus</name>
-  </bonus>
+	<bonus category="catacombs" id="255">
+		<name>Living Effectiveness</name>
+	</bonus>
+	<bonus category="special bonuses" id="59">
+		<name>Crafting skill gain (%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="116">
+		<name>Crafting and Combine speed (%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="71">
+		<name>Robbery resist Chance (%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="256">
+		<name>Robbery Chance Bonus(%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="257">
+		<name>Robbery Delay Reduction (%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="117">
+		<name>Counter Attack Chance (%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="119">
+		<name>Tension Gain (%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="260">
+		<name>Tension conservation at Death (%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="131">
+		<name>SpellShield Chance (%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="146">
+		<name>Mythical SpellReflection Chance (%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="267">
+		<name>Mythical Debuff resist Chance (%)</name>
+	</bonus>
+	<bonus category="special bonuses" id="118">
+		<name>Mythical Omni Regen</name>
+	</bonus>
+	<bonus category="special bonuses" id="245">
+		<name>Mythical Crowd Spells Duration</name>
+	</bonus>
+	<bonus category="special bonuses" id="258">
+		<name>Stealth effectiveness bonus</name>
+	</bonus>
+	<bonus category="special bonuses" id="259">
+		<name>Stealth detection Bonus</name>
+	</bonus>
+	<bonus category="special bonuses" id="265">
+		<name>Dot Damage bonus</name>
+	</bonus>
+	<bonus category="special bonuses" id="261">
+		<name>Critical Dot hit Chance</name>
+	</bonus>
+	<bonus category="special bonuses" id="266">
+		<name>Dot Duration Decrease</name>
+	</bonus>
+	<bonus category="special bonuses" id="263">
+		<name>LeftHand Damage Bonus</name>
+	</bonus>
+	<bonus category="special bonuses" id="264">
+		<name>LeftHand Chance Bonus</name>
+	</bonus>
+	<bonus category="special bonuses" id="262">
+		<name>LeftHand Damage and Chance</name>
+	</bonus>
+	<bonus category="special bonuses" id="246">
+		<name>Loot Chance</name>
+	</bonus>
+	<bonus category="special bonuses" id="235">
+		<name>Mythical Coin</name>
+	</bonus>
+	<bonus category="special bonuses" id="247">
+		<name>Bounty Points</name>
+	</bonus>
+	<bonus category="special bonuses" id="248">
+		<name>Xp Points</name>
+	</bonus>
+	<bonus category="special bonuses" id="253">
+		<name>Realm Points</name>
+	</bonus>
+	<bonus category="special bonuses" id="268">
+		<name>Damnation Effect Enhancement</name>
+	</bonus>
 
   <!-- Section Visible Effects -->
 	<effect id="0">

@@ -20,6 +20,7 @@ namespace AmteCreator.DataQuestRewardQuests
         Timer,
         UseItem,
         Whisper,
+        Switch,
         End
     }
 }

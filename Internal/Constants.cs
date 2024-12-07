@@ -11,7 +11,7 @@ namespace AmteCreator.Internal
         public const int DolPort = 42421;
     }
 
-    public enum eProperty : byte
+    public enum eProperty : ushort
     {
         Undefined = 0,
         // Note, these are set in the ItemDB now.  Changing
@@ -90,7 +90,7 @@ namespace AmteCreator.Internal
         Skill_Spear = 56,
         Skill_Mending = 57,
         Skill_Augmentation = 58,
-        //Skill_Cave_Magic = 59,
+        CraftingSkillGain = 59,
         Skill_Darkness = 60,
         Skill_Suppression = 61,
         Skill_Runecarving = 62,
@@ -102,7 +102,7 @@ namespace AmteCreator.Internal
         Skill_Composite = 68,
         Skill_Battlesongs = 69,
         Skill_Enchantments = 70,
-        // 71 Available for a Skill
+        RobberyResist = 71,
         Skill_Blades = 72,
         Skill_Blunt = 73,
         Skill_Piercing = 74,
@@ -150,8 +150,10 @@ namespace AmteCreator.Internal
         Skill_Last = 115,
         #endregion
 
-        // 116 - 119 Available
-
+        CraftingSpeed = 116,
+        CounterAttack = 117,
+        MythicalOmniRegen = 118,
+        MythicalTension = 119,
         Focus_Darkness = 120,
         Focus_Suppression = 121,
         Focus_Runecarving = 122,
@@ -163,7 +165,7 @@ namespace AmteCreator.Internal
         Focus_Light = 128,
         Focus_Body = 129,
         Focus_Matter = 130,
-        // 131 Available
+        SpellShieldChance = 131,
         Focus_Mind = 132,
         Focus_Void = 133,
         Focus_Mana = 134,
@@ -178,7 +180,7 @@ namespace AmteCreator.Internal
         Focus_CreepingPath = 143,
         Focus_Arboreal = 144,
         MaxSpeed = 145,
-        // 146 Available
+        MythicalSpellReflect = 146,
         MaxConcentration = 147,
         ArmorFactor = 148,
         ArmorAbsorption = 149,
@@ -282,11 +284,27 @@ namespace AmteCreator.Internal
         ResCapBonus_Last = 229,
         #endregion
 
+        #region Mythical and Special bonuses
         DPS = 230,
         MagicAbsorption = 231,
         CriticalHealHitChance = 232,
 
-        // 233 - 246 Available
+        MythicalSafeFall = 233,
+        MythicalDiscumbering = 234,
+        MythicalCoin = 235,
+        MythicalStatCapBonus_First = 236,
+        MythicalStrCapBonus = 236,
+        MythicalDexCapBonus = 237,
+        MythicalConCapBonus = 238,
+        MythicalQuiCapBonus = 239,
+        MythicalIntCapBonus = 240,
+        MythicalPieCapBonus = 241,
+        MythicalEmpCapBonus = 242,
+        MythicalChaCapBonus = 243,
+        MythicalAcuCapBonus = 244,
+        MythicalStatCapBonus_Last = 244,
+        MythicalCrowdDuration = 245,
+        LootChance = 246,
 
         BountyPoints = 247,
         XpPoints = 248,
@@ -296,11 +314,72 @@ namespace AmteCreator.Internal
         StyleAbsorb = 252,
         RealmPoints = 253,
         ArcaneSyphon = 254,
-        // 255 Available
-        MaxProperty = 255
+        LivingEffectiveness = 255,
+        RobberyChanceBonus = 256,
+        RobberyDelayReduction = 257,
+        StealthEffectivenessBonus = 258,
+        StealthDetectionBonus = 259,
+        TensionConservationBonus = 260,
+        CriticalDotHitChance = 261,
+        OffhandDamageAndChanceBonus = 262,
+        OffhandDamageBonus = 263,
+        OffhandChanceBonus = 264,
+        DotDamageBonus = 265,
+        DotDurationDecrease = 266,
+        MythicalDebuffResistChance = 267,
+        DamnationEffectEnhancement = 268,
+        #endregion
+
+        #region New Skills & Focus
+        Skill_Learning = 270,
+        Skill_BlueMage1 = 271,
+        Skill_BlueMage2 = 272,
+        Skill_BlueMage3 = 273,
+        Skill_RedMage1 = 274,
+        Skill_RedMage2 = 275,
+        Skill_RedMage3 = 276,
+        Skill_Tormentshaper = 277,
+        Skill_Wraithsight = 278,
+        Skill_Void_Acolyte = 279,
+        Skill_Geomancer1 = 280,
+        Skill_Geomancer2 = 281,
+        Skill_Geomancer3 = 282,
+        Skill_Reaper1 = 283,
+        Skill_Reaper2 = 284,
+        Skill_Reaper3 = 285,
+        Skill_Corsair1 = 286,
+        Skill_Corsair2 = 287,
+        Skill_Corsair3 = 288,
+        Skill_Dragoon1 = 289,
+        Skill_Dragoon2 = 290,
+        Skill_Dragoon3 = 291,
+        Skill_PuppetMaster1 = 292,
+        Skill_PuppetMaster2 = 293,
+        Skill_PuppetMaster3 = 294,
+        Skill_DarkKnight1 = 295,
+        Skill_DarkKnight2 = 296,
+        Skill_DarkKnight3 = 297,
+        Skill_Alchemist1 = 298,
+        Skill_Alchemist2 = 299,
+        Skill_Alchemist3 = 300,
+        Skill_Psion1 = 301,
+        Skill_Psion2 = 302,
+        Skill_Psion3 = 303,
+        Skill_ChaosMage1 = 304,
+        Skill_ChaosMage2 = 305,
+        Skill_ChaosMage3 = 306,
+        Skill_ElementalKnight1 = 307,
+        Skill_ElementalKnight2 = 308,
+        Skill_ElementalKnight3 = 309,
+
+        Focus_Tormentshaper = 310,
+        Focus_Wraithsight = 311,
+        Focus_Void_Acolyte = 312,
+        MaxProperty = 313
+        #endregion
     }
 
-	[Flags]
+    [Flags]
 	public enum eFlags : int
 	{
 		/// <summary>
